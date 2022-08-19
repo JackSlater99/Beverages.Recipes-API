@@ -18,3 +18,15 @@ Use the following frameworks / libraries:
 - Auth0 for securing Admin functions.
 - Tailwind CSS.
 - Implement Web Advertisements.
+
+## Team
+
+[Jack Slater](https://www.linkedin.com/in/j-slater99/)
+
+[Jack Carmichael](https://www.linkedin.com/in/jackcarmichael/)
+
+[Sandy Yu](https://www.linkedin.com/in/sandyysh221/)
+
+[Mike Langley](https://www.linkedin.com/in/mike-langley-641713246/)
+
+[Michael Lyon](https://www.linkedin.com/in/michaellyon19994/)
