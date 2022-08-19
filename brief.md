@@ -2,7 +2,7 @@
 ## Brief
 Create an restful API using Java Spring and implement a front end web application using React which will allow the users to view data in the browser or access via a open API.
 ### MVP
-for the MVP the user should be able to:
+For the MVP the user should be able to:
 - See a list of drinks recipe's on a responsive front end.
 - Allow users to access the API for personal use.
 - Filter the API results based on user requirements.
