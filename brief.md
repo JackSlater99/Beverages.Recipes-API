@@ -1,6 +1,6 @@
 # Capstone Project Domain.net 
 ## Brief
-Create an restful API using Java Spring and implement a front end web application using React which will allow the users to view data in the browser or access via a open API.
+Create a restful API from scratch using Java Spring and implement in a front end web application using React which will allow the users to view the formatted data and get access to the open API for their own usage.
 ### MVP
 For the MVP the user should be able to:
 - See a list of drinks recipe's on a responsive front end.
