@@ -3,7 +3,7 @@ import React from "react";
 const RecipeCard = () => {
     return (
         <article>
-            **RecipeCard**
+            <h2>**RecipeCard**</h2>
         </article>
     )
 }

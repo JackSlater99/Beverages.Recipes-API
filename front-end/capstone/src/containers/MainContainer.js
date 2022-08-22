@@ -23,10 +23,12 @@ const MainContainer = () => {
             
 
 
-            <Routes>
-                <Route path="/" exact component={<Recipies />} />
-                <Route path="/recipies" exact component={<RecipeFull />} />
-            </Routes>
+            
+                <Routes>
+                    <Route element={<Recipies />} path="/" exact component={<Recipies />} />
+                    <Route element={<RecipeFull />} path="/recipies" exact component={<RecipeFull />} />
+                </Routes>
+            
 
             <Footer />
         </div>
