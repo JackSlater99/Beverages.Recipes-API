@@ -11,24 +11,14 @@ import RecipeFull from "../components/recipeFull/RecipeFull";
 const MainContainer = () => {
 
     return (
-        <div>
-            <h2 className="text-3xl font-bold">
-                
-                **MainContainer**
-                    
-                </h2>
+        <div className="container mx-auto">
             <Header />
             <TitleBanner />
-
-            
-
-
             
                 <Routes>
                     <Route element={<Recipies />} path="/" exact component={<Recipies />} />
                     <Route element={<RecipeFull />} path="/recipies" exact component={<RecipeFull />} />
                 </Routes>
-            
 
             <Footer />
         </div>
