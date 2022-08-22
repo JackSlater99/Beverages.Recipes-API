@@ -1,4 +1,4 @@
-package com.example.backendbeveragesrecipes.models;
+package com.example.beveragesrecipes.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -30,12 +30,10 @@ public class RecipeIngredient {
             name = "recipe_ingredients",
             joinColumns = {@JoinColumn(
                     name = "ingredient_id",
-                    nullable = false,
                     updatable = false
             )},
             inverseJoinColumns = {@JoinColumn(
                     name = "recipe_id",
-                    nullable = false,
                     updatable = false
             )}
     )

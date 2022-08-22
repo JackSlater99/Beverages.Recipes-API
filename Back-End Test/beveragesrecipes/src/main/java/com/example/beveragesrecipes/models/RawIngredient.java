@@ -1,4 +1,4 @@
-package com.example.backendbeveragesrecipes.models;
+package com.example.beveragesrecipes.models;
 
 import org.hibernate.annotations.Cascade;
 
