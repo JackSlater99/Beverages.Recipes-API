@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -23,19 +24,12 @@ public class RecipeIngredient {
     @Column(name = "units")
     private String units;
 
-    @JsonBackReference
     @ManyToMany
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @JoinTable(
-            name = "recipe_ingredients",
-            joinColumns = {@JoinColumn(
-                    name = "ingredient_id",
-                    updatable = false
-            )},
-            inverseJoinColumns = {@JoinColumn(
-                    name = "recipe_id",
-                    updatable = false
-            )}
+            name = "recipes_ingredients",
+            joinColumns = {@JoinColumn(name = "recipe_ingredient_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "recipe_id", nullable = false, updatable = false)}
     )
     private List<Recipe> recipes;
 
@@ -43,6 +37,7 @@ public class RecipeIngredient {
         this.rawIngredient = rawIngredient;
         this.quantity = quantity;
         this.units = units;
+        this.recipes = new ArrayList<Recipe>();
     }
 
 

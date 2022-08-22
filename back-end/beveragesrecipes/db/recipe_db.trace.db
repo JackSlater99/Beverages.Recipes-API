@@ -1,3 +1,6 @@
 2022-08-22 16:57:28 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Milk is a nutrient-rich liquid food produced by the mammary glands of mammals. ... (262)"; SQL statement:
 insert into raw_ingredients (id, alcoholic, description, image, name) values (default, ?, ?, ?, ?) [22001-214]
+2022-08-22 18:44:33 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]RECIPE_INGREDIENTS"; expected "ROLLBACK, REVOKE, RUNSCRIPT, RELEASE"; SQL statement:
+RECIPE_INGREDIENTS [42001-214]

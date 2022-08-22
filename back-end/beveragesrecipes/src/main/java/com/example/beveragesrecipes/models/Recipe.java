@@ -1,5 +1,6 @@
 package com.example.beveragesrecipes.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cascade;
 
@@ -14,26 +15,6 @@ public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @JsonIgnoreProperties({"recipeIngredient"})
-    @ManyToMany
-    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-    @JoinTable(
-            name = "recipe_ingredients",
-            joinColumns = {@JoinColumn(
-                    name = "recipe_id",
-                    updatable = false
-            )},
-            inverseJoinColumns = {@JoinColumn(
-                    name = "ingredient_id",
-                    updatable = false
-            )}
-    )
-    private List<RecipeIngredient> ingredients;
-//
-//    @ManyToOne
-//    @JoinColumn(name = "raw_id", nullable = false)
-//    private RawIngredient rawIngredient;
 
     @Column(name = "name")
     private String name;
@@ -53,6 +34,16 @@ public class Recipe {
     @Column(name = "prep_time")
     private int prepTime;
 
+    @JsonIgnoreProperties({"rawIngredients"})
+    @ManyToMany
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JoinTable(
+            name = "recipes_ingredients",
+            joinColumns = {@JoinColumn(name = "recipe_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name="recipe_ingredient_id", nullable = false, updatable = false)}
+    )
+    private List<RecipeIngredient> ingredients;
+
     @Column(name = "instructions")
     private String instructions;
 
@@ -66,6 +57,7 @@ public class Recipe {
         this.image = image;
         this.difficulty = difficulty;
         this.prepTime = prepTime;
+        this.ingredients = new ArrayList<RecipeIngredient>();
         this.instructions = instructions;
         this.video = video;
     }
