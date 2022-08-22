@@ -1,6 +1,8 @@
 import React from "react";
+
 import Hero from "./Hero";
 import NavBar from './NavBar';
+import TitleBanner from "../titlebanner/TitleBanner";
 
 const Header = () => {
 
@@ -10,7 +12,7 @@ const Header = () => {
             <p>Go on, you know you want to ...</p>
             <NavBar />
             <Hero />
-
+            <TitleBanner />
         </header>
     )
 
