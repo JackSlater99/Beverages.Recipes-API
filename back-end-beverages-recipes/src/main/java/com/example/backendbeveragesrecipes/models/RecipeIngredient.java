@@ -14,14 +14,17 @@ public class RecipeIngredient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @ManyToOne
+    @JoinColumn(name = "raw_ingredient_id", nullable = false)
+    private RawIngredient rawIngredient;
 
-    @OneToMany(mappedBy = "recipeIngredient", fetch = FetchType.LAZY)
-    @Column(name = "ingredient")
-    private RawIngredient recipeIngredient;
     @Column(name = "quantity")
     private double quantity;
     @Column(name = "units")
     private String units;
+
+//    @OneToMany(mappedBy = "rawIngredient", fetch = FetchType.LAZY)
+//    private RawIngredient rawIngredient;
 
     @JsonBackReference
     @ManyToMany
@@ -41,8 +44,8 @@ public class RecipeIngredient {
     )
     private List<Recipe> recipes;
 
-    public RecipeIngredient(RawIngredient recipeIngredient, double quantity, String units) {
-        this.recipeIngredient = recipeIngredient;
+    public RecipeIngredient(RawIngredient rawIngredient, double quantity, String units) {
+        this.rawIngredient = rawIngredient;
         this.quantity = quantity;
         this.units = units;
     }
@@ -59,12 +62,12 @@ public class RecipeIngredient {
         this.id = id;
     }
 
-    public RawIngredient getRecipeIngredient() {
-        return recipeIngredient;
+    public RawIngredient getRawIngredient() {
+        return rawIngredient;
     }
 
-    public void setRecipeIngredient(RawIngredient recipeIngredient) {
-        this.recipeIngredient = recipeIngredient;
+    public void setRawIngredient(RawIngredient rawIngredient) {
+        this.rawIngredient = rawIngredient;
     }
 
     public double getQuantity() {

@@ -21,9 +21,9 @@ public class RawIngredient {
     @Column(name = "description")
     private String description;
 
-    @ManyToOne
-    @JoinColumn(name = "recipe_ingredients", nullable = false)
-    private RecipeIngredient recipeIngredient;
+//    @ManyToOne
+//    @JoinColumn(name = "recipe_ingredients", nullable = false)
+//    private RecipeIngredient recipeIngredient;
 
     public RawIngredient(String name, String image, Boolean alcoholic, String description) {
         this.name = name;

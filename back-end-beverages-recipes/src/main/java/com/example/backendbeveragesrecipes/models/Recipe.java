@@ -15,7 +15,7 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonIgnoreProperties({"recipes"})
+    @JsonIgnoreProperties({"recipeIngredient"})
     @ManyToMany
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @JoinTable(
@@ -32,10 +32,10 @@ public class Recipe {
             )}
     )
     private List<RecipeIngredient> ingredients;
-
-    @ManyToOne
-    @JoinColumn(name = "raw_id", nullable = false)
-    private RawIngredient rawIngredient;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "raw_id", nullable = false)
+//    private RawIngredient rawIngredient;
 
     @Column(name = "name")
     private String name;
