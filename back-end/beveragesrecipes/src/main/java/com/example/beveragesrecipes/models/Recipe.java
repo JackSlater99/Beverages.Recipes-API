@@ -44,13 +44,13 @@ public class Recipe {
     )
     private List<RecipeIngredient> ingredients;
 
-    @Column(name = "instructions")
-    private String instructions;
+    @OneToMany(mappedBy = "recipe", fetch = FetchType.LAZY)
+    private List<Instructions> instructions;
 
     @Column(name = "video")
     private String video;
 
-    public Recipe(String name, String type, double rating, String image, String difficulty, int prepTime, String instructions, String video) {
+    public Recipe(String name, String type, double rating, String image, String difficulty, int prepTime, String video) {
         this.name = name;
         this.type = type;
         this.rating = rating;
@@ -58,7 +58,7 @@ public class Recipe {
         this.difficulty = difficulty;
         this.prepTime = prepTime;
         this.ingredients = new ArrayList<RecipeIngredient>();
-        this.instructions = instructions;
+        this.instructions = new ArrayList<Instructions>();
         this.video = video;
     }
 
@@ -125,16 +125,16 @@ public class Recipe {
         return ingredients;
     }
 
-    public void setIngredients(List<RecipeIngredient> ingredients) {
-        this.ingredients = ingredients;
-    }
-
-    public String getInstructions() {
+    public List<Instructions> getInstructions() {
         return instructions;
     }
 
-    public void setInstructions(String instructions) {
+    public void setInstructions(List<Instructions> instructions) {
         this.instructions = instructions;
+    }
+
+    public void setIngredients(List<RecipeIngredient> ingredients) {
+        this.ingredients = ingredients;
     }
 
     public String getVideo() {
@@ -148,4 +148,5 @@ public class Recipe {
     public void addIngredients(RecipeIngredient ingredient) {
         this.ingredients.add(ingredient);
     }
+
 }
