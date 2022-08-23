@@ -3,9 +3,7 @@ import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
 const Profile = () => {
-  console.log(useAuth0());
   const { user } = useAuth0();
-  console.log(user);
   const { name, picture, email } = user;
 
   console.log(picture)
