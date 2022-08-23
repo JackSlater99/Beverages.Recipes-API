@@ -3,18 +3,24 @@ import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
 const Profile = () => {
+  console.log(useAuth0());
   const { user } = useAuth0();
+  console.log(user);
   const { name, picture, email } = user;
+
+  console.log(picture)
 
   return (
     <div>
       <div className="row align-items-center profile-header">
         <div className="col-md-2 mb-3">
           <img
-            src={picture}
+            src={picture} 
+            referrerPolicy="no-referrer"
             alt="Profile"
             className="rounded-circle img-fluid profile-picture mb-3 mb-md-0"
           />
+          {picture}
         </div>
         <div className="col-md text-center text-md-left">
           <h2>{name}</h2>
@@ -30,5 +36,5 @@ const Profile = () => {
   );
 };
 
-export default Profile;import React from 'react';
+export default Profile;
 
