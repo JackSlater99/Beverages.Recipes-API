@@ -1,4 +1,4 @@
-package com.example.beveragesrecipes.models;
+package com.example.Postgres.Test.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

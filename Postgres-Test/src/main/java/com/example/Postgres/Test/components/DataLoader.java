@@ -1,13 +1,13 @@
-package com.example.beveragesrecipes.components;
+package com.example.Postgres.Test.components;
 
-import com.example.beveragesrecipes.models.Instructions;
-import com.example.beveragesrecipes.models.RawIngredient;
-import com.example.beveragesrecipes.models.Recipe;
-import com.example.beveragesrecipes.models.RecipeIngredient;
-import com.example.beveragesrecipes.repositories.IngredientRepository;
-import com.example.beveragesrecipes.repositories.InstructionRepository;
-import com.example.beveragesrecipes.repositories.RecipeIngredientRepository;
-import com.example.beveragesrecipes.repositories.RecipeRepository;
+import com.example.Postgres.Test.models.Instructions;
+import com.example.Postgres.Test.models.RawIngredient;
+import com.example.Postgres.Test.models.Recipe;
+import com.example.Postgres.Test.models.RecipeIngredient;
+import com.example.Postgres.Test.repositories.IngredientRepository;
+import com.example.Postgres.Test.repositories.InstructionRepository;
+import com.example.Postgres.Test.repositories.RecipeIngredientRepository;
+import com.example.Postgres.Test.repositories.RecipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
