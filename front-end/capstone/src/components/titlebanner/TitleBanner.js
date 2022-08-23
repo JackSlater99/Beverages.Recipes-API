@@ -5,8 +5,7 @@ import Favourites from "./Favourites";
 const TitleBanner = () => {
 
     return(
-        <div>
-            <h2>Favourites (**TitleBanner**)</h2>
+        <div className="flex bg-yellow-100">
             <Search />
             <Favourites />
         </div>
