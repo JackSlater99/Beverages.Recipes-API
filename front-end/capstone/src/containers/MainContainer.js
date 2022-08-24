@@ -86,11 +86,7 @@ const MainContainer = () => {
           component={<RecipeFull />}
         />
         <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
-        <Route
-          element={<Profile />}
-          path="/profile"
-          component={<Profile />}
-        />
+        <Route element={<Profile />} path="/profile" component={<Profile />} />
       </Routes>
 
       <Footer />
