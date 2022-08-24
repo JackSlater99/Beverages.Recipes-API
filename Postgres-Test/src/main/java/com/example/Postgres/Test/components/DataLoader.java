@@ -40,8 +40,11 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(milk);
         RawIngredient groundEspresso = new RawIngredient("Ground Espresso", "https://i.imgur.com/KhZQ9Oq.jpg", Boolean.FALSE, "" );
         ingredientRepository.save(groundEspresso);
-        RawIngredient drinkingChocolate = new RawIngredient("Drinking Chocolate", "https://i.imgur.com/o0KXhGQ.jpg", Boolean.FALSE, "Drinking chocolate, or sipping chocolate, is exactly what it sounds like – luxurious, melted chocolate you can drink!");
+        RawIngredient drinkingChocolate = new RawIngredient("Drinking Chocolate", "https://i.imgur.com/o0KXhGQ.jpg", Boolean.TRUE, "Drinking chocolate, or sipping chocolate, is exactly what it sounds like – luxurious, melted chocolate you can drink!");
         ingredientRepository.save(drinkingChocolate);
+
+
+        // COFFEE
 
         RecipeIngredient recipeIngredient1 = new RecipeIngredient(milk, 100, "ml");
         recipeIngredientRepository.save(recipeIngredient1);
@@ -54,6 +57,8 @@ public class DataLoader implements ApplicationRunner {
 
         Recipe recipe1 = new Recipe(
                 "Flat White",
+                "Jack",
+                true,
                 "Coffee",
                 0,
                 "https://i.imgur.com/vWWmMbP.jpg",
@@ -73,11 +78,13 @@ public class DataLoader implements ApplicationRunner {
 
         Recipe recipe2 = new Recipe(
                 "Mocha",
-                "Coffee",
+                "John",
+                false,
+                "Beer",
                 0,
                 "https://i.imgur.com/jiN9sSV.jpg",
-                "Easy",
-                3,
+                "Medium",
+                5,
                 "https://youtu.be/g86JjlpegIM"
         );
 
@@ -89,5 +96,9 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(recipeTwoInstruction1);
         Instructions recipeTwoInstruction2 = new Instructions("Steam the milk with the steamer attachment so that it has around 4-6cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming into the centre. Once the milk jug is almost touching the surface of the coffee, tilt to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top.", recipe2);
         instructionRepository.save(recipeTwoInstruction2);
+
+
+        // MOCKTAILS
+
     }
 }

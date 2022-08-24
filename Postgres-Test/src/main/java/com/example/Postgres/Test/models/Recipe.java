@@ -19,6 +19,12 @@ public class Recipe {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "author")
+    private String author;
+
+    @Column(name = "approved")
+    private Boolean approved;
+
     @Column(name = "type")
     private String type;
 
@@ -50,8 +56,10 @@ public class Recipe {
     @Column(name = "video")
     private String video;
 
-    public Recipe(String name, String type, double rating, String image, String difficulty, int prepTime, String video) {
+    public Recipe(String name, String author, Boolean approved, String type, double rating, String image, String difficulty, int prepTime, String video) {
         this.name = name;
+        this.author = author;
+        this.approved = approved;
         this.type = type;
         this.rating = rating;
         this.image = image;
@@ -149,4 +157,19 @@ public class Recipe {
         this.ingredients.add(ingredient);
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public Boolean getApproved() {
+        return approved;
+    }
+
+    public void setApproved(Boolean approved) {
+        this.approved = approved;
+    }
 }
