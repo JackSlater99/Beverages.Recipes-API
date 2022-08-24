@@ -40,7 +40,7 @@ public class RecipeController {
 
     @GetMapping(value="/recipes/alcoholic")
     public ResponseEntity<Recipe> getRecipeIfAlcoholic() {
-        return new ResponseEntity(recipeRepository.findAllByIngredientsRawIngredientAlcoholicIsTrue(), HttpStatus.OK);
+        return new ResponseEntity(recipeRepository.findDistinctByIngredientsRawIngredientAlcoholicIsTrue(), HttpStatus.OK);
     }
 
     @GetMapping(value="/recipes/{id}")
