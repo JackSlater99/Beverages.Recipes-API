@@ -89,11 +89,19 @@ const ApiIndex = () => {
     },
     {
       id:11,
-      title: "Ingredients by ID",
+      title: "Ingredient by ID",
       description: "Show ingredient by ID",
       endPointUrl: `${baseUrl}/ingredients/1`,
       displayUrl: `${baseUrl}/ingredients/1`,
       httpVerb: "GET"
+    },
+    {
+      id:12,
+      title: "Ingredient Create",
+      description: "Create an ingredient by sending JSON in the format show.",
+      endPointUrl: `${baseUrl}/ingredients/1`,
+      displayUrl: `${baseUrl}/ingredients`,
+      httpVerb: "POST"
     },
 
   ];
