@@ -4,7 +4,7 @@ import RecipeCard from "./RecipeCard";
 const Recipes = () => {
   const apiUrl = "http://localhost:8080/api/recipes";
 
-  const [recipesJson, setRecipesJson] = useState({});
+  const [recipesJson, setRecipesJson] = useState([]);
 
   const getAllRecipes = async () => {
     const resp = await fetch(apiUrl);
@@ -16,14 +16,16 @@ const Recipes = () => {
     getAllRecipes();
   }, []);
 
+  console.log(recipesJson);
+
+  const cardNodes = recipesJson.map((recipe) => {
+    return <RecipeCard recipe={recipe} key={recipe.id} />;
+  });
+
   return (
     <>
       <h2>Recipes Index (**Recipes**)</h2>
-      <main className="flex gap-x-4 min-h-screen ">
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-      </main>
+      <main className="grid grid-cols-4 gap-4">{cardNodes}</main>
     </>
   );
 };

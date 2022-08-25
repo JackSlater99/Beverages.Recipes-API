@@ -1,19 +1,23 @@
 import React from "react";
 import Ratings from "../elements/Ratings";
 import YouTubeLink from "../elements/YouTubeLink";
+import RecipesInstruction from "./RecipesInstruction";
 
-const RecipeCard = () => {
-    return (
-        <article className="bg-blue-200 flex-col ">
-            <h2>Title of Drink</h2>
-            <img src="https://via.placeholder.com/150" alt="YouTube Link" />
-            <p>Our favourite tipple for those early morning blues.</p>
-            <Ratings />
-            <p>Stats Here</p>
-            <YouTubeLink />
+const RecipeCard = ({ recipe }) => {
+  console.log(recipe.instructions[0].instruction);
 
-        </article>
-    )
-}
+  return (
+    <article className="bg-blue-200 flex-col ">
+      <h2>{recipe.name}</h2>
+      <img className="w-48" src={recipe.image} alt={recipe.name} />
+      {/* <RecipesInstruction instructions={recipe.instructions} /> */}
+      <Ratings rating={parseInt(recipe.rating)} />
+      <p>Difficulty: {recipe.difficulty}</p>
+      <p>Prep time: {recipe.prepTime}</p>
+      <p></p>
+      <YouTubeLink videoLink={recipe.video} title={recipe.name} />
+    </article>
+  );
+};
 
 export default RecipeCard;
