@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Ratings from "../elements/Ratings";
 import RecipesIngredients from "../recipes/RecipeIngredients";
 import RecipesInstruction from "../recipes/RecipesInstruction";
+import YouTubeLink from "../elements/YouTubeLink";
 
 const RecipeFull = ({ recipes }) => {
   const { id } = useParams();
@@ -34,6 +35,9 @@ const RecipeFull = ({ recipes }) => {
           <p>
             <span className="font-bold">Prep Time: </span>
             {recipe.prepTime} minutes
+          </p>
+          <p>
+            <YouTubeLink videoLink={recipe.video} title={recipe.name} />
           </p>
           <p>
             <span className="font-bold">Ingredients:</span>

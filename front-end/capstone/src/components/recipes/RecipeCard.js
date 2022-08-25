@@ -14,12 +14,11 @@ const RecipeCard = ({ recipe }) => {
       <img className="w-48" src={recipe.image} alt={recipe.name} />
       {/* <RecipesInstruction instructions={recipe.instructions} /> */}
       <Ratings rating={parseInt(recipe.rating)} />
-      <p>Difficulty: {recipe.difficulty}</p>
-      <p>Prep time: {recipe.prepTime}</p>
+      <span>Difficulty: {recipe.difficulty}</span>
+      <span>Prep time: {recipe.prepTime}</span>
       <Link to={{ pathname: `/recipes/${recipe.id}` }} recipe={recipe}>
         Click to see full recipe
       </Link>
-      <YouTubeLink videoLink={recipe.video} title={recipe.name} />
     </article>
   );
 };
