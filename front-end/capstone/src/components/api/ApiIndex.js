@@ -71,6 +71,14 @@ const ApiIndex = () => {
       displayUrl: `${baseUrl}/recipes?preptime=5`,
       httpVerb: "GET"
     },
+    {
+      id:9,
+      title: "Recipe Contains Alcohol",
+      description: "Recipes that contain one or more alhoholic ingredients.",
+      endPointUrl: `${baseUrl}/recipes/alcoholic`,
+      displayUrl: `${baseUrl}/recipes/alcoholic`,
+      httpVerb: "GET"
+    },
 
   ];
 
