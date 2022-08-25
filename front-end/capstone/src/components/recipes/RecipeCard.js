@@ -9,7 +9,7 @@ const RecipeCard = ({ recipe }) => {
   console.log(recipe.instructions[0].instruction);
 
   return (
-    <article className="bg-blue-200 flex-col ">
+    <article className="bg-blue-200 grid place-items-center">
       <h2>{recipe.name}</h2>
       <img className="w-48" src={recipe.image} alt={recipe.name} />
       {/* <RecipesInstruction instructions={recipe.instructions} /> */}
