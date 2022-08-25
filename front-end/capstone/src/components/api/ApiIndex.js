@@ -3,30 +3,49 @@ import ApiSelect from "./ApiSelect";
 import JsonView from "./JsonView";
 
 const ApiIndex = () => {
+
+  const baseUrl = "http://localhost:8080/api";
+
   const endPoints = [
     {
       id: 1,
       title: "Recipes Index",
       description: "Get all recipes as an array of Objects.",
-      endPointUrl: "http://localhost:8080/api/recipes",
+      endPointUrl: `${baseUrl}/recipes/1`,
+      displayUrl: `${baseUrl}/recipes/`,
+      httpVerb: "GET"
     },
     {
       id: 2,
       title: "Recipes Show",
       description: "Get a single recipe by (id, name).",
-      endPointUrl: "http://localhost:8080/api/recipes/1",
+      endPointUrl: `${baseUrl}/recipes/1`,
+      displayUrl: `${baseUrl}/recipes/1`,
+      httpVerb: "GET"
     },
     {
       id: 3,
       title: "Recipes Create",
       description: "Create a single recipe by (id, name).",
-      endPointUrl: "http://localhost:8080/recipesCREATE",
+      endPointUrl: `http://localhost:8080/recipes`,
+      displayUrl: `http://localhost:8080/recipes`,
+      httpVerb: "POST"
     },
     {
-      id: 4,
+      id:4,
+      title: "Recipe By Name",
+      description: "Recipe Get by name.",
+      endPointUrl: `${baseUrl}/recipes?name=flat white`,
+      displayUrl: `${baseUrl}/recipes?name=flat white`,
+      httpVerb: "GET"
+    },
+    {
+      id: 5,
       title: "Ingredients",
       description: "Ingredients Show by Id.",
-      endPointUrl: "http://localhost:8080/api/ingredients/1",
+      endPointUrl: `${baseUrl}/ingredients/1`,
+      displayUrl: `${baseUrl}/ingredients/1`,
+      httpVerb: "GET"
     },
   ];
 
@@ -36,7 +55,9 @@ const ApiIndex = () => {
     id: 2,
     title: "Recipes Show",
     description: "Get a single recipe by (id, name).",
-    endPointUrl: "http://localhost:8080/api/recipes/1",
+    endPointUrl: `${baseUrl}/recipes/1`,
+    displayUrl: `${baseUrl}/recipes`,
+    httpVerb: "GET"
   });
 
   const onSelectChange = (event) => {
@@ -69,10 +90,17 @@ const ApiIndex = () => {
           <h2 className="text-lg font-semibold">{selectedOption.title}</h2>
           <input
             readOnly
-            className="w-full border-solid border-2 border-gray-500"
+            className="invisible"
             type="text"
             value={selectedOption.endPointUrl}
           />
+
+          <p>
+            {selectedOption.httpVerb}
+            <span className="border-solid border-2 border-gray-500">
+              {selectedOption.displayUrl}
+            </span>
+          </p>
 
           <p className="mt-8 ">{selectedOption.description}</p>
           <button
