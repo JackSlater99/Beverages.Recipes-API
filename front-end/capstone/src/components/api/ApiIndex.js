@@ -151,6 +151,14 @@ const ApiIndex = () => {
       displayUrl: `${baseUrl}/recipe-ingredients/1`,
       httpVerb: "GET"
     },
+    {
+      id:19,
+      title: "Add a recipe ingredient",
+      description: "Add a newe recipe ingredient by POSTing JSON in the format shown.",
+      endPointUrl: `${baseUrl}/recipe-ingredients/1`,
+      displayUrl: `${baseUrl}/recipe-ingredients/1`,
+      httpVerb: "POST"
+    },
 
   ];
 
