@@ -232,7 +232,7 @@ const ApiIndex = () => {
             <span className="mr-8 pl-8 pr-8 pt-1 pb-1 border-solid border-2 border-gray-200">
               {selectedOption.displayUrl}
             </span>
-            <button onClick={() => {navigator.clipboard.writeText(selectedOption.endPointUrl)}}>
+            <button onClick={ () => {navigator.clipboard.writeText(selectedOption.endPointUrl)}}>
               Copy URL
             </button>
           </p>
