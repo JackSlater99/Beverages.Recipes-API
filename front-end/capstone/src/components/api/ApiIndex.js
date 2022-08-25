@@ -9,6 +9,7 @@ const ApiIndex = () => {
   const endPoints = [
     {
       id: 1,
+      section: "recipes",
       title: "Recipes Index",
       description: "Get all recipes as an array of Objects.",
       endPointUrl: `${baseUrl}/recipes/1`,
@@ -17,6 +18,7 @@ const ApiIndex = () => {
     },
     {
       id: 2,
+      section: "recipes",
       title: "Recipes Show",
       description: "Get a single recipe by (id, name).",
       endPointUrl: `${baseUrl}/recipes/1`,
@@ -25,6 +27,7 @@ const ApiIndex = () => {
     },
     {
       id: 3,
+      section: "recipes",
       title: "Recipes Create",
       description: "Add a recipe to our database by sending JSON in the format shown.",
       endPointUrl: `${baseUrl}/recipes/2`,
@@ -33,6 +36,7 @@ const ApiIndex = () => {
     },
     {
       id:4,
+      section: "recipes",
       title: "Recipe By Name",
       description: "Recipe Get by name.",
       endPointUrl: `${baseUrl}/recipes?name=flat white`,
@@ -41,6 +45,7 @@ const ApiIndex = () => {
     },
     {
       id:5,
+      section: "recipes",
       title: "Recipe By Author",
       description: "Recipe Get by Author (Name)",
       endPointUrl: `${baseUrl}/recipes?author=jack`,
@@ -49,6 +54,7 @@ const ApiIndex = () => {
     },
     {
       id:6,
+      section: "recipes",
       title: "Recipe By Type",
       description: "Recipe Get by Type (Beer, Coffee).",
       endPointUrl: `${baseUrl}/recipes?type=Coffee`,
@@ -57,6 +63,7 @@ const ApiIndex = () => {
     },
     {
       id:7,
+      section: "recipes",
       title: "Recipe By Difficulty",
       description: "Recipe Get by Difficulty (Easy, Medium, Difficult).",
       endPointUrl: `${baseUrl}/recipes?difficulty=medium`,
@@ -65,6 +72,7 @@ const ApiIndex = () => {
     },
     {
       id:8,
+      section: "recipes",
       title: "Recipe By Preparation Time",
       description: "Recipe Get by time to preapare (minutes).",
       endPointUrl: `${baseUrl}/recipes?preptime=5`,
@@ -73,6 +81,7 @@ const ApiIndex = () => {
     },
     {
       id:9,
+      section: "recipes",
       title: "Recipe Contains Alcohol",
       description: "Recipes that contain one or more alhoholic ingredients.",
       endPointUrl: `${baseUrl}/recipes/alcoholic`,
@@ -81,6 +90,7 @@ const ApiIndex = () => {
     },
     {
       id:10,
+      section: "ingredients",
       title: "Ingredients Index",
       description: "Show all ingredients from all recipes",
       endPointUrl: `${baseUrl}/ingredients/1`,
@@ -89,6 +99,7 @@ const ApiIndex = () => {
     },
     {
       id:11,
+      section: "ingredients",
       title: "Ingredient by ID",
       description: "Show ingredient by ID",
       endPointUrl: `${baseUrl}/ingredients/1`,
@@ -97,6 +108,7 @@ const ApiIndex = () => {
     },
     {
       id:12,
+      section: "ingredients",
       title: "Ingredient Create",
       description: "Create an ingredient by sending JSON in the format show using HTTP POST.",
       endPointUrl: `${baseUrl}/ingredients/1`,
@@ -105,6 +117,7 @@ const ApiIndex = () => {
     },
     {
       id:13,
+      section: "ingredients",
       title: "Ingredient Update",
       description: "Update an ingredient by sending JSON in the format show using an HTTP PUT",
       endPointUrl: `${baseUrl}/ingredients/1`,
@@ -113,6 +126,7 @@ const ApiIndex = () => {
     },
     {
       id:14,
+      section: "instructions",
       title: "Instructions Index",
       description: "Show all instructions",
       endPointUrl: `${baseUrl}/instructions/1`,
@@ -121,6 +135,7 @@ const ApiIndex = () => {
     },
     {
       id:15,
+      section: "instructions",
       title: "Instructions by ID",
       description: "Get instruction by ID",
       endPointUrl: `${baseUrl}/instructions/1`,
@@ -129,6 +144,7 @@ const ApiIndex = () => {
     },
     {
       id:16,
+      section: "instructions",
       title: "Instructions Create",
       description: "Create an instructions by POSTing JSON as shown",
       endPointUrl: `${baseUrl}/instructions/1`,
@@ -137,6 +153,7 @@ const ApiIndex = () => {
     },
     {
       id:17,
+      section: "recipe-ingredients",
       title: "Recipe Ingredients Index",
       description: "Show all recipe ingredients",
       endPointUrl: `${baseUrl}/recipe-ingredients/1`,
@@ -145,6 +162,7 @@ const ApiIndex = () => {
     },
     {
       id:18,
+      section: "recipe-ingredients",
       title: "Recipe Ingredients by ID",
       description: "Show recipe ingredients by ID",
       endPointUrl: `${baseUrl}/recipe-ingredients/1`,
@@ -153,6 +171,7 @@ const ApiIndex = () => {
     },
     {
       id:19,
+      section: "recipe-ingredients",
       title: "Add a recipe ingredient",
       description: "Add a newe recipe ingredient by POSTing JSON in the format shown.",
       endPointUrl: `${baseUrl}/recipe-ingredients/1`,
@@ -166,6 +185,7 @@ const ApiIndex = () => {
 
   const [selectedOption, setSelectedOption] = useState({
     id: 2,
+    section: "recipes",
     title: "Recipes Show",
     description: "Get a single recipe by (id, name).",
     endPointUrl: `${baseUrl}/recipes/1`,
@@ -184,7 +204,6 @@ const ApiIndex = () => {
     console.log(selectedOption.endPointUrl, {});
     const resp = await fetch(selectedOption.endPointUrl);
     const jsonData = await resp.json();
-    console.log(jsonData);
     setJsonData(jsonData);
   };
 
@@ -209,16 +228,17 @@ const ApiIndex = () => {
           />
 
           <h3 className="mt-4 mb-2 text-md font-semibold">Endpoint URL</h3>
-
           <p>
-            <span className="pl-8 pr-8 pt-1 pb-1 border-solid border-2 border-gray-500">
+            <span className="mr-8 pl-8 pr-8 pt-1 pb-1 border-solid border-2 border-gray-200">
               {selectedOption.displayUrl}
             </span>
+            <button onClick={() => {navigator.clipboard.writeText(selectedOption.endPointUrl)}}>
+              Copy URL
+            </button>
           </p>
 
           <h3 className="mt-4 text-md font-semibold">HTTP Method</h3>
-            <p>{selectedOption.httpVerb}</p>
-
+          <p>{selectedOption.httpVerb}</p>
 
           <h3 className="mt-4 text-md font-semibold">Purpose</h3>
           <p className="mt-4">{selectedOption.description}</p>
@@ -229,6 +249,7 @@ const ApiIndex = () => {
           >
             Try Button
           </button>
+
         </div>
       </section>
 
