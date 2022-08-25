@@ -2,10 +2,14 @@ import React from "react";
 
 const RecipesInstruction = ({ instructions }) => {
   const instructionsNodes = instructions.map((instruction) => {
-    return <li key={instruction.id}>{instruction.instruction}</li>;
+    return (
+      <li key={instruction.id} className="mb-4">
+        {instruction.instruction}
+      </li>
+    );
   });
 
-  return <ul>{instructionsNodes}</ul>;
+  return <ol>{instructionsNodes}</ol>;
 };
 
 export default RecipesInstruction;
