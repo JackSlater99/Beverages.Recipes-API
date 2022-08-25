@@ -26,7 +26,7 @@ const ApiIndex = () => {
     {
       id: 3,
       title: "Recipes Create",
-      description: "Add a recipe to our database by sending JSON in the format shown..",
+      description: "Add a recipe to our database by sending JSON in the format shown.",
       endPointUrl: `${baseUrl}/recipes/2`,
       displayUrl: `${baseUrl}/recipes`,
       httpVerb: "POST"
@@ -77,6 +77,14 @@ const ApiIndex = () => {
       description: "Recipes that contain one or more alhoholic ingredients.",
       endPointUrl: `${baseUrl}/recipes/alcoholic`,
       displayUrl: `${baseUrl}/recipes/alcoholic`,
+      httpVerb: "GET"
+    },
+    {
+      id:10,
+      title: "Ingredients Index",
+      description: "Show all ingredients from all recipes",
+      endPointUrl: `${baseUrl}/ingredients/1`,
+      displayUrl: `${baseUrl}/ingredients`,
       httpVerb: "GET"
     },
 
