@@ -51,6 +51,7 @@ public class Recipe {
     private List<RecipeIngredient> ingredients;
 
     @OneToMany(mappedBy = "recipe", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"recipe"})
     private List<Instructions> instructions;
 
     @Column(name = "video")
