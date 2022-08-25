@@ -26,9 +26,9 @@ const ApiIndex = () => {
     {
       id: 3,
       title: "Recipes Create",
-      description: "Create a single recipe by (id, name).",
-      endPointUrl: `http://localhost:8080/recipes`,
-      displayUrl: `http://localhost:8080/recipes`,
+      description: "Add a recipe to our database by sending JSON in the format shown..",
+      endPointUrl: `${baseUrl}/recipes/2`,
+      displayUrl: `${baseUrl}/recipes`,
       httpVerb: "POST"
     },
     {
