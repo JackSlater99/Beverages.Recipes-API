@@ -10,7 +10,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import NavBar from "../components/header/NavBar";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
-import Recipies from "../components/recipies/Recipies";
+import Recipes from "../components/recipes/Recipes";
 import RecipeFull from "../components/recipeFull/RecipeFull";
 import ApiIndex from "../components/api/ApiIndex";
 import Profile from "../components/AuthComponents/Profile";
@@ -78,7 +78,7 @@ const MainContainer = () => {
       <Header />
 
       <Routes>
-        <Route element={<Recipies />} path="/" exact component={<Recipies />} />
+        <Route element={<Recipes />} path="/" exact component={<Recipes />} />
         <Route
           element={<RecipeFull selectedRecipe={test_json} />}
           path="/recipies"
