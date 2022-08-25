@@ -42,7 +42,7 @@ const ApiIndex = () => {
     {
       id:5,
       title: "Recipe By Author",
-      description: "Recipe Get by Author.",
+      description: "Recipe Get by Author (Name)",
       endPointUrl: `${baseUrl}/recipes?author=jack`,
       displayUrl: `${baseUrl}/recipes?author=jack`,
       httpVerb: "GET"
@@ -53,6 +53,14 @@ const ApiIndex = () => {
       description: "Recipe Get by Type (Beer, Coffee).",
       endPointUrl: `${baseUrl}/recipes?type=Coffee`,
       displayUrl: `${baseUrl}/recipes?type=Coffee`,
+      httpVerb: "GET"
+    },
+    {
+      id:7,
+      title: "Recipe By Difficulty",
+      description: "Recipe Get by Difficulty (Easy, Medium, Difficult).",
+      endPointUrl: `${baseUrl}/recipes?difficulty=medium`,
+      displayUrl: `${baseUrl}/recipes?difficulty=medium`,
       httpVerb: "GET"
     },
 
