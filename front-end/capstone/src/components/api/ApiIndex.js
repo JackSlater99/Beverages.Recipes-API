@@ -22,50 +22,22 @@ const ApiIndex = () => {
       description: "Create a single recipe by (id, name).",
       endPointUrl: "http://localhost:8080/recipesCREATE",
     },
+    {
+      id: 4,
+      title: "Ingredients",
+      description: "Ingredients Show by Id.",
+      endPointUrl: "http://localhost:8080/api/ingredients/1",
+    },
   ];
 
   const [jsonData, setJsonData] = useState({});
 
   const [selectedOption, setSelectedOption] = useState({
-    id: 1,
-    title: "Recipes Index",
-    description: "Get all recipes as an array of Objects.",
-    endPointUrl: "http://localhost:8080/api/recipes",
+    id: 2,
+    title: "Recipes Show",
+    description: "Get a single recipe by (id, name).",
+    endPointUrl: "http://localhost:8080/api/recipes/1",
   });
-
-  const test_json = {
-    bev_id: 34,
-    title: "Drink",
-    rating: 5,
-    ingredients: {
-      whisky: {
-        quantity: 10,
-        units: "ml",
-      },
-      banana: {
-        quantity: 10,
-        units: "ml",
-      },
-      batman: {
-        quantity: 10,
-        units: "ml",
-      },
-    },
-    Instructions: {
-      summary:
-        "take the batman and soak him in whisky for at least 45 minutes.  He will then sing and want to eat the banana.",
-      steps: {
-        1: "Peel batman",
-        2: "Drink Whisky",
-        3: "Eat the banana",
-      },
-    },
-    image_link: "http://beverages.recipies/images/batman.jpg",
-    thumb_nail: "http://beverages.recipies/images/batman.jpg",
-    youtube: "http://youtube.com/jshsduse",
-    uri: "http://beverages.recipies/drinks/34",
-    country: "link",
-  };
 
   const onSelectChange = (event) => {
     const selectedEndPoint = endPoints.find(
