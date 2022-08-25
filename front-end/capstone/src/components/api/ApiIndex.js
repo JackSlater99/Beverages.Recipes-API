@@ -40,13 +40,14 @@ const ApiIndex = () => {
       httpVerb: "GET"
     },
     {
-      id: 5,
-      title: "Ingredients",
-      description: "Ingredients Show by Id.",
-      endPointUrl: `${baseUrl}/ingredients/1`,
-      displayUrl: `${baseUrl}/ingredients/1`,
+      id:5,
+      title: "Recipe By Author",
+      description: "Recipe Get by Author.",
+      endPointUrl: `${baseUrl}/recipes?author=jack`,
+      displayUrl: `${baseUrl}/recipes?author=jack`,
       httpVerb: "GET"
     },
+
   ];
 
   const [jsonData, setJsonData] = useState({});
