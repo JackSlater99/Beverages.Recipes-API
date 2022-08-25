@@ -208,16 +208,23 @@ const ApiIndex = () => {
             value={selectedOption.endPointUrl}
           />
 
+          <h3 className="mt-4 mb-2 text-md font-semibold">Endpoint URL</h3>
+
           <p>
-            {selectedOption.httpVerb}
-            <span className="border-solid border-2 border-gray-500">
+            <span className="pl-8 pr-8 pt-1 pb-1 border-solid border-2 border-gray-500">
               {selectedOption.displayUrl}
             </span>
           </p>
 
-          <p className="mt-8 ">{selectedOption.description}</p>
+          <h3 className="mt-4 text-md font-semibold">HTTP Method</h3>
+            <p>{selectedOption.httpVerb}</p>
+
+
+          <h3 className="mt-4 text-md font-semibold">Purpose</h3>
+          <p className="mt-4">{selectedOption.description}</p>
+
           <button
-            className="w-1/2 mt-8 border-solid border-2 border-gray-500"
+            className="w-1/2 mt-4 border-solid border-2 border-green-500"
             onClick={makeFetchRequest}
           >
             Try Button
