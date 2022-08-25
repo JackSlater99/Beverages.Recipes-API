@@ -14,8 +14,8 @@ const RecipeFull = ({ recipes }) => {
 
   return (
     <main className="bg-green-100">
-      <div className="grid grid-cols-2 gap-4 p-8">
-        <div className="p-4">
+      <div className="grid grid-cols-2 gap-4 p-6">
+        <div className="flex items-center justify-center">
           <img
             src={recipe.image}
             alt={recipe.name}
