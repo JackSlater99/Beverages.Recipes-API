@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,68 +20,38 @@ import ProtectedRoute from "../auth/protected-route";
 const MainContainer = () => {
   const { isLoading } = useAuth0();
 
+  const apiUrl = "http://localhost:8080/api/recipes";
+
+  const [recipesJson, setRecipesJson] = useState([]);
+
+  const getAllRecipes = async () => {
+    const resp = await fetch(apiUrl);
+    const data = await resp.json();
+    setRecipesJson(data);
+  };
+
+  useEffect(() => {
+    getAllRecipes();
+  }, []);
+
   if (isLoading) {
     return <Loading />;
   }
-
-  const test_json = {
-    id: 1,
-    name: "Flat White",
-    type: "Coffee",
-    rating: 4.0,
-    image: "https://i.imgur.com/vWWmMbP.jpg",
-    difficulty: "Easy",
-    prepTime: 3,
-    ingredients: [
-      {
-        id: 1,
-        rawIngredient: {
-          id: 1,
-          name: "Milk",
-          image: "https://i.imgur.com/49CWlbF.jpg",
-          alcoholic: false,
-          description: "",
-        },
-        quantity: 100.0,
-        units: "ml",
-      },
-      {
-        id: 2,
-        rawIngredient: {
-          id: 2,
-          name: "Ground Espresso",
-          image: "https://i.imgur.com/KhZQ9Oq.jpg",
-          alcoholic: false,
-          description: "",
-        },
-        quantity: 18.0,
-        units: "g",
-      },
-    ],
-    instructions: [
-      {
-        id: 1,
-        instruction:
-          "Make around 35ml espresso using your coffee machine and pour into the base of your cup.",
-      },
-      {
-        id: 2,
-        instruction:
-          "Steam the milk with the steamer attachment so that it has around 1-2cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming to pour into the centre. Once the milk jug is almost touching the surface of the coffee, tilt the jug to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top.",
-      },
-    ],
-    video: "https://youtu.be/-50tS3d2Yao",
-  };
 
   return (
     <div className="container mx-auto">
       <Header />
 
       <Routes>
-        <Route element={<Recipes />} path="/" exact component={<Recipes />} />
         <Route
-          element={<RecipeFull selectedRecipe={test_json} />}
-          path="/recipies"
+          element={<Recipes recipes={recipesJson} />}
+          path="/"
+          exact
+          component={<Recipes />}
+        />
+        <Route
+          element={<RecipeFull recipes={recipesJson} />}
+          path="/recipes/:id"
           exact
           component={<RecipeFull />}
         />

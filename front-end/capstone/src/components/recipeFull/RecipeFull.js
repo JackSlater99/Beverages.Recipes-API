@@ -1,35 +1,34 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Ratings from "../elements/Ratings";
 
-const RecipeFull = ({selectedRecipe}) => {
+const RecipeFull = ({ recipes }) => {
+  const { id } = useParams();
+  const recipe = recipes.find((currentRecipe) => currentRecipe.id == id);
 
-    console.log(selectedRecipe)
+  if (!recipe) {
+    return "Recipe not found";
+  }
 
-    return (
-        <main className="min-h-screen bg-green-100">
-            <h2>{selectedRecipe.name}</h2>
+  return (
+    <main className="min-h-screen bg-green-100">
+      <h2>{recipe.name}</h2>
 
-            <div className="flex">
-                <div>
-                    <img src={selectedRecipe.image} alt={selectedRecipe.name} />
-                </div>
+      <div className="flex">
+        <div>
+          <img src={recipe.image} alt={recipe.name} />
+        </div>
 
-                <div>
-                    <div className="STATSBAR">
-                        {selectedRecipe.type}
-                        {selectedRecipe.prepTime}
-                        {selectedRecipe.difficulty}
-                        <Ratings rating={selectedRecipe.rating} />
-                    </div>
+        <div>
+          <div className="STATSBAR">
+            <Ratings rating={recipe.rating} />
+          </div>
+        </div>
+      </div>
 
-                    
-                </div>
-
-            </div>
-
-            <h3></h3>
-        </main>
-        )
-}
+      <h3></h3>
+    </main>
+  );
+};
 
 export default RecipeFull;

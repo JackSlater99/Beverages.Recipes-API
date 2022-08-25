@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 import RecipeCard from "./RecipeCard";
 
-const Recipes = () => {
-  const apiUrl = "http://localhost:8080/api/recipes";
+const Recipes = ({ recipes }) => {
+  // const apiUrl = "http://localhost:8080/api/recipes";
 
-  const [recipesJson, setRecipesJson] = useState([]);
+  // const [recipesJson, setRecipesJson] = useState([]);
 
-  const getAllRecipes = async () => {
-    const resp = await fetch(apiUrl);
-    const data = await resp.json();
-    setRecipesJson(data);
-  };
+  // const getAllRecipes = async () => {
+  //   const resp = await fetch(apiUrl);
+  //   const data = await resp.json();
+  //   setRecipesJson(data);
+  // };
 
-  useEffect(() => {
-    getAllRecipes();
-  }, []);
+  // useEffect(() => {
+  //   getAllRecipes();
+  // }, []);
 
-  console.log(recipesJson);
+  // console.log(recipesJson);
 
-  const cardNodes = recipesJson.map((recipe) => {
+  const cardNodes = recipes.map((recipe) => {
     return <RecipeCard recipe={recipe} key={recipe.id} />;
   });
 

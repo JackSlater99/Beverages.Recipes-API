@@ -16,8 +16,8 @@ const RecipeCard = ({ recipe }) => {
       <Ratings rating={parseInt(recipe.rating)} />
       <p>Difficulty: {recipe.difficulty}</p>
       <p>Prep time: {recipe.prepTime}</p>
-      <Link to="/recipies" recipe={recipe}>
-        To see
+      <Link to={{ pathname: `/recipes/${recipe.id}` }} recipe={recipe}>
+        Click to see full recipe
       </Link>
       <YouTubeLink videoLink={recipe.video} title={recipe.name} />
     </article>
