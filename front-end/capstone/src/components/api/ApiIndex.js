@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import ApiSelect from "./ApiSelect";
 import JsonView from "./JsonView";
 
@@ -7,32 +7,32 @@ const ApiIndex = () => {
     const endPoints = [
         { 
             id: 1,
-            title: "Recipies Index",
-            description: "Get all recipies as an array of Objects.",
-            endPointUrl: "http://javaBackEnd:3000/recipies",
+            title: "Recipes Index",
+            description: "Get all recipes as an array of Objects.",
+            endPointUrl: "http://localhost:8080/api/recipes",
         },
         { 
             id: 2,
-            title: "Recipies Show",
+            title: "Recipes Show",
             description: "Get a single recipe by (id, name).",
-            endPointUrl: "http://javaBackEnd:3000/recipies/id",
+            endPointUrl: "http://localhost:8080/recipes/id",
         }, 
         { 
             id: 3,
-            title: "Recipies Create",
+            title: "Recipes Create",
             description: "Create a single recipe by (id, name).",
-            endPointUrl: "http://javaBackEnd:3000/recipiesCREATE",
+            endPointUrl: "http://localhost:8080/recipesCREATE",
         }
     ]
 
 
-
+    const [jsonData, setJsonData] = useState({});
 
     const [selectedOption, setSelectedOption] = useState({ 
         id: 1,
-        title: "Recipies Index",
-        description: "Get all recipies as an array of Objects.",
-        endPointUrl: "http://javaBackEnd:3000/recipies",
+        title: "Recipes Index",
+        description: "Get all recipes as an array of Objects.",
+        endPointUrl: "http://localhost:8080/api/recipes",
     });
 
 
@@ -77,22 +77,31 @@ const ApiIndex = () => {
             setSelectedOption(selectedEndPoint);
         }
 
-        const makeFetchRequest = (event) => {
-            console.log(selectedOption.endPointUrl);
+        const makeFetchRequest = async (event) => {
+            console.log(selectedOption.endPointUrl, {});
+            const resp = await fetch(selectedOption.endPointUrl);
+            const jsonData = await resp.json();
+            console.log(jsonData);
+            setJsonData(jsonData);
         }
 
+
+        useEffect ( () => {
+            makeFetchRequest();
+        }
+        , []);
 
     return (
         <main className="flex">
 
-            <section className="p-4 w-2/3">
+            <section className="p-4 w-1/2">
                 <div className="pb-8">
                     <ApiSelect endPoints={endPoints} onSelectionChange={onSelectChange} />
                 </div>
 
                 <div>
                     <h2 className="text-lg font-semibold">{selectedOption.title}</h2>
-                    <input className="w-full border-solid border-2 border-gray-500" type="text" value={selectedOption.endPointUrl} />
+                    <input readOnly className="w-full border-solid border-2 border-gray-500" type="text" value={selectedOption.endPointUrl} />
 
                     
                     <p className="mt-8 " >{selectedOption.description}</p>
@@ -102,8 +111,8 @@ const ApiIndex = () => {
             </section>
 
 
-            <section className="max-w-3x1">
-                <JsonView jsonApiData={test_json} />
+            <section className="w-1/2">
+                <JsonView jsonApiData={jsonData} />
             </section>
         </main>
     )
