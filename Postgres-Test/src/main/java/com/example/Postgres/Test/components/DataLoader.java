@@ -110,7 +110,7 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/vWWmMbP.jpg",
                 "Easy",
                 3,
-                "https://youtu.be/-50tS3d2Yao"
+                "https://www.youtube.com/embed/-50tS3d2Yao"
         );
 
         flatWhite.addIngredients(coffeeIngredient1);
