@@ -16,6 +16,7 @@ import ApiIndex from "../components/api/ApiIndex";
 import Profile from "../components/AuthComponents/Profile";
 import Loading from "../components/AuthComponents/Loading";
 import ProtectedRoute from "../auth/protected-route";
+import BackToTopButton from "../components/Scroll/BackToTopButton";
 
 const MainContainer = () => {
   const { isLoading } = useAuth0();
@@ -58,6 +59,7 @@ const MainContainer = () => {
         <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
         <Route element={<Profile />} path="/profile" component={<Profile />} />
       </Routes>
+      <BackToTopButton />
 
       <Footer />
     </div>
