@@ -107,7 +107,7 @@ public class DataLoader implements ApplicationRunner {
                 true,
                 "Coffee",
                 0,
-                "https://i.imgur.com/vWWmMbP.jpg",
+                "https://i.imgur.com/u0uNgqi.jpg",
                 "Easy",
                 3,
                 "https://www.youtube.com/embed/-50tS3d2Yao"
@@ -128,7 +128,7 @@ public class DataLoader implements ApplicationRunner {
                 true,
                 "Coffee",
                 0,
-                "https://i.imgur.com/jiN9sSV.jpg",
+                "https://i.imgur.com/l8YPCim.jpg",
                 "Medium",
                 3,
                 "https://www.youtube.com/embed/g86JjlpegIM"
@@ -149,7 +149,7 @@ public class DataLoader implements ApplicationRunner {
                 true,
                 "Coffee",
                 0,
-                "https://i.imgur.com/Jd3ZoNB.jpg",
+                "https://i.imgur.com/Gglcd3D.jpg",
                 "Easy",
                 3,
                 "https://youtu.be/gvPetTPFsZM"
@@ -169,7 +169,7 @@ public class DataLoader implements ApplicationRunner {
                 true,
                 "Coffee",
                 0,
-                "https://i.imgur.com/Rdj5vLW.jpg",
+                "https://i.imgur.com/VtuKUEa.jpg",
                 "Easy",
                 3,
                 "https://www.youtube.com/embed/0PN0MwTcbxI"
@@ -189,7 +189,7 @@ public class DataLoader implements ApplicationRunner {
                 true,
                 "Coffee",
                 0,
-                "https://i.imgur.com/jgo6ZIj.jpg",
+                "https://i.imgur.com/aUGAqRN.jpg",
                 "Easy",
                 5,
                 "https://www.youtube.com/embed/U4WJ7Ljy4K0"
@@ -258,7 +258,7 @@ public class DataLoader implements ApplicationRunner {
                 true,
                 "Mocktail",
                 0,
-                "https://i.imgur.com/LVEsTHr.jpg",
+                "https://i.imgur.com/bGRaRHA.jpg",
                 "Easy",
                 5,
                 "https://www.youtube.com/embed/5DW0t34Lr5Y");
@@ -286,7 +286,7 @@ public class DataLoader implements ApplicationRunner {
             true,
             "Martini",
             0,
-            "https://i.imgur.com/tVGxjvs.jpg",
+            "https://i.imgur.com/cKCXoJj.jpg",
             "Easy",
             5,
             "https://www.youtube.com/embed/n5RNgIUtPv0"
@@ -316,7 +316,7 @@ public class DataLoader implements ApplicationRunner {
                 true,
                 "Martini",
                 0,
-                "https://i.imgur.com/y3FcfYI.jpg",
+                "https://i.imgur.com/vwdoYKl.jpg",
                 "Easy",
                 5,
                 "https://www.youtube.com/embed/TnkMtoDNgxE"
@@ -345,7 +345,7 @@ public class DataLoader implements ApplicationRunner {
                 true,
                 "Martini",
                 0,
-                "https://i.imgur.com/1U8RON7.jpg",
+                "https://i.imgur.com/CqoVEws.jpg",
                 "Easy",
                 5,
                 "https://www.youtube.com/embed/3GZH-qgsybI"
@@ -377,7 +377,7 @@ public class DataLoader implements ApplicationRunner {
                 true,
                 "Cocktail",
                 0,
-                "https://i.imgur.com/Yv1of36.jpg",
+                "https://i.imgur.com/ez3w2Lk.jpg",
                 "Easy",
                 5,
                 "https://www.youtube.com/embed/7EHeAe_QZK8"
