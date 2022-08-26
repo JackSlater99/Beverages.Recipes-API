@@ -1,35 +1,56 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Ratings from "../elements/Ratings";
+import RecipesIngredients from "../recipes/RecipeIngredients";
+import RecipesInstruction from "../recipes/RecipesInstruction";
+import YouTubeLink from "../elements/YouTubeLink";
 
-const RecipeFull = ({selectedRecipe}) => {
+const RecipeFull = ({ recipes }) => {
+  const { id } = useParams();
+  const recipe = recipes.find((currentRecipe) => currentRecipe.id == id);
 
-    console.log(selectedRecipe)
+  if (!recipe) {
+    return "Recipe not found";
+  }
 
-    return (
-        <main className="min-h-screen bg-green-100">
-            <h2>{selectedRecipe.name}</h2>
-
-            <div className="flex">
-                <div>
-                    <img src={selectedRecipe.image} alt={selectedRecipe.name} />
-                </div>
-
-                <div>
-                    <div className="STATSBAR">
-                        {selectedRecipe.type}
-                        {selectedRecipe.prepTime}
-                        {selectedRecipe.difficulty}
-                        <Ratings rating={selectedRecipe.rating} />
-                    </div>
-
-                    
-                </div>
-
-            </div>
-
-            <h3></h3>
-        </main>
-        )
-}
+  return (
+    <main className="bg-green-100">
+      <div className="grid grid-cols-2 gap-4 p-6">
+        <div className="flex items-center justify-center">
+          <img
+            src={recipe.image}
+            alt={recipe.name}
+            className="max-w-md rounded"
+          />
+        </div>
+        <div className="p-4">
+          <h1 className="text-center">{recipe.name}</h1>
+          <Ratings rating={recipe.rating} />
+          <p>
+            <span className="font-bold">Type of Drink:</span> {recipe.type}
+          </p>
+          <p>
+            <span className="font-bold">Difficulty:</span> {recipe.difficulty}
+          </p>
+          <p>
+            <span className="font-bold">Prep Time: </span>
+            {recipe.prepTime} minutes
+          </p>
+          <p>
+            <YouTubeLink videoLink={recipe.video} title={recipe.name} />
+          </p>
+          <p>
+            <span className="font-bold">Ingredients:</span>
+            <RecipesIngredients ingredients={recipe.ingredients} />
+          </p>
+          <p>
+            <span className="font-bold">Instructions:</span>
+            <RecipesInstruction instructions={recipe.instructions} />
+          </p>
+        </div>
+      </div>
+    </main>
+  );
+};
 
 export default RecipeFull;

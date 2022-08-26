@@ -1,12 +1,14 @@
 import React from "react";
 
 const YouTubeLink = ({ videoLink, title }) => {
+  console.log({ videoLink });
   return (
-    <div>
-      <a className="flex items-center m-4" href={videoLink}>
-        <img src="https://via.placeholder.com/32" alt={title} />
-        <span>You Tube</span>
-      </a>
+    <div className="aspect-w-16 aspect-h-9">
+      <iframe
+        src={videoLink}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 };
