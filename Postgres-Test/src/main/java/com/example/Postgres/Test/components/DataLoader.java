@@ -131,7 +131,7 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/jiN9sSV.jpg",
                 "Medium",
                 3,
-                "https://youtu.be/g86JjlpegIM"
+                "https://www.youtube.com/embed/g86JjlpegIM"
         );
 
         mocha.addIngredients(coffeeIngredient2);
@@ -172,7 +172,7 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/Rdj5vLW.jpg",
                 "Easy",
                 3,
-                "https://youtu.be/0PN0MwTcbxI"
+                "https://www.youtube.com/embed/0PN0MwTcbxI"
         );
 
         latte.addIngredients(coffeeIngredient2);
@@ -192,7 +192,7 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/jgo6ZIj.jpg",
                 "Easy",
                 5,
-                "https://youtu.be/U4WJ7Ljy4K0"
+                "https://www.youtube.com/embed/U4WJ7Ljy4K0"
         );
 
         espressoMartini.addIngredients(coffeeIngredient6);
@@ -229,7 +229,7 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/zFrmj7z.jpg",
                 "Easy",
                 5,
-                "https://youtu.be/FXR_gyXlCVs"
+                "https://www.youtube.com/embed/FXR_gyXlCVs"
         );
 
         summerCupMocktail.addIngredients(summerCupMocktailIngredient1);
@@ -261,7 +261,7 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/LVEsTHr.jpg",
                 "Easy",
                 5,
-                "https://youtu.be/5DW0t34Lr5Y");
+                "https://www.youtube.com/embed/5DW0t34Lr5Y");
 
         virginMojito.addIngredients(virginMojitoIngredient1);
         virginMojito.addIngredients(virginMojitoIngredient2);
@@ -289,7 +289,7 @@ public class DataLoader implements ApplicationRunner {
             "https://i.imgur.com/tVGxjvs.jpg",
             "Easy",
             5,
-            "https://youtu.be/n5RNgIUtPv0"
+            "https://www.youtube.com/embed/n5RNgIUtPv0"
     );
 
         vodkaMartini.addIngredients(martiniIngredient1);
@@ -319,7 +319,7 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/y3FcfYI.jpg",
                 "Easy",
                 5,
-                "https://youtu.be/TnkMtoDNgxE"
+                "https://www.youtube.com/embed/TnkMtoDNgxE"
         );
 
         cosmopolitan.addIngredients(martiniIngredient3);
@@ -348,7 +348,7 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/1U8RON7.jpg",
                 "Easy",
                 5,
-                "https://youtu.be/3GZH-qgsybI"
+                "https://www.youtube.com/embed/3GZH-qgsybI"
         );
 
         dirtyMartini.addIngredients(martiniIngredient7);
@@ -380,7 +380,7 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/Yv1of36.jpg",
                 "Easy",
                 5,
-                "https://youtu.be/7EHeAe_QZK8"
+                "https://www.youtube.com/embed/7EHeAe_QZK8"
         );
 
         classicShandy.addIngredients(classicShandyIngredient1);
