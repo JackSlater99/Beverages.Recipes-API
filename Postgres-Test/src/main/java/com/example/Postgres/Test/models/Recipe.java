@@ -28,8 +28,8 @@ public class Recipe {
     @Column(name = "type")
     private String type;
 
-    @Column(name = "rating")
-    private double rating;
+//    @Column(name = "rating")
+//    private double rating;
 
     @Column(name = "image")
     private String image;
@@ -54,20 +54,24 @@ public class Recipe {
     @JsonIgnoreProperties({"recipe"})
     private List<Instructions> instructions;
 
+    @OneToMany(mappedBy = "recipe", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"recipe"})
+    private double rating;
+
     @Column(name = "video")
     private String video;
 
-    public Recipe(String name, String author, Boolean approved, String type, double rating, String image, String difficulty, int prepTime, String video) {
+    public Recipe(String name, String author, Boolean approved, String type, String image, String difficulty, int prepTime, String video) {
         this.name = name;
         this.author = author;
         this.approved = approved;
         this.type = type;
-        this.rating = rating;
         this.image = image;
         this.difficulty = difficulty;
         this.prepTime = prepTime;
         this.ingredients = new ArrayList<RecipeIngredient>();
         this.instructions = new ArrayList<Instructions>();
+        this.rating = 0.0;
         this.video = video;
     }
 
@@ -98,12 +102,20 @@ public class Recipe {
         this.type = type;
     }
 
-    public double getRating() {
-        return rating;
+//    public double getRating() {
+//        return rating;
+//    }
+//
+//    public void setRating(double rating) {
+//        this.rating = rating;
+//    }
+
+    public List<Reviews> getRatings() {
+        return ratings;
     }
 
-    public void setRating(double rating) {
-        this.rating = rating;
+    public void setRatings(List<Reviews> ratings) {
+        this.ratings = ratings;
     }
 
     public String getImage() {
@@ -173,4 +185,6 @@ public class Recipe {
     public void setApproved(Boolean approved) {
         this.approved = approved;
     }
+
+
 }
