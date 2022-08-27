@@ -30,7 +30,13 @@ public class Recipe {
 
     @Column(name = "rating")
     private double rating;
-    
+
+    @Column(name = "number_of_ratings")
+    private int numberOfRatings;
+
+    @Column(name = "accumulated_rating")
+    private double accumulatedRating;
+
     @Column(name = "image")
     private String image;
 
@@ -57,11 +63,6 @@ public class Recipe {
     @Column(name = "video")
     private String video;
 
-    @Column(name = "number_of_ratings")
-    private int numberOfRatings;
-
-    @Column(name = "accumulated_rating")
-    private double accumulatedRating;
 
     public Recipe(String name, String author, Boolean approved, String type, String image, String difficulty, int prepTime, String video) {
         this.name = name;
@@ -74,8 +75,9 @@ public class Recipe {
         this.ingredients = new ArrayList<RecipeIngredient>();
         this.instructions = new ArrayList<Instructions>();
         this.video = video;
-        this.numberOfRatings = 0;
-        this.accumulatedRating = 0.00;
+        this.numberOfRatings = 3;
+        this.accumulatedRating = 15.00;
+        this.rating = 0.0;
     }
 
     public Recipe() {
@@ -122,15 +124,12 @@ public class Recipe {
     }
 
     public double getRating() {
-        int ratingAverage = (int) Math.round(getRating() / getNumberOfRatings());
-        return ratingAverage;
+//
+        return this.calculateAverage();
     }
 
     public void setRating(double rating) {
         this.rating = rating;
-//        get current number of ratings
-//        get current accumulated value of ratings
-//        calculateAverage
     }
 
     public int calculateAverage(){
