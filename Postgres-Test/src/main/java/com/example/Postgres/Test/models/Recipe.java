@@ -54,12 +54,18 @@ public class Recipe {
     @JsonIgnoreProperties({"recipe"})
     private List<Instructions> instructions;
 
-    @OneToMany(mappedBy = "recipe", fetch = FetchType.LAZY)
-    @JsonIgnoreProperties({"recipe"})
-    private double rating;
+//    @OneToMany(mappedBy = "recipe", fetch = FetchType.LAZY)
+//    @JsonIgnoreProperties({"recipe"})
+//    private Reviews rating;
 
     @Column(name = "video")
     private String video;
+
+    @Column(name = "number_of_ratings")
+    private int numberOfRatings;
+
+    @Column(name = "accumulated_rating")
+    private double accumulatedRating;
 
     public Recipe(String name, String author, Boolean approved, String type, String image, String difficulty, int prepTime, String video) {
         this.name = name;
@@ -71,8 +77,9 @@ public class Recipe {
         this.prepTime = prepTime;
         this.ingredients = new ArrayList<RecipeIngredient>();
         this.instructions = new ArrayList<Instructions>();
-        this.rating = 0.0;
         this.video = video;
+        this.numberOfRatings = 0;
+        this.accumulatedRating = 0.00;
     }
 
     public Recipe() {
@@ -102,20 +109,25 @@ public class Recipe {
         this.type = type;
     }
 
-//    public double getRating() {
-//        return rating;
-//    }
-//
-//    public void setRating(double rating) {
-//        this.rating = rating;
-//    }
-
-    public List<Reviews> getRatings() {
-        return ratings;
+    public int getNumberOfRatings() {
+        return numberOfRatings;
     }
 
-    public void setRatings(List<Reviews> ratings) {
-        this.ratings = ratings;
+    public void setNumberOfRatings(int numberOfRatings) {
+        this.numberOfRatings = numberOfRatings;
+    }
+
+    public double getAccumulatedRating() {
+        return accumulatedRating;
+    }
+
+    public void setAccumulatedRating(double accumulatedRating) {
+        this.accumulatedRating = accumulatedRating;
+    }
+
+    public int calculateAverage(){
+        int ratingAverage = (int) Math.round(getAccumulatedRating() / getNumberOfRatings());
+        return ratingAverage;
     }
 
     public String getImage() {
@@ -185,6 +197,7 @@ public class Recipe {
     public void setApproved(Boolean approved) {
         this.approved = approved;
     }
+
 
 
 }
