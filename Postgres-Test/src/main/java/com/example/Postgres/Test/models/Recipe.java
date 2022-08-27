@@ -28,9 +28,9 @@ public class Recipe {
     @Column(name = "type")
     private String type;
 
-//    @Column(name = "rating")
-//    private double rating;
-
+    @Column(name = "rating")
+    private double rating;
+    
     @Column(name = "image")
     private String image;
 
@@ -53,10 +53,6 @@ public class Recipe {
     @OneToMany(mappedBy = "recipe", fetch = FetchType.LAZY)
     @JsonIgnoreProperties({"recipe"})
     private List<Instructions> instructions;
-
-//    @OneToMany(mappedBy = "recipe", fetch = FetchType.LAZY)
-//    @JsonIgnoreProperties({"recipe"})
-//    private Reviews rating;
 
     @Column(name = "video")
     private String video;
@@ -123,6 +119,18 @@ public class Recipe {
 
     public void setAccumulatedRating(double accumulatedRating) {
         this.accumulatedRating = accumulatedRating;
+    }
+
+    public double getRating() {
+        int ratingAverage = (int) Math.round(getRating() / getNumberOfRatings());
+        return ratingAverage;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+//        get current number of ratings
+//        get current accumulated value of ratings
+//        calculateAverage
     }
 
     public int calculateAverage(){
