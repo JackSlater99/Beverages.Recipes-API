@@ -1,3 +1,13 @@
+:root {
+  --default-font: "Poppins", sans-serif;
+  --branding-colour: #26303c;
+  --secondary-colour: #fff;
+}
+
+body {
+  font-family: var(--default-font);
+}
+
 .App {
   text-align: center;
 }
