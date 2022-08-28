@@ -16,6 +16,7 @@ import ApiIndex from "../components/api/ApiIndex";
 import Profile from "../components/AuthComponents/Profile";
 import Loading from "../components/AuthComponents/Loading";
 import ProtectedRoute from "../auth/protected-route";
+import Ingredients from "../components/ingredients/Ingredients";
 
 const MainContainer = () => {
   const { isLoading } = useAuth0();
@@ -29,6 +30,8 @@ const MainContainer = () => {
     const data = await resp.json();
     setRecipesJson(data);
   };
+
+  
 
   useEffect(() => {
     getAllRecipes();
@@ -55,6 +58,13 @@ const MainContainer = () => {
           exact
           component={<RecipeFull />}
         />
+         <Route 
+          element={<Ingredients />} 
+          path="/ingredients"
+          exact 
+          component={<Ingredients />} 
+          />
+            
         <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
         <Route element={<Profile />} path="/profile" component={<Profile />} />
       </Routes>

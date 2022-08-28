@@ -15,6 +15,9 @@ const NavBar = () => {
           <Link to="/recipies">RecipesFull</Link>
         </li>
         <li>
+          <Link to="/ingredients">Ingredients</Link>
+        </li>
+        <li>
           <Link to="/api">API</Link>
         </li>
         <li>
