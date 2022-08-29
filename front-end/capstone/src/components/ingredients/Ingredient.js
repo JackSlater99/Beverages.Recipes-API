@@ -37,7 +37,7 @@ const Ingredient = ({ ingredients, recipes }) => {
     return(
         <>
             <p>{foundIngredient.name}</p> 
-            
+            <p>{foundIngredient.recipe}</p>
         </>    
             
     )
