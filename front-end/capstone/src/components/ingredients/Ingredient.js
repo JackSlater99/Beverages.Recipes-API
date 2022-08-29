@@ -5,11 +5,41 @@ const Ingredient = ({ ingredients, recipes }) => {
 
     const {id} = useParams();
 
-    const ingredient = ingredients.find((currentIngredient) => currentIngredient.id === parseInt(id))
+    const foundIngredient = ingredients.find((currentIngredient) => { 
+            // console.log(currentIngredient.id);
+            return currentIngredient.id === parseInt(id);
+        }); 
+    // we need to compare every rawIngredient id to the recpies. 
 
+
+    const recipesWithIngredient = [];
+
+    for (let recipe of recipes){
+        for (let ingredient of recipe.ingredients){
+            if(ingredient.id === foundIngredient.id){
+                recipesWithIngredient.push(recipe);
+            }
+        }
+    }
+
+    // const recipesWithIngredient = recipes.map( (recipe) => {
+    //     return recipe.ingredients.filter((ingredient) => {
+    //         console.log(foundIngredient) ;
+    //         return  ingredient.rawIngredient.id === foundIngredient.id;
+
+    //     });
+    // });
+
+
+
+    console.log(recipesWithIngredient);
     
     return(
-            <p>{ingredient.name}</p>     
+        <>
+            <p>{foundIngredient.name}</p> 
+            
+        </>    
+            
     )
 }
 
