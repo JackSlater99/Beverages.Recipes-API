@@ -47,16 +47,14 @@ const MainContainer = () => {
           element={<Recipes recipes={recipesJson} />}
           path="/"
           exact
-          component={<Recipes />}
         />
         <Route
           element={<RecipeFull recipes={recipesJson} />}
           path="/recipes/:id"
           exact
-          component={<RecipeFull />}
         />
-        <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
-        <Route element={<Profile />} path="/profile" component={<Profile />} />
+        <Route element={<ApiIndex />} path="/api" />
+        <Route element={<Profile />} path="/profile" />
       </Routes>
 
       <Footer />
