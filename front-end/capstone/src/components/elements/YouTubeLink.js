@@ -1,7 +1,6 @@
 import React from "react";
 
 const YouTubeLink = ({ videoLink, title }) => {
-  console.log({ videoLink });
   return (
     <div className="aspect-w-16 aspect-h-9">
       <iframe

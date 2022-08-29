@@ -6,7 +6,6 @@ const Profile = () => {
   const { user } = useAuth0();
   const { name, picture, email } = user;
 
-  console.log(picture)
 
   return (
     <div>
