@@ -31,10 +31,22 @@ const MainContainer = () => {
     setRecipesJson(data);
   };
 
-  
-
   useEffect(() => {
     getAllRecipes();
+  }, []);
+
+  const apiUrl2 = "http://localhost:8080/api/ingredients";
+
+  const [ingredientsJson, setIngredientsJson] = useState([]);
+
+  const getAllIngredients = async () => {
+    const resp = await fetch(apiUrl2);
+    const data = await resp.json();
+    setIngredientsJson(data);
+  };
+
+  useEffect(() => {
+    getAllIngredients();
   }, []);
 
   if (isLoading) {
@@ -59,7 +71,7 @@ const MainContainer = () => {
           component={<RecipeFull />}
         />
          <Route 
-          element={<Ingredients />} 
+          element={<Ingredients ingredients={ingredientsJson}/>} 
           path="/ingredients"
           exact 
           component={<Ingredients />} 
