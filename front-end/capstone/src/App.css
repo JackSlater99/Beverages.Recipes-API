@@ -1,7 +1,9 @@
 :root {
   --default-font: "Poppins", sans-serif;
-  --branding-colour: #26303c;
-  --secondary-colour: #3c4550;
+  --branding-colour: #233142;
+  --secondary-colour: #455d7a;
+  --third-colour: #f95959;
+  --fourth-colour: #e3e3e3;
 }
 
 body {
@@ -26,7 +28,7 @@ a::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #e06488;
+  background-color: var(--third-colour);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
