@@ -1,11 +1,38 @@
 :root {
   --default-font: "Poppins", sans-serif;
   --branding-colour: #26303c;
-  --secondary-colour: #fff;
+  --secondary-colour: #3c4550;
 }
 
 body {
   font-family: var(--default-font);
+}
+
+a {
+  color: var(--branding-colour);
+  position: relative;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-colour);
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #e06488;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a:hover::before {
+  transform: scaleX(1);
 }
 
 .App {
