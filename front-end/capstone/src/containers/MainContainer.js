@@ -17,6 +17,7 @@ import Profile from "../components/AuthComponents/Profile";
 import Loading from "../components/AuthComponents/Loading";
 import ProtectedRoute from "../auth/protected-route";
 import Ingredients from "../components/ingredients/Ingredients";
+import Ingredient from "../components/ingredients/Ingredient";
 
 const MainContainer = () => {
   const { isLoading } = useAuth0();
@@ -75,6 +76,12 @@ const MainContainer = () => {
           path="/ingredients"
           exact 
           component={<Ingredients />} 
+          />
+         <Route 
+          element={<Ingredient recipes={recipesJson} ingredients={ingredientsJson}/>} 
+          path="/ingredients/:id"
+          exact 
+          component={<Ingredient />} 
           />
             
         <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />

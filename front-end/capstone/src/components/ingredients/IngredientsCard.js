@@ -12,7 +12,7 @@ const IngredientsCard = ({ingredient}) => {
       <p>{ingredient.alchoholic}</p>
       <p>{ingredient.description}</p>
       <img className="w-48" src={ingredient.image} alt={ingredient.name} />
-      <Link to={{ pathname: `/ingredients/${ingredient.id}` }} ingredient={ingredient} component={<Ingredient />} >
+      <Link to={{ pathname: `/ingredients/${ingredient.id}` }} ingredient={ingredient} element={<Ingredient />} >
         Click to see where this ingredient is used
       </Link>
       

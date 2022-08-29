@@ -1,8 +1,15 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
-const Ingredient = () => {
+const Ingredient = ({ ingredients, recipes }) => {
+
+    const {id} = useParams();
+
+    const ingredient = ingredients.find((currentIngredient) => currentIngredient.id === parseInt(id))
+
+    
     return(
-        <h1>Ingredient Single</h1>
+            <p>{ingredient.name}</p>     
     )
 }
 
