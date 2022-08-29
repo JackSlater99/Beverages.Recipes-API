@@ -20,7 +20,6 @@ import Ingredients from "../components/ingredients/Ingredients";
 import Ingredient from "../components/ingredients/Ingredient";
 import BackToTopButton from "../components/Scroll/BackToTopButton";
 
-
 const MainContainer = () => {
   const { isLoading } = useAuth0();
 
@@ -57,42 +56,48 @@ const MainContainer = () => {
   }
 
   return (
-    <div className="container mx-auto">
+    <div className="MainContainer">
       <Header />
-
-      <Routes>
-        <Route
-          element={<Recipes recipes={recipesJson} />}
-          path="/"
-          exact
-          component={<Recipes />}
-        />
-        <Route
-          element={
-            <RecipeFull recipes={recipesJson} getAllRecipes={getAllRecipes} />
-          }
-          path="/recipes/:id"
-          exact
-          component={<RecipeFull />}
-        />
-         <Route 
-          element={<Ingredients ingredients={ingredientsJson}/>} 
-          path="/ingredients"
-          exact 
-          component={<Ingredients />} 
+      <div className="container mx-auto">
+        <Routes>
+          <Route
+            element={<Recipes recipes={recipesJson} />}
+            path="/"
+            exact
+            component={<Recipes />}
           />
-         <Route 
-          element={<Ingredient recipes={recipesJson} ingredients={ingredientsJson}/>} 
-          path="/ingredients/:id"
-          exact 
-          component={<Ingredient />} 
+          <Route
+            element={
+              <RecipeFull recipes={recipesJson} getAllRecipes={getAllRecipes} />
+            }
+            path="/recipes/:id"
+            exact
+            component={<RecipeFull />}
           />
-            
-        <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
-        <Route element={<Profile />} path="/profile" component={<Profile />} />
-      </Routes>
-      <BackToTopButton />
+          <Route
+            element={<Ingredients ingredients={ingredientsJson} />}
+            path="/ingredients"
+            exact
+            component={<Ingredients />}
+          />
+          <Route
+            element={
+              <Ingredient recipes={recipesJson} ingredients={ingredientsJson} />
+            }
+            path="/ingredients/:id"
+            exact
+            component={<Ingredient />}
+          />
 
+          <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
+          <Route
+            element={<Profile />}
+            path="/profile"
+            component={<Profile />}
+          />
+        </Routes>
+        <BackToTopButton />
+      </div>
       <Footer />
     </div>
   );
