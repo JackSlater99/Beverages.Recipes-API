@@ -6,7 +6,6 @@ import RecipeFull from "../recipeFull/RecipeFull";
 import RecipesInstruction from "./RecipesInstruction";
 
 const RecipeCard = ({ recipe }) => {
-
   return (
     <article className="bg-blue-200 grid place-items-center pb-6">
       <h2>{recipe.name}</h2>

@@ -17,6 +17,7 @@ const NavBar = () => {
         <Menu styling={styling}>
             <MenuLink to='/'>Home</MenuLink>
             <MenuLink to='/recipes'>Recipes</MenuLink>
+            <MenuLink to='/Ingredients'>Ingredients</MenuLink>
             <MenuLink to='/api'>API</MenuLink>
             <MenuLink to='/about'>About</MenuLink>
         </Menu>
