@@ -37,6 +37,10 @@ a:hover::before {
   transform: scaleX(1);
 }
 
+input[type="radio"] {
+  display: none;
+}
+
 .App {
   text-align: center;
 }

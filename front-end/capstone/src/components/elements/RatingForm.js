@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { useParams } from "react-router-dom";
+import "./Rating.css";
 
 const RatingForm = ({ recipes, getAllRecipes }) => {
   const { id } = useParams();

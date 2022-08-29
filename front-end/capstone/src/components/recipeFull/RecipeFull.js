@@ -17,15 +17,13 @@ const RecipeFull = ({ recipes, getAllRecipes }) => {
   return (
     <main className="bg-green-100">
       <div className="grid grid-cols-2 gap-4 p-6">
-        <div className="flex items-center justify-center">
+        <div>
+          <h1 className="text-center">{recipe.name}</h1>
           <img
             src={recipe.image}
             alt={recipe.name}
             className="max-w-md rounded"
           />
-        </div>
-        <div className="p-4">
-          <h1 className="text-center">{recipe.name}</h1>
           <Ratings recipe={recipe} />
           <p>
             <span className="font-bold">Type of Drink:</span> {recipe.type}
@@ -37,6 +35,8 @@ const RecipeFull = ({ recipes, getAllRecipes }) => {
             <span className="font-bold">Prep Time: </span>
             {recipe.prepTime} minutes
           </p>
+        </div>
+        <div className="p-4">
           <p>
             <YouTubeLink videoLink={recipe.video} title={recipe.name} />
           </p>
