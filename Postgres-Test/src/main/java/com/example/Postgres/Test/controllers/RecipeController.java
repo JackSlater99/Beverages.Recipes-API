@@ -45,6 +45,11 @@ public class RecipeController {
         return new ResponseEntity(recipeRepository.findDistinctByIngredientsRawIngredientAlcoholicIsTrue(), HttpStatus.OK);
     }
 
+    @GetMapping(value="/recipes/search/{name}")
+    public ResponseEntity<Recipe> getRecipeId(@PathVariable String name) {
+        return new ResponseEntity(recipeRepository.findIdByNameIgnoreCase(name), HttpStatus.OK);
+    }
+
     @GetMapping(value="/recipes/{id}")
     public ResponseEntity<Recipe> getRecipe(@PathVariable Long id) {
         return new ResponseEntity(recipeRepository.findById(id), HttpStatus.OK);

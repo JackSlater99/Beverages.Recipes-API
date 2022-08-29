@@ -201,7 +201,6 @@ const ApiIndex = () => {
   };
 
   const makeFetchRequest = async (event) => {
-    console.log(selectedOption.endPointUrl, {});
     const resp = await fetch(selectedOption.endPointUrl);
     const jsonData = await resp.json();
     setJsonData(jsonData);
