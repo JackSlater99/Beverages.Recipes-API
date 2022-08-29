@@ -25,7 +25,6 @@ public class RecipeTest {
                 "Jack",
                 true,
                 "Coffee",
-                0,
                 "https://i.imgur.com/vWWmMbP.jpg",
                 "Easy",
                 3,

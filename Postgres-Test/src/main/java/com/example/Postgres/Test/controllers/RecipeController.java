@@ -45,6 +45,11 @@ public class RecipeController {
         return new ResponseEntity(recipeRepository.findDistinctByIngredientsRawIngredientAlcoholicIsTrue(), HttpStatus.OK);
     }
 
+    @GetMapping(value="/recipes/search/{name}")
+    public ResponseEntity<Recipe> getRecipeId(@PathVariable String name) {
+        return new ResponseEntity(recipeRepository.findIdByNameIgnoreCase(name), HttpStatus.OK);
+    }
+
     @GetMapping(value="/recipes/{id}")
     public ResponseEntity<Recipe> getRecipe(@PathVariable Long id) {
         return new ResponseEntity(recipeRepository.findById(id), HttpStatus.OK);
@@ -63,6 +68,8 @@ public class RecipeController {
         recipeToUpdate.setApproved(recipe.getApproved());
         recipeToUpdate.setType(recipe.getType());
         recipeToUpdate.setRating(recipe.getRating());
+        recipeToUpdate.setAccumulatedRating(recipe.getAccumulatedRating());
+        recipeToUpdate.setNumberOfRatings(recipe.getNumberOfRatings());
         recipeToUpdate.setImage(recipe.getImage());
         recipeToUpdate.setDifficulty(recipe.getDifficulty());
         recipeToUpdate.setPrepTime(recipe.getPrepTime());

@@ -18,6 +18,8 @@ import Loading from "../components/AuthComponents/Loading";
 import ProtectedRoute from "../auth/protected-route";
 import Ingredients from "../components/ingredients/Ingredients";
 import Ingredient from "../components/ingredients/Ingredient";
+import BackToTopButton from "../components/Scroll/BackToTopButton";
+
 
 const MainContainer = () => {
   const { isLoading } = useAuth0();
@@ -66,7 +68,9 @@ const MainContainer = () => {
           component={<Recipes />}
         />
         <Route
-          element={<RecipeFull recipes={recipesJson} />}
+          element={
+            <RecipeFull recipes={recipesJson} getAllRecipes={getAllRecipes} />
+          }
           path="/recipes/:id"
           exact
           component={<RecipeFull />}
@@ -87,6 +91,7 @@ const MainContainer = () => {
         <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
         <Route element={<Profile />} path="/profile" component={<Profile />} />
       </Routes>
+      <BackToTopButton />
 
       <Footer />
     </div>

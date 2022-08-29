@@ -31,6 +31,12 @@ public class Recipe {
     @Column(name = "rating")
     private double rating;
 
+    @Column(name = "number_of_ratings")
+    private int numberOfRatings;
+
+    @Column(name = "accumulated_rating")
+    private double accumulatedRating;
+
     @Column(name = "image")
     private String image;
 
@@ -57,19 +63,22 @@ public class Recipe {
     @Column(name = "video")
     private String video;
 
-    public Recipe(String name, String author, Boolean approved, String type, double rating, String image, String difficulty, int prepTime, String video) {
+    public Recipe(String name, String author, Boolean approved, String type, String image, String difficulty, int prepTime, String video) {
         this.name = name;
         this.author = author;
         this.approved = approved;
         this.type = type;
-        this.rating = rating;
         this.image = image;
         this.difficulty = difficulty;
         this.prepTime = prepTime;
         this.ingredients = new ArrayList<RecipeIngredient>();
         this.instructions = new ArrayList<Instructions>();
         this.video = video;
+        this.numberOfRatings = 0;
+        this.accumulatedRating = 0.00;
+        this.rating = 0.0;
     }
+
 
     public Recipe() {
     }
@@ -98,12 +107,34 @@ public class Recipe {
         this.type = type;
     }
 
+    public int getNumberOfRatings() {
+        return numberOfRatings;
+    }
+
+    public void setNumberOfRatings(int numberOfRatings) {
+        this.numberOfRatings = numberOfRatings;
+    }
+
+    public double getAccumulatedRating() {
+        return accumulatedRating;
+    }
+
+    public void setAccumulatedRating(double accumulatedRating) {
+        this.accumulatedRating = accumulatedRating;
+    }
+
     public double getRating() {
-        return rating;
+//
+        return this.calculateAverage();
     }
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    public int calculateAverage(){
+        int ratingAverage = (int) Math.round(getAccumulatedRating() / getNumberOfRatings());
+        return ratingAverage;
     }
 
     public String getImage() {

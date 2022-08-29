@@ -16,6 +16,6 @@ public interface RecipeRepository extends JpaRepository<Recipe, Long> {
     List<Recipe> findAllByAuthorIgnoreCase(String author);
     List<Recipe> findByNameIgnoreCase(String name);
     List<Recipe> findById(long id);
-
+    List<Recipe> findIdByNameIgnoreCase(String name);
     List<Recipe> findDistinctByIngredientsRawIngredientAlcoholicIsTrue();
 }
