@@ -10,8 +10,6 @@ const Ingredient = ({ ingredients, recipes }) => {
     // console.log(currentIngredient.id);
     return currentIngredient.id === parseInt(id);
   });
-  // we need to compare every rawIngredient id to the recpies. 
-
 
   const recipesWithIngredient = [];
 
@@ -26,9 +24,6 @@ const Ingredient = ({ ingredients, recipes }) => {
   const cardNodes = recipesWithIngredient.map((recipe) => {
     return <RecipeCard recipe={recipe} key={recipe.id} />;
   });
-
-
-  console.log(recipesWithIngredient);
 
   return (
     <>
