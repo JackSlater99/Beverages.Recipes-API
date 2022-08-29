@@ -68,6 +68,8 @@ public class RecipeController {
         recipeToUpdate.setApproved(recipe.getApproved());
         recipeToUpdate.setType(recipe.getType());
         recipeToUpdate.setRating(recipe.getRating());
+        recipeToUpdate.setAccumulatedRating(recipe.getAccumulatedRating());
+        recipeToUpdate.setNumberOfRatings(recipe.getNumberOfRatings());
         recipeToUpdate.setImage(recipe.getImage());
         recipeToUpdate.setDifficulty(recipe.getDifficulty());
         recipeToUpdate.setPrepTime(recipe.getPrepTime());

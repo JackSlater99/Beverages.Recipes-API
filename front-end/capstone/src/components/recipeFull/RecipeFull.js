@@ -4,8 +4,9 @@ import Ratings from "../elements/Ratings";
 import RecipesIngredients from "../recipes/RecipeIngredients";
 import RecipesInstruction from "../recipes/RecipesInstruction";
 import YouTubeLink from "../elements/YouTubeLink";
+import RatingForm from "../elements/RatingForm";
 
-const RecipeFull = ({ recipes }) => {
+const RecipeFull = ({ recipes, getAllRecipes }) => {
   const { id } = useParams();
   const recipe = recipes.find((currentRecipe) => currentRecipe.id == id);
 
@@ -25,7 +26,7 @@ const RecipeFull = ({ recipes }) => {
         </div>
         <div className="p-4">
           <h1 className="text-center">{recipe.name}</h1>
-          <Ratings rating={recipe.rating} />
+          <Ratings recipe={recipe} />
           <p>
             <span className="font-bold">Type of Drink:</span> {recipe.type}
           </p>
@@ -46,6 +47,9 @@ const RecipeFull = ({ recipes }) => {
           <p>
             <span className="font-bold">Instructions:</span>
             <RecipesInstruction instructions={recipe.instructions} />
+          </p>
+          <p>
+            <RatingForm recipes={recipes} getAllRecipes={getAllRecipes} />
           </p>
         </div>
       </div>

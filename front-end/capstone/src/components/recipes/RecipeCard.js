@@ -11,7 +11,7 @@ const RecipeCard = ({ recipe }) => {
     <article className="bg-blue-200 grid place-items-center pb-6">
       <h2>{recipe.name}</h2>
       <img className="w-48" src={recipe.image} alt={recipe.name} />
-      <Ratings rating={parseInt(recipe.rating)} />
+      <Ratings recipe={recipe} />
       <span>Difficulty: {recipe.difficulty}</span>
       <span>Prep time: {recipe.prepTime}</span>
       <Link to={{ pathname: `/recipes/${recipe.id}` }} recipe={recipe}>

@@ -51,7 +51,9 @@ const MainContainer = () => {
           component={<Recipes />}
         />
         <Route
-          element={<RecipeFull recipes={recipesJson} />}
+          element={
+            <RecipeFull recipes={recipesJson} getAllRecipes={getAllRecipes} />
+          }
           path="/recipes/:id"
           exact
           component={<RecipeFull />}
