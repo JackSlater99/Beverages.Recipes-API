@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import ApiSelect from "./ApiSelect";
 import JsonView from "./JsonView";
 
-const ApiIndex = () => {
+import "./ApiIndex.css";
 
+const ApiIndex = () => {
   const baseUrl = "http://localhost:8080/api";
 
   const endPoints = [
@@ -14,7 +15,7 @@ const ApiIndex = () => {
       description: "Get all recipes as an array of Objects.",
       endPointUrl: `${baseUrl}/recipes/1`,
       displayUrl: `${baseUrl}/recipes/`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
       id: 2,
@@ -23,162 +24,165 @@ const ApiIndex = () => {
       description: "Get a single recipe by (id, name).",
       endPointUrl: `${baseUrl}/recipes/1`,
       displayUrl: `${baseUrl}/recipes/1`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
       id: 3,
       section: "recipes",
       title: "Recipes Create",
-      description: "Add a recipe to our database by sending JSON in the format shown.",
+      description:
+        "Add a recipe to our database by sending JSON in the format shown.",
       endPointUrl: `${baseUrl}/recipes/2`,
       displayUrl: `${baseUrl}/recipes`,
-      httpVerb: "POST"
+      httpVerb: "POST",
     },
     {
-      id:4,
+      id: 4,
       section: "recipes",
       title: "Recipe By Name",
       description: "Recipe Get by name.",
       endPointUrl: `${baseUrl}/recipes?name=flat white`,
       displayUrl: `${baseUrl}/recipes?name=flat white`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:5,
+      id: 5,
       section: "recipes",
       title: "Recipe By Author",
       description: "Recipe Get by Author (Name)",
       endPointUrl: `${baseUrl}/recipes?author=jack`,
       displayUrl: `${baseUrl}/recipes?author=jack`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:6,
+      id: 6,
       section: "recipes",
       title: "Recipe By Type",
       description: "Recipe Get by Type (Beer, Coffee).",
       endPointUrl: `${baseUrl}/recipes?type=Coffee`,
       displayUrl: `${baseUrl}/recipes?type=Coffee`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:7,
+      id: 7,
       section: "recipes",
       title: "Recipe By Difficulty",
       description: "Recipe Get by Difficulty (Easy, Medium, Difficult).",
       endPointUrl: `${baseUrl}/recipes?difficulty=medium`,
       displayUrl: `${baseUrl}/recipes?difficulty=medium`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:8,
+      id: 8,
       section: "recipes",
       title: "Recipe By Preparation Time",
       description: "Recipe Get by time to preapare (minutes).",
       endPointUrl: `${baseUrl}/recipes?preptime=5`,
       displayUrl: `${baseUrl}/recipes?preptime=5`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:9,
+      id: 9,
       section: "recipes",
       title: "Recipe Contains Alcohol",
       description: "Recipes that contain one or more alhoholic ingredients.",
       endPointUrl: `${baseUrl}/recipes/alcoholic`,
       displayUrl: `${baseUrl}/recipes/alcoholic`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:10,
+      id: 10,
       section: "ingredients",
       title: "Ingredients Index",
       description: "Show all ingredients from all recipes",
       endPointUrl: `${baseUrl}/ingredients/1`,
       displayUrl: `${baseUrl}/ingredients`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:11,
+      id: 11,
       section: "ingredients",
       title: "Ingredient by ID",
       description: "Show ingredient by ID",
       endPointUrl: `${baseUrl}/ingredients/1`,
       displayUrl: `${baseUrl}/ingredients/1`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:12,
+      id: 12,
       section: "ingredients",
       title: "Ingredient Create",
-      description: "Create an ingredient by sending JSON in the format show using HTTP POST.",
+      description:
+        "Create an ingredient by sending JSON in the format show using HTTP POST.",
       endPointUrl: `${baseUrl}/ingredients/1`,
       displayUrl: `${baseUrl}/ingredients`,
-      httpVerb: "POST"
+      httpVerb: "POST",
     },
     {
-      id:13,
+      id: 13,
       section: "ingredients",
       title: "Ingredient Update",
-      description: "Update an ingredient by sending JSON in the format show using an HTTP PUT",
+      description:
+        "Update an ingredient by sending JSON in the format show using an HTTP PUT",
       endPointUrl: `${baseUrl}/ingredients/1`,
       displayUrl: `${baseUrl}/ingredients/22`,
-      httpVerb: "PUT"
+      httpVerb: "PUT",
     },
     {
-      id:14,
+      id: 14,
       section: "instructions",
       title: "Instructions Index",
       description: "Show all instructions",
       endPointUrl: `${baseUrl}/instructions/1`,
       displayUrl: `${baseUrl}/instructions`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:15,
+      id: 15,
       section: "instructions",
       title: "Instructions by ID",
       description: "Get instruction by ID",
       endPointUrl: `${baseUrl}/instructions/1`,
       displayUrl: `${baseUrl}/instructions/1`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:16,
+      id: 16,
       section: "instructions",
       title: "Instructions Create",
       description: "Create an instructions by POSTing JSON as shown",
       endPointUrl: `${baseUrl}/instructions/1`,
       displayUrl: `${baseUrl}/instructions`,
-      httpVerb: "POST"
+      httpVerb: "POST",
     },
     {
-      id:17,
+      id: 17,
       section: "recipe-ingredients",
       title: "Recipe Ingredients Index",
       description: "Show all recipe ingredients",
       endPointUrl: `${baseUrl}/recipe-ingredients/1`,
       displayUrl: `${baseUrl}/recipe-ingredients`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:18,
+      id: 18,
       section: "recipe-ingredients",
       title: "Recipe Ingredients by ID",
       description: "Show recipe ingredients by ID",
       endPointUrl: `${baseUrl}/recipe-ingredients/1`,
       displayUrl: `${baseUrl}/recipe-ingredients/1`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:19,
+      id: 19,
       section: "recipe-ingredients",
       title: "Add a recipe ingredient",
-      description: "Add a newe recipe ingredient by POSTing JSON in the format shown.",
+      description:
+        "Add a newe recipe ingredient by POSTing JSON in the format shown.",
       endPointUrl: `${baseUrl}/recipe-ingredients/1`,
       displayUrl: `${baseUrl}/recipe-ingredients/1`,
-      httpVerb: "POST"
+      httpVerb: "POST",
     },
-
   ];
 
   const [jsonData, setJsonData] = useState({});
@@ -190,7 +194,7 @@ const ApiIndex = () => {
     description: "Get a single recipe by (id, name).",
     endPointUrl: `${baseUrl}/recipes/1`,
     displayUrl: `${baseUrl}/recipes`,
-    httpVerb: "GET"
+    httpVerb: "GET",
   });
 
   const onSelectChange = (event) => {
@@ -231,7 +235,11 @@ const ApiIndex = () => {
             <span className="mr-8 pl-8 pr-8 pt-1 pb-1 border-solid border-2 border-gray-200">
               {selectedOption.displayUrl}
             </span>
-            <button onClick={ () => {navigator.clipboard.writeText(selectedOption.endPointUrl)}}>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(selectedOption.endPointUrl);
+              }}
+            >
               Copy URL
             </button>
           </p>
@@ -248,7 +256,6 @@ const ApiIndex = () => {
           >
             Try Button
           </button>
-
         </div>
       </section>
 
