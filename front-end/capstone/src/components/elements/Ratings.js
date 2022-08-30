@@ -35,7 +35,6 @@ const Ratings = ({ recipe }) => {
           {makeStars(recipe)} {recipe.numberOfRatings} reviews
         </span>
       </p>
-      <p></p>
     </div>
   );
 };

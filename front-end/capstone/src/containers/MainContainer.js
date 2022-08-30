@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Switch,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 import NavBar from "../components/header/NavBar";
@@ -57,7 +52,7 @@ const MainContainer = () => {
   }
 
   return (
-    <div className="main-container">
+    <div className="">
       <Header />
       <div className="container mx-auto">
         <Routes>
