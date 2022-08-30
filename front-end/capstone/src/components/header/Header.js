@@ -6,10 +6,10 @@ import TitleBanner from "../titlebanner/TitleBanner";
 
 const Header = () => {
   return (
-    <header className="min-h-[16rem] bg-blue-200">
+    <header className="min-h-[16rem] ">
       <NavBar />
       <TitleBanner />
-      <Hero />
+      {/* <Hero /> */}
     </header>
   );
 };
