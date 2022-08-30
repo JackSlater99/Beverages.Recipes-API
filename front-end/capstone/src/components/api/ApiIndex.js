@@ -146,7 +146,7 @@ const ApiIndex = () => {
         <h1 className="mb-4 mt-8">Recipe Open API</h1>
         <p className="mb-8">Please select an endpoint from the dropdown to see sample JSON, the enpoint URL and the HTTP method.</p>
 
-        <h3 className="mt-4 mb-4 text-md font-semibold">Select Endpoint <span className="pl-12 text-gray-500">{selectedOption.title}</span></h3>
+        <h3 className="mt-4 mb-4 text-md font-semibold">Select Endpoint <span className="pl-12 text-gray-500 font-normal">{selectedOption.title}</span></h3>
         <div className="ep-select">
           <ApiSelect endPoints={endPoints} onSelectionChange={onSelectChange} />
         </div>
@@ -162,13 +162,13 @@ const ApiIndex = () => {
 
           <h3 className="mt-4 mb-2 text-md font-semibold">Endpoint URL</h3>
           <p className="ep-display-url">
-            <span className="">{selectedOption.displayUrl}</span>
+            <span>{selectedOption.displayUrl}</span>
             <button
               onClick={() => {
                 navigator.clipboard.writeText(selectedOption.endPointUrl);
               }}
             >
-              <FaCopy color="222B36" />
+              <FaCopy className="fa-copy" color="222B36" />
             </button>
           </p>
 
