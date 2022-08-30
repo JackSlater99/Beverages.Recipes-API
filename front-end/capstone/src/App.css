@@ -56,6 +56,33 @@ input[type="radio"] {
   }
 }
 
+.styled-btn {
+  display: inline-block;
+  padding: 0.4em 1.3em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgba(255, 255, 255, 0);
+  border-radius: 1em;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: #4e9af1;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.styled-btn:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+@media all and (max-width: 30em) {
+  a.button4 {
+    display: block;
+    margin: 0.2em auto;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

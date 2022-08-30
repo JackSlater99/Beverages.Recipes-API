@@ -82,7 +82,12 @@ const RatingForm = ({ recipes, getAllRecipes }) => {
             );
           })}
         </div>
-        <input type="submit" value="submit" id="submit" />
+        <input
+          className="styled-btn"
+          type="submit"
+          value="Submit"
+          id="submit"
+        />
       </form>
     </div>
   );
