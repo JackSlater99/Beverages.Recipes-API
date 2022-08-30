@@ -16,7 +16,7 @@ const Ratings = ({ recipe }) => {
           const ratingValue = i + 1;
 
           return (
-            <label>
+            <label key={ratingValue}>
               <input type="radio" name="rating" value={ratingValue} />
               <FaStar
                 className="star"
