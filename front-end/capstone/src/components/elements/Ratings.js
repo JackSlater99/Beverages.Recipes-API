@@ -18,7 +18,7 @@ const Ratings = ({ recipe }) => {
             <label key={ratingValue}>
               <input type="radio" name="rating" value={ratingValue} />
               <FaStar
-                color={ratingValue <= recipe.rating ? "#FFC107" : "E4E5E9"}
+                color={ratingValue <= recipe.rating ? "#FFC107" : "#E4E5E9"}
                 size={50}
               />
             </label>
