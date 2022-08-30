@@ -15,16 +15,19 @@ const RecipeFull = ({ recipes, getAllRecipes }) => {
   }
 
   return (
-    <main className="bg-green-100">
-      <div className="grid grid-cols-2 gap-4 p-6">
-        <div>
-          <h1 className="text-center">{recipe.name}</h1>
+    <main className="pb-8">
+      <div className="grid grid-rows-1">
+        <h1 className="text-center">{recipe.name}</h1>
+        <Ratings recipe={recipe} />
+      </div>
+      <div className="grid grid-cols-2 gap-4 p-6 center">
+        <div className="p-4">
           <img
             src={recipe.image}
             alt={recipe.name}
             className="max-w-md rounded"
           />
-          <Ratings recipe={recipe} />
+
           <p>
             <span className="font-bold">Type of Drink:</span> {recipe.type}
           </p>
@@ -37,9 +40,7 @@ const RecipeFull = ({ recipes, getAllRecipes }) => {
           </p>
         </div>
         <div className="p-4">
-          <p>
-            <YouTubeLink videoLink={recipe.video} title={recipe.name} />
-          </p>
+          <YouTubeLink videoLink={recipe.video} title={recipe.name} />
           <p>
             <span className="font-bold">Ingredients:</span>
             <RecipesIngredients ingredients={recipe.ingredients} />
@@ -48,10 +49,10 @@ const RecipeFull = ({ recipes, getAllRecipes }) => {
             <span className="font-bold">Instructions:</span>
             <RecipesInstruction instructions={recipe.instructions} />
           </p>
-          <p>
-            <RatingForm recipes={recipes} getAllRecipes={getAllRecipes} />
-          </p>
         </div>
+      </div>
+      <div className="grid grid-rows-1">
+        <RatingForm recipes={recipes} getAllRecipes={getAllRecipes} />
       </div>
     </main>
   );
