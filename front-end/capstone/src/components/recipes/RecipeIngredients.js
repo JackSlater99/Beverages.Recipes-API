@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const RecipesIngredients = ({ ingredients }) => {
   const ingredientssNodes = ingredients.map((ingredient) => {
-    return <li key={ingredient.id}>{ingredient.rawIngredient.name}</li>;
+    return <li key={ingredient.id}>
+            <Link to={{ pathname: `/ingredients/${ingredient.rawIngredient.id}` }}>{ingredient.rawIngredient.name}</Link>
+          </li>;
+
   });
 
   return <ul>{ingredientssNodes}</ul>;

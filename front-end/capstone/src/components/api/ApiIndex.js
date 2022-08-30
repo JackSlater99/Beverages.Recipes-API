@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import ApiSelect from "./ApiSelect";
 import JsonView from "./JsonView";
 
-const ApiIndex = () => {
+import "./ApiIndex.css";
 
+const ApiIndex = () => {
   const baseUrl = "http://localhost:8080/api";
 
   const endPoints = [
@@ -14,7 +15,7 @@ const ApiIndex = () => {
       description: "Get all recipes as an array of Objects.",
       endPointUrl: `${baseUrl}/recipes/1`,
       displayUrl: `${baseUrl}/recipes/`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
       id: 2,
@@ -23,7 +24,7 @@ const ApiIndex = () => {
       description: "Get a single recipe by (id, name).",
       endPointUrl: `${baseUrl}/recipes/1`,
       displayUrl: `${baseUrl}/recipes/1`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     // {
     //   id: 3,
@@ -35,76 +36,76 @@ const ApiIndex = () => {
     //   httpVerb: "POST"
     // },
     {
-      id:4,
+      id: 4,
       section: "recipes",
       title: "Recipe By Name",
       description: "Recipe Get by name.",
       endPointUrl: `${baseUrl}/recipes?name=flat white`,
       displayUrl: `${baseUrl}/recipes?name=flat white`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:5,
+      id: 5,
       section: "recipes",
       title: "Recipe By Author",
       description: "Recipe Get by Author (Name)",
       endPointUrl: `${baseUrl}/recipes?author=jack`,
       displayUrl: `${baseUrl}/recipes?author=jack`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:6,
+      id: 6,
       section: "recipes",
       title: "Recipe By Type",
       description: "Recipe Get by Type (Beer, Coffee).",
       endPointUrl: `${baseUrl}/recipes?type=Coffee`,
       displayUrl: `${baseUrl}/recipes?type=Coffee`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:7,
+      id: 7,
       section: "recipes",
       title: "Recipe By Difficulty",
       description: "Recipe Get by Difficulty (Easy, Medium, Difficult).",
       endPointUrl: `${baseUrl}/recipes?difficulty=medium`,
       displayUrl: `${baseUrl}/recipes?difficulty=medium`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:8,
+      id: 8,
       section: "recipes",
       title: "Recipe By Preparation Time",
       description: "Recipe Get by time to preapare (minutes).",
       endPointUrl: `${baseUrl}/recipes?preptime=5`,
       displayUrl: `${baseUrl}/recipes?preptime=5`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:9,
+      id: 9,
       section: "recipes",
       title: "Recipe Contains Alcohol",
       description: "Recipes that contain one or more alhoholic ingredients.",
       endPointUrl: `${baseUrl}/recipes/alcoholic`,
       displayUrl: `${baseUrl}/recipes/alcoholic`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:10,
+      id: 10,
       section: "ingredients",
       title: "Ingredients Index",
       description: "Show all ingredients from all recipes",
       endPointUrl: `${baseUrl}/ingredients/1`,
       displayUrl: `${baseUrl}/ingredients`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     {
-      id:11,
+      id: 11,
       section: "ingredients",
       title: "Ingredient by ID",
       description: "Show ingredient by ID",
       endPointUrl: `${baseUrl}/ingredients/1`,
       displayUrl: `${baseUrl}/ingredients/1`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     // {
     //   id:12,
@@ -125,13 +126,13 @@ const ApiIndex = () => {
     //   httpVerb: "PUT"
     // },
     {
-      id:14,
+      id: 14,
       section: "instructions",
       title: "Instructions Index",
       description: "Show all instructions",
       endPointUrl: `${baseUrl}/instructions/1`,
       displayUrl: `${baseUrl}/instructions`,
-      httpVerb: "GET"
+      httpVerb: "GET",
     },
     // {
     //   id:15,
@@ -178,7 +179,6 @@ const ApiIndex = () => {
     //   displayUrl: `${baseUrl}/recipe-ingredients/1`,
     //   httpVerb: "POST"
     // },
-
   ];
 
   const [jsonData, setJsonData] = useState({});
@@ -190,7 +190,7 @@ const ApiIndex = () => {
     description: "Get a single recipe by (id, name).",
     endPointUrl: `${baseUrl}/recipes/1`,
     displayUrl: `${baseUrl}/recipes`,
-    httpVerb: "GET"
+    httpVerb: "GET",
   });
 
   const onSelectChange = (event) => {
@@ -213,12 +213,12 @@ const ApiIndex = () => {
   return (
     <main className="flex">
       <section className="p-4 w-1/2">
-        <div className="pb-8">
+        <div className="ep-select">
           <ApiSelect endPoints={endPoints} onSelectionChange={onSelectChange} />
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold">{selectedOption.title}</h2>
+          <p className="">{selectedOption.title}</p>
           <input
             readOnly
             className="invisible"
@@ -227,28 +227,26 @@ const ApiIndex = () => {
           />
 
           <h3 className="mt-4 mb-2 text-md font-semibold">Endpoint URL</h3>
-          <p>
-            <span className="mr-8 pl-8 pr-8 pt-1 pb-1 border-solid border-2 border-gray-200">
-              {selectedOption.displayUrl}
-            </span>
-            <button onClick={ () => {navigator.clipboard.writeText(selectedOption.endPointUrl)}}>
+          <p className="ep-display-url">
+            <span className="">{selectedOption.displayUrl}</span>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(selectedOption.endPointUrl);
+              }}
+            >
               Copy URL
             </button>
           </p>
 
           <h3 className="mt-4 text-md font-semibold">HTTP Method</h3>
-          <p>{selectedOption.httpVerb}</p>
+          <p className="ep-display-url">{selectedOption.httpVerb}</p>
 
           <h3 className="mt-4 text-md font-semibold">Purpose</h3>
           <p className="mt-4">{selectedOption.description}</p>
 
-          <button
-            className="w-1/2 mt-4 border-solid border-2 border-green-500"
-            onClick={makeFetchRequest}
-          >
+          <button className="styled-btn" onClick={makeFetchRequest}>
             Try Button
           </button>
-
         </div>
       </section>
 

@@ -7,14 +7,11 @@ import RecipesInstruction from "./RecipesInstruction";
 
 const RecipeCard = ({ recipe }) => {
   return (
-    <article className="bg-blue-200 grid place-items-center pb-6">
+    <article className="grid place-items-center pb-6">
       <h2>{recipe.name}</h2>
-      <img className="w-48" src={recipe.image} alt={recipe.name} />
-      <Ratings recipe={recipe} />
-      <span>Difficulty: {recipe.difficulty}</span>
-      <span>Prep time: {recipe.prepTime}</span>
+      <img className="w-80 mb-4 rounded" src={recipe.image} alt={recipe.name} />
       <Link to={{ pathname: `/recipes/${recipe.id}` }} recipe={recipe}>
-        Click to see full recipe
+        Full Recipe
       </Link>
     </article>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { useParams } from "react-router-dom";
+import "./Rating.css";
 
 const RatingForm = ({ recipes, getAllRecipes }) => {
   const { id } = useParams();
@@ -81,7 +82,12 @@ const RatingForm = ({ recipes, getAllRecipes }) => {
             );
           })}
         </div>
-        <input type="submit" value="submit" id="submit" />
+        <input
+          className="styled-btn"
+          type="submit"
+          value="Submit"
+          id="submit"
+        />
       </form>
     </div>
   );

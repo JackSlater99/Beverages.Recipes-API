@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Switch,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 import NavBar from "../components/header/NavBar";
@@ -20,8 +15,6 @@ import Ingredients from "../components/ingredients/Ingredients";
 import Ingredient from "../components/ingredients/Ingredient";
 import BackToTopButton from "../components/Scroll/BackToTopButton";
 import Homepage from "../components/homepage/Homepage";
-
-
 
 const MainContainer = () => {
   const { isLoading } = useAuth0();
@@ -58,11 +51,10 @@ const MainContainer = () => {
     return <Loading />;
   }
 
-  
-
   return (
-    <div className="container mx-auto">
+    <div className="">
       <Header />
+      <div className="container mx-auto">
         <Routes>
           <Route
             element={<Homepage recipes={recipesJson} />}
@@ -91,17 +83,23 @@ const MainContainer = () => {
             component={<Ingredients />}
           />
           <Route
-            element={<Ingredient recipes={recipesJson} ingredients={ingredientsJson} />}
+            element={
+              <Ingredient recipes={recipesJson} ingredients={ingredientsJson} />
+            }
             path="/ingredients/:id"
             exact
             component={<Ingredient />}
           />
 
           <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
-          <Route element={<Profile />} path="/profile" component={<Profile />} />
+          <Route
+            element={<Profile />}
+            path="/profile"
+            component={<Profile />}
+          />
         </Routes>
-      <BackToTopButton />
-
+        <BackToTopButton />
+      </div>
       <Footer />
     </div>
   );

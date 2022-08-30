@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
-import "./Rating.css";
 
 const Ratings = ({ recipe }) => {
   const accumulatedRating = recipe.accumulatedRating;
   const numberOfRatings = recipe.numberOfRatings;
-  const averageRating = () => {
-    return accumulatedRating / numberOfRatings;
-  };
+  // const averageRating = () => {
+  //   return accumulatedRating / numberOfRatings;
+  // };
 
   const makeStars = (recipe) => {
     return (
@@ -19,8 +18,7 @@ const Ratings = ({ recipe }) => {
             <label key={ratingValue}>
               <input type="radio" name="rating" value={ratingValue} />
               <FaStar
-                className="star"
-                color={ratingValue <= recipe.rating ? "#FFC107" : "E4E5E9"}
+                color={ratingValue <= recipe.rating ? "#FFC107" : "#E4E5E9"}
                 size={50}
               />
             </label>
@@ -32,11 +30,11 @@ const Ratings = ({ recipe }) => {
 
   return (
     <div className="ratings text-center">
-      <p>Rating: {recipe.rating}</p>
-      <p>Number of Ratings: {recipe.numberOfRatings}</p>
-      {/* <p>Accumulated Rating: {recipe.accumulatedRating}</p>
-      <p>Average Ratign: {averageRating()}</p> */}
-      {makeStars(recipe)}
+      <p>
+        <span>
+          {makeStars(recipe)} {recipe.numberOfRatings} reviews
+        </span>
+      </p>
     </div>
   );
 };
