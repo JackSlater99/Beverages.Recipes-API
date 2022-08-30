@@ -78,7 +78,38 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(lemon);
         RawIngredient bitterBeer = new RawIngredient("Bitter Beer", "https://i.imgur.com/7JgQQHl.jpg", Boolean.TRUE, "Bitter belongs to the pale ale beer style and can have a great variety of strength, flavour and appearance, from dark amber to a golden summer ale. It can be under 3% abv and as high as 7% with premium or strong bitters. The colour may be controlled by the addition of caramel colouring.");
         ingredientRepository.save(bitterBeer);
-
+        RawIngredient tomatoJuice = new RawIngredient("Tomato Juice", "https://i.imgur.com/dDog3GF.jpg", Boolean.FALSE, "Juice extracted from fresh tomatoes by cooking them and then exposing the heated tomatoes to a process that separates the skins and seeds from the juice. The juice is then bottled or canned and can be salted or unsalted, and at times other seasonings are added. Tomato juice is served as a beverage or can be added to dishes for flavoring.");
+        ingredientRepository.save(tomatoJuice);
+        RawIngredient lemonJuice = new RawIngredient("Lemon Juice", "https://i.imgur.com/vrtVHvQ.jpg", Boolean.FALSE, "The juice from a fresh lemon, which is the best form of lemon flavor. Bottled lemon juice can be substituted if fresh lemons are not available.");
+        ingredientRepository.save(lemonJuice);
+        RawIngredient worcestershireSauce = new RawIngredient("Worcestershire Sauce", "https://i.imgur.com/21QSNYL.jpg", Boolean.FALSE, "A popular condiment that has a savory flavor and is used to season a wide variety of dishes. This thin dark sauce is made with soy sauce, garlic, onion, molasses, vinegar, anchovies, lime, and a variety of other seasonings. The name Worcestershire refers to the town of Worcester, England where the sauce was first produced commercially.");
+        ingredientRepository.save(worcestershireSauce);
+        RawIngredient tabasco = new RawIngredient("Tabasco", "https://i.imgur.com/7o0dxot.jpg", Boolean.FALSE, "A trademarked hot sauce that consists of red chile peppers, salt and vinegar. The small, very hot pepper originated in Tabasco, Mexico and the hot sauce was developed by the McIlhenny family more than 125 years ago. Its spicy flavor is used in making Bloody Mary cocktails and many spicy dishes.");
+        ingredientRepository.save(tabasco);
+        RawIngredient celery = new RawIngredient("Celery", "https://i.imgur.com/XsPGpf7.jpg", Boolean.FALSE, "Celery is a vegetable with long petioles, meaty and succulent that are known by the name of stalks. They may be eaten raw in salads or alone, fried, boiled, with sauces and as a condiment for soups, stews, etc. It can also be used as an aromatic and besides the stalks, the leaves and seeds of the plant are used.");
+        ingredientRepository.save(celery);
+        RawIngredient ice = new RawIngredient("Ice", "https://i.imgur.com/G6B3CZf.jpg", Boolean.FALSE, "A small block of artificial ice formed in a mold or cut from a larger block and commonly used for icing drinks.");
+        ingredientRepository.save(ice);
+        RawIngredient salt = new RawIngredient("Salt", "https://i.imgur.com/XGSFQuq.jpg", Boolean.FALSE, "A colorless or white substance that consists of sodium and chlorine and is used in seasoning and preserving food and in industry.");
+        ingredientRepository.save(salt);
+        RawIngredient blackPepper = new RawIngredient("Black Pepper", "https://i.imgur.com/I5YIIZT.jpg", Boolean.FALSE, "Black pepper is a plant that grows in the tropics, especially in India. The plant is a perennial vine that bears flowers. People cultivate the plant for its fruit, the peppercorn. The peppercorn can be used as a spice or condiment. Usually, it makes things hot.");
+        ingredientRepository.save(blackPepper);
+        RawIngredient tapiocaStarch = new RawIngredient("Tapioca Starch", "https://i.imgur.com/GQW7INj.jpg", Boolean.FALSE, "Tapioca starch is a gluten-free flour that comes from the cassava plant. You can use it to thicken soups, stews, and gravies, or you can swap out wheat flour with tapioca for gluten-free baking.");
+        ingredientRepository.save(tapiocaStarch);
+        RawIngredient brownSugar = new RawIngredient("Brown Sugar", "https://i.imgur.com/Jwi8C89.jpg", Boolean.FALSE, "Brown sugar is granulated cane sugar with added molasses. It is coarser and more moist than white sugar and imparts a unique flavor and dark color to food systems.");
+        ingredientRepository.save(brownSugar);
+        RawIngredient water = new RawIngredient("Water", "https://i.imgur.com/HmarZRY.jpg", Boolean.FALSE, "A substance composed of the chemical elements hydrogen and oxygen and existing in gaseous, liquid, and solid states. It is one of the most plentiful and essential of compounds. A tasteless and odourless liquid at room temperature, it has the important ability to dissolve many other substances.");
+        ingredientRepository.save(water);
+        RawIngredient blackTea = new RawIngredient("Black Tea", "https://i.imgur.com/oVRMmWq.jpg", Boolean.FALSE, "A type of tea that is more oxidized than oolong, yellow, white and green teas. Black tea is generally stronger in flavour than other teas.");
+        ingredientRepository.save(blackTea);
+        RawIngredient mango = new RawIngredient("Mango", "https://i.imgur.com/q4zX0im.jpg", Boolean.FALSE, "A mango is a sweet tropical fruit, and it's also the name of the trees on which the fruit grows. Ripe mangoes are juicy, fleshy, and delicious.");
+        ingredientRepository.save(mango);
+        RawIngredient plainYogurt = new RawIngredient("Plain Yogurt", "https://i.imgur.com/i6DL0bs.jpg", Boolean.FALSE, "Made from whole, low-fat, or nonfat milk that is fermented with bacterial cultures, the bacteria in Yogurt allows the milk to congeal, giving it a thick, creamy texture. The flavor is slightly acidic and it is often blended with natural fruit flavors or pieces of fruit to enhance the flavor. Yogurt is high in protein and calcium along with many B vitamins.");
+        ingredientRepository.save(plainYogurt);
+        RawIngredient cinnamon = new RawIngredient("Cinnamon", "https://i.imgur.com/QN1byhC.jpg", Boolean.FALSE, "The spice, consisting of the dried inner bark, is brown in colour and has a delicately fragrant aroma and a warm sweet flavour. Cinnamon is used to flavour a variety of foods, from confections to curries to beverages, and is popular in bakery goods in many places.");
+        ingredientRepository.save(cinnamon);
+        RawIngredient groundCardamom = new RawIngredient("", "https://i.imgur.com/g23azPo.jpg", Boolean.FALSE, "A spice consisting of whole or ground dried fruits, or seeds, of Elettaria cardamomum, a herbaceous perennial plant of the ginger family (Zingiberaceae). The seeds have a warm, slightly pungent, and highly aromatic flavour somewhat reminiscent of camphor.");
+        ingredientRepository.save(groundCardamom);
 
         // COFFEE
 
@@ -381,7 +412,115 @@ public class DataLoader implements ApplicationRunner {
         Instructions classicShandyInstruction2 = new Instructions("Stir well, then make a small cut in a second lemon slice and use this to garnish the rim of the glass.", classicShandy);
         instructionRepository.save(classicShandyInstruction2);
 
+        RecipeIngredient maryIngredient1 = new RecipeIngredient(vodka, 100, "ml");
+        recipeIngredientRepository.save(maryIngredient1);
+        RecipeIngredient maryIngredient2 = new RecipeIngredient(tomatoJuice, 500, "ml");
+        recipeIngredientRepository.save(maryIngredient2);
+        RecipeIngredient maryIngredient3 = new RecipeIngredient(lemonJuice, 1, "tbsp");
+        recipeIngredientRepository.save(maryIngredient3);
+        RecipeIngredient maryIngredient4 = new RecipeIngredient(worcestershireSauce, 3, "shakes");
+        recipeIngredientRepository.save(maryIngredient4);
+        RecipeIngredient maryIngredient5 = new RecipeIngredient(tabasco, 3, "shakes");
+        recipeIngredientRepository.save(maryIngredient5);
+        RecipeIngredient maryIngredient6 = new RecipeIngredient(celery, 2, "sticks");
+        recipeIngredientRepository.save(maryIngredient6);
+        RecipeIngredient maryIngredient7 = new RecipeIngredient(ice, 1, "handful");
+        recipeIngredientRepository.save(maryIngredient7);
+        RecipeIngredient maryIngredient8 = new RecipeIngredient(salt, 1, "pinch");
+        recipeIngredientRepository.save(maryIngredient8);
+        RecipeIngredient maryIngredient9 = new RecipeIngredient(blackPepper, 1, "pinch");
+        recipeIngredientRepository.save(maryIngredient9);
+
+        Recipe bloodyMary = new Recipe("Bloody Mary", "BBC Good Food", true, "Cocktail", "https://i.imgur.com/74rMM8s.jpg", "Easy", 5, "https://www.youtube.com/embed/C5XvpOKrJds");
+        bloodyMary.addIngredients(maryIngredient1);
+        bloodyMary.addIngredients(maryIngredient2);
+        bloodyMary.addIngredients(maryIngredient3);
+        bloodyMary.addIngredients(maryIngredient4);
+        bloodyMary.addIngredients(maryIngredient5);
+        bloodyMary.addIngredients(maryIngredient6);
+        bloodyMary.addIngredients(maryIngredient7);
+        bloodyMary.addIngredients(maryIngredient8);
+        bloodyMary.addIngredients(maryIngredient9);
+        recipeRepository.save(bloodyMary);
+
+        Instructions bloodyMaryInstruction1 = new Instructions("Place the ice in a large jug. Measure the vodka, tomato juice and lemon juice and pour it straight onto the ice.", bloodyMary);
+        instructionRepository.save(bloodyMaryInstruction1);
+        Instructions bloodyMaryInstruction2 = new Instructions("Add 3 shakes of Worcestershire sauce and Tabasco (or more if you like it very spicy) and a pinch of salt and pepper. Stir until the outside of the jug feels cold, then strain the cocktail into 2 tall glasses.", bloodyMary);
+        instructionRepository.save(bloodyMaryInstruction2);
+        Instructions bloodyMaryInstruction3 = new Instructions("", bloodyMary);
+        instructionRepository.save(bloodyMaryInstruction3);
+
+//        TEAS:
+        RecipeIngredient bobaIngredient1 = new RecipeIngredient(tapiocaStarch, 160, "g");
+        recipeIngredientRepository.save(bobaIngredient1);
+        RecipeIngredient bobaIngredient2 = new RecipeIngredient(brownSugar, 160, "g");
+        recipeIngredientRepository.save(bobaIngredient2);
+        RecipeIngredient bobaIngredient3 = new RecipeIngredient(water, 80, "ml");
+        recipeIngredientRepository.save(bobaIngredient3);
+        RecipeIngredient bobaIngredient4 = new RecipeIngredient(blackTea, 2, "bags");
+        recipeIngredientRepository.save(bobaIngredient4);
+        RecipeIngredient bobaIngredient5 = new RecipeIngredient(milk, 118, "ml");
+        recipeIngredientRepository.save(bobaIngredient5);
+        RecipeIngredient bobaIngredient6 = new RecipeIngredient(ice, 1, "handful");
+        recipeIngredientRepository.save(bobaIngredient6);
+
+        Recipe brownSugarBoba = new Recipe("Brown Sugar Boba", "Tiffy Cooks", false, "Tea", "https://i.imgur.com/2zBworp.jpg", "Medium", 10, "https://www.youtube.com/embed/EA1skTLzBnQ")
+
+        brownSugarBoba.addIngredients(bobaIngredient1);
+        brownSugarBoba.addIngredients(bobaIngredient2);
+        brownSugarBoba.addIngredients(bobaIngredient3);
+        brownSugarBoba.addIngredients(bobaIngredient4);
+        brownSugarBoba.addIngredients(bobaIngredient5);
+        brownSugarBoba.addIngredients(bobaIngredient6);
+        recipeRepository.save(brownSugarBoba);
+
+        Instructions bobaInstructions1 = new Instructions("In a pot, mix 3 tbsp of Tapioca Flour, 80 ml of water, and 60g of brown sugar. Make sure everything is thoroughly combined before bringing it to the stove.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions1);
+        Instructions bobaInstructions2 = new Instructions("Turn the heat to medium-high and keep stirring until it becomes a thick and sticky consistency. Turn the heat off, and add in the remaining tapioca starch. Mix until slightly cooled down and pour onto a clean surface. (Not everything will be mixed well, but it’s ok)", brownSugarBoba);
+        instructionRepository.save(bobaInstructions2);
+        Instructions bobaInstructions3 = new Instructions("Once it is safe to knead (warm), knead until it becomes a smooth consistency with no lumps. This process takes around 5 minutes. If it is too sticky, you can add in a bit of bit more Tapioca Starch, but make sure to keep kneading.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions3);
+        Instructions bobaInstructions4 = new Instructions("Cut into 4 pieces. Roll out each piece and cut it into small pieces. The size depends on how big you prefer your pearls to be. The pearls do expand a little bit once you cook them.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions4);
+        Instructions bobaInstructions5 = new Instructions("Roll the pieces into a ball and coat with tapioca starch. At this point, you can freeze the tapioca balls in the freezer for up to 1 month.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions5);
+        Instructions bobaInstructions6 = new Instructions("Boil a big pot of water and once everything is simmering, add in the tapioca starch. Let it cook on medium heat for 25 minutes. Make sure to stir occasionally, so it doesn’t stick to the bottom. After 25 minutes, put the lid on, turn the heat off and let it rest for another 15 minutes. (If you prefer your boba to be on the softer side, simmer for an extra 5 minutes, and rest for another 5 minutes.)", brownSugarBoba);
+        instructionRepository.save(bobaInstructions6);
+        Instructions bobaInstructions7 = new Instructions("Drain the boba and let it rest in cold water until ready to use.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions7);
+        Instructions bobaInstructions8 = new Instructions("To make the thick brown sugar glaze. In a pot, add in remaining brown sugar and turn the heat up to medium. Heat the brown sugar and mix for 2-3 minutes or until slightly melted. Add in drained boba and mix till it becomes a thick consistency, around another 2-3 minutes.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions8);
+        Instructions bobaInstructions9 = new Instructions("Using two tea bags, steep ¼ cup of tea. In a cup, add in the brown sugar boba, swirl the brown sugar boba around the cup, so it leaves a tiger pattern. Add in steep tea, ice, and milk. Enjoy!", brownSugarBoba);
+        instructionRepository.save(bobaInstructions9);
 
 
+//        FRUIT
+        RecipeIngredient lassiIngredient1 = new RecipeIngredient(mango, 1, "cup");
+        recipeIngredientRepository.save(lassiIngredient1);
+        RecipeIngredient lassiIngredient2 = new RecipeIngredient(plainYogurt, 1, "cup");
+        recipeIngredientRepository.save(lassiIngredient2);
+        RecipeIngredient lassiIngredient3 = new RecipeIngredient(milk, 0.5, "cup");
+        recipeIngredientRepository.save(lassiIngredient3);
+        RecipeIngredient lassiIngredient4 = new RecipeIngredient(sugar, 2, "tbsp");
+        recipeIngredientRepository.save(lassiIngredient4);
+        RecipeIngredient lassiIngredient5 = new RecipeIngredient(cinnamon, 1, "dash");
+        recipeIngredientRepository.save(lassiIngredient5);
+        RecipeIngredient lassiIngredient6 = new RecipeIngredient(groundCardamom, 0.25, "tsp");
+        recipeIngredientRepository.save(lassiIngredient6);
+
+        Recipe mangoLassi = new Recipe("Mango Lassi", "The Wanderlust Kitchen", false, "Fruit", "https://i.imgur.com/ZU2WM0o.jpg", "Easy", 5, "https://www.youtube.com/embed/mlEYpN5o2dQ");
+        mangoLassi.addIngredients(lassiIngredient1);
+        mangoLassi.addIngredients(lassiIngredient2);
+        mangoLassi.addIngredients(lassiIngredient3);
+        mangoLassi.addIngredients(lassiIngredient4);
+        mangoLassi.addIngredients(lassiIngredient5);
+        mangoLassi.addIngredients(lassiIngredient6);
+        recipeRepository.save(mangoLassi);
+
+        Instructions lassiInstruction1 = new Instructions("Add all of the ingedients to the bowl of a blender.", mangoLassi);
+        instructionRepository.save(lassiInstruction1);
+        Instructions lassiInstruction2 = new Instructions("Puree until smooth. Serve immediately!", mangoLassi);
+        instructionRepository.save(lassiInstruction2);
     }
+
 }
