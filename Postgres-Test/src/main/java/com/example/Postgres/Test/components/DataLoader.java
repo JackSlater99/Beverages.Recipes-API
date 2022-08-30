@@ -130,6 +130,12 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(thaiTea);
         RawIngredient sweetenedCondensedMilk = new RawIngredient("Sweetened Condensed Milk", "https://i.imgur.com/4jwn0B3.jpg", Boolean.FALSE, "Sweetened condensed milk is made by removing most of the water from cow's milk. It's sweeter and higher in calories than evaporated milk, as sugar is added as a preservative. It can add flavor to desserts, coffee and certain stews but is unsuitable for people with milk protein allergy or lactose intolerance.");
         ingredientRepository.save(sweetenedCondensedMilk);
+        RawIngredient yuja = new RawIngredient("Yuja", "https://i.imgur.com/YVxglUb.jpg", Boolean.FALSE, "Intensely aromatic, its major antecedent among several arcane citruses is the mandarin, which thus gives a sweet-sharp flavour that is both orangey and lemony but also includes a fresh hint of green that all combine to make something lively and individual; some detect the presence of grapefruit flavour too.");
+        ingredientRepository.save(yuja);
+        RawIngredient ginger = new RawIngredient("Ginger", "https://i.imgur.com/1klXEvE.jpg", Boolean.FALSE, "Ginger is used as a cooking spice throughout the world. It's used as a food flavoring and medicine. Ginger contains chemicals that might reduce nausea and swelling.");
+        ingredientRepository.save(ginger);
+        RawIngredient clove = new RawIngredient("Clove", "https://i.imgur.com/8c0QnWp.jpg", Boolean.FALSE, "Cloves are a pungent warm spice with an intense flavor and aroma. The flavor comes from the compound eugenol. On the tongue, you'll detect sweetness, bitterness, and astringency (drying the mouth), with a noticeable amount of heat.");
+        ingredientRepository.save(clove);
 
         // COFFEE
 
@@ -577,6 +583,67 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(thaiTeaInstruction3);
         Instructions thaiTeaInstruction4 = new Instructions("Drizzle the top with some evaporated milk and enjoy.", thaiIcedTea);
         instructionRepository.save(thaiTeaInstruction4);
+
+//        YUJACHA
+        RecipeIngredient yujaIngredient1 = new RecipeIngredient(yuja, 1, "cup");
+        recipeIngredientRepository.save(yujaIngredient1);
+        RecipeIngredient yujaIngredient2 = new RecipeIngredient(sugar, 1, "cup");
+        recipeIngredientRepository.save(yujaIngredient2);
+
+        Recipe yujacha = new Recipe("Yujacha", "Maangchi", false, "Tea", "https://i.imgur.com/tgWms1H.jpg", "Easy", 5, "https://www.youtube.com/embed/DOV-gx8Wjmc");
+        yujacha.addIngredients(yujaIngredient1);
+        yujacha.addIngredients(yujaIngredient2);
+        recipeRepository.save(yujacha);
+
+        Instructions yujachaInstruction1 = new Instructions("Slice the yuja thinly. Remove as many seeds as you can find. Add to a bowl.", yujacha);
+        instructionRepository.save(yujachaInstruction1);
+        Instructions yujachaInstruction2 = new Instructions("Add sugar. Mix.", yujacha);
+        instructionRepository.save(yujachaInstruction2);
+        Instructions yujachaInstruction3 = new Instructions("Add a couple tablespoons of yujacha in a cup or glass. Stir with boiling hot water. Serve right away, with a small spoon. You can drink the tea and eat the rinds and pulp with the spoon.", yujacha);
+        instructionRepository.save(yujachaInstruction3);
+        Instructions yujachaInstruction4 = new Instructions("It will keep in the fridge for a couple of months.", yujacha);
+        instructionRepository.save(yujachaInstruction4);
+
+//        DOODH CHA
+        RecipeIngredient doodhIngredient1 = new RecipeIngredient(water, 300, "g");
+        recipeIngredientRepository.save(doodhIngredient1);
+        RecipeIngredient doodhIngredient2 = new RecipeIngredient(milk, 300, "g");
+        recipeIngredientRepository.save(doodhIngredient2);
+        RecipeIngredient doodhIngredient3 = new RecipeIngredient(ginger, 8, "g");
+        recipeIngredientRepository.save(doodhIngredient3);
+        RecipeIngredient doodhIngredient4 = new RecipeIngredient(clove, 1, "piece");
+        recipeIngredientRepository.save(doodhIngredient4);
+        RecipeIngredient doodhIngredient5 = new RecipeIngredient(groundCardamom, 1, "pinch");
+        recipeIngredientRepository.save(doodhIngredient5);
+        RecipeIngredient doodhIngredient6 = new RecipeIngredient(sugar, 25, "g");
+        recipeIngredientRepository.save(doodhIngredient6);
+        RecipeIngredient doodhIngredient7 = new RecipeIngredient(blackTea, 8, "g");
+        recipeIngredientRepository.save(doodhIngredient7);
+
+        Recipe doodhCha = new Recipe("Doodh Chat", "Bong Eats", false, "Tea", "https://i.imgur.com/UCcuAVP.jpg", "Medium", 15, "https://www.youtube.com/embed/ntigmnhKrAY");
+        doodhCha.addIngredients(doodhIngredient1);
+        doodhCha.addIngredients(doodhIngredient2);
+        doodhCha.addIngredients(doodhIngredient3);
+        doodhCha.addIngredients(doodhIngredient4);
+        doodhCha.addIngredients(doodhIngredient5);
+        doodhCha.addIngredients(doodhIngredient6);
+        doodhCha.addIngredients(doodhIngredient7);
+        recipeRepository.save(doodhCha);
+
+        Instructions doodhInstruction1 = new Instructions("Using a mortar and pestle, roughly crush the clove and cardamom pod. This will help release their flavours.", doodhCha);
+        instructionRepository.save(doodhInstruction1);
+        Instructions doodhInstruction2 = new Instructions("Wash, peel, and dice the ginger roughly.", doodhCha);
+        instructionRepository.save(doodhInstruction2);
+        Instructions doodhInstruction3 = new Instructions("Set a saucepan over medium-high heat and add the water, clove, cardamom, and ginger.", doodhCha);
+        instructionRepository.save(doodhInstruction3);
+        Instructions doodhInstruction4 = new Instructions("Cover the pan and let the water come to a boil. Allow the spices to bubble in water for about 4 minutes.", doodhCha);
+        instructionRepository.save(doodhInstruction4);
+        Instructions doodhInstruction5 = new Instructions("Add the milk, and once it has heated up, add in the tea and sugar.", doodhCha);
+        instructionRepository.save(doodhInstruction5);
+        Instructions doodhInstruction6 = new Instructions("Allow this milky mixture to boil vigorously. Just when the tea is about to boil over, drop the heat and let it simmer for about 4 minutes. You can see the tea change colour from light brown to a rosy kind of orange.", doodhCha);
+        instructionRepository.save(doodhInstruction6);
+        Instructions doodhInstruction7 = new Instructions("Strain and serve immediately.", doodhCha);
+        instructionRepository.save(doodhInstruction7);
 
 
 //        MILK
