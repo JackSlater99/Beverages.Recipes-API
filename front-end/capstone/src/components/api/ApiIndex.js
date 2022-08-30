@@ -184,7 +184,7 @@ const ApiIndex = () => {
         </div>
       </section>
 
-      <section className="w-1/2 mt-8 px-8">
+      <section className="w-1/2 mt-8">
         <JsonView jsonApiData={jsonData} />
       </section>
     </main>
