@@ -19,6 +19,8 @@ import ProtectedRoute from "../auth/protected-route";
 import Ingredients from "../components/ingredients/Ingredients";
 import Ingredient from "../components/ingredients/Ingredient";
 import BackToTopButton from "../components/Scroll/BackToTopButton";
+import Homepage from "../components/homepage/Homepage";
+
 
 
 const MainContainer = () => {
@@ -62,8 +64,14 @@ const MainContainer = () => {
 
       <Routes>
         <Route
-          element={<Recipes recipes={recipesJson} />}
+          element={<Homepage recipes={recipesJson} />}
           path="/"
+          exact
+          component={<Homepage />}
+        />
+        <Route
+          element={<Recipes recipes={recipesJson} />}
+          path="/recipes"
           exact
           component={<Recipes />}
         />
@@ -75,19 +83,19 @@ const MainContainer = () => {
           exact
           component={<RecipeFull />}
         />
-         <Route 
-          element={<Ingredients ingredients={ingredientsJson}/>} 
+        <Route
+          element={<Ingredients ingredients={ingredientsJson} />}
           path="/ingredients"
-          exact 
-          component={<Ingredients />} 
-          />
-         <Route 
-          element={<Ingredient recipes={recipesJson} ingredients={ingredientsJson}/>} 
+          exact
+          component={<Ingredients />}
+        />
+        <Route
+          element={<Ingredient recipes={recipesJson} ingredients={ingredientsJson} />}
           path="/ingredients/:id"
-          exact 
-          component={<Ingredient />} 
-          />
-            
+          exact
+          component={<Ingredient />}
+        />
+
         <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
         <Route element={<Profile />} path="/profile" component={<Profile />} />
       </Routes>
