@@ -14,6 +14,14 @@ import cocktail from "/Users/user/codeclan_work/week_14/beverages/Beverages.Reci
 
 const Homepage = ({ recipes }) => {
 
+    const baseUrl1 = "http://localhost:8080/api/recipes?type=beer";
+
+
+    const getRecipes = () => {
+        return fetch(baseUrl)
+            .then(res => res.json())
+    };
+
 
 
     return (
