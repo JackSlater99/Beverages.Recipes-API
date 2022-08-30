@@ -48,7 +48,7 @@ const Ingredient = ({ ingredients, recipes }) => {
         <div className="p-4">
           <p>
             <span className="font-bold">Alcoholic: </span>
-            {foundIngredient.alcoholic}
+            {alcoholicIngredient()}
           </p>
           <p className="font-bold">Description:</p>
           <p>{foundIngredient.description}</p>

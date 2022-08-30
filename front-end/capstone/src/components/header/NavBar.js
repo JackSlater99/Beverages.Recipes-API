@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <Nav>
       <Logo href="/">
-        <img src={logo} width="100" />
+        <img src={logo} width="100" alt="logo" />
       </Logo>
       <Hamburger onClick={() => setStyling(!styling)}>
         <span></span>

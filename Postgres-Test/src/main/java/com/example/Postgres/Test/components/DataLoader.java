@@ -36,9 +36,9 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
-        RawIngredient milk = new RawIngredient("Milk", "https://i.imgur.com/U3zdqwq.jpg", Boolean.FALSE, "Milk is an excellent source of vitamins and minerals, including “nutrients of concern,” which are under-consumed by many populations. It provides potassium, B12, calcium and vitamin D, which are lacking in many diets. Milk is also a good source of vitamin A, magnesium, zinc and thiamine.");
+        RawIngredient milk = new RawIngredient("Milk", "https://i.imgur.com/gyWpF8r.jpg", Boolean.FALSE, "Milk is an excellent source of vitamins and minerals, including “nutrients of concern,” which are under-consumed by many populations. It provides potassium, B12, calcium and vitamin D, which are lacking in many diets. Milk is also a good source of vitamin A, magnesium, zinc and thiamine.");
         ingredientRepository.save(milk);
-        RawIngredient groundEspresso = new RawIngredient("Ground Espresso", "https://i.imgur.com/eOvIK87.jpg", Boolean.FALSE, "Because espresso is roasted, ground, and brewed differently, it has a unique flavor compared to drip coffee. It usually has a bolder, less acidic taste, with a well-rounded and full-bodied finish. It tastes “stronger,” meaning that it has a rich coffee flavor. The roasting process especially brings out more oils in the beans, so it often has a heavier feel. " );
+        RawIngredient groundEspresso = new RawIngredient("Ground Espresso", "https://i.imgur.com/d5Kx6mA.jpg", Boolean.FALSE, "Because espresso is roasted, ground, and brewed differently, it has a unique flavor compared to drip coffee. It usually has a bolder, less acidic taste, with a well-rounded and full-bodied finish. It tastes “stronger,” meaning that it has a rich coffee flavor. The roasting process especially brings out more oils in the beans, so it often has a heavier feel. " );
         ingredientRepository.save(groundEspresso);
         RawIngredient drinkingChocolate = new RawIngredient("Drinking Chocolate", "https://i.imgur.com/OaES1rn.jpg", Boolean.FALSE, "Drinking chocolate, or sipping chocolate, is exactly what it sounds like – luxurious, melted chocolate you can drink!");
         ingredientRepository.save(drinkingChocolate);
