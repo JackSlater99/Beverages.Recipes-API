@@ -8,7 +8,7 @@ const LoginButton = () => {
     return(
 
       <FAUser
-      className=""
+      className="fa fa-user fa-2x"
       onClick={() => loginWithRedirect()}
     />
     )
