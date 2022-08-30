@@ -24,7 +24,7 @@ const Recipes = ({ recipes }) => {
 
   return (
     <>
-      <h2>Recipes Index (**Recipes**)</h2>
+      <h2>List of Recipes</h2>
       <main className="grid grid-cols-4 gap-4">{cardNodes}</main>
     </>
   );
