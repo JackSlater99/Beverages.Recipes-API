@@ -136,6 +136,12 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(ginger);
         RawIngredient clove = new RawIngredient("Clove", "https://i.imgur.com/8c0QnWp.jpg", Boolean.FALSE, "Cloves are a pungent warm spice with an intense flavor and aroma. The flavor comes from the compound eugenol. On the tongue, you'll detect sweetness, bitterness, and astringency (drying the mouth), with a noticeable amount of heat.");
         ingredientRepository.save(clove);
+        RawIngredient redWine = new RawIngredient("Red Wine", "https://i.imgur.com/l4sY6J7.jpg", Boolean.TRUE, "Red wine is a type of wine made from dark-colored grape varieties.");
+        ingredientRepository.save(redWine);
+        RawIngredient starAnise = new RawIngredient("Star Anise", "https://i.imgur.com/3MkBVlS.jpg", Boolean.FALSE, "Star anise is a spice made from the fruit of the Chinese evergreen tree Illicium verum. It's aptly named for the star-shaped pods from which the spice seeds are harvested and has a flavor that is reminiscent of licorice.");
+        ingredientRepository.save(starAnise);
+        RawIngredient lemonZest = new RawIngredient("Lemon Zest", "https://i.imgur.com/6sW7fi4.jpg", Boolean.FALSE, "Lemon zest is the yellow outside portion of its peel. It's often used with or without lemon juice to add tangy flavor to recipes. The zest can taste even stronger than the juice; it's often used in lemon-flavored baked or cooked recipes like lemon poppy seed pancakes.");
+        ingredientRepository.save(lemonZest);
 
         // COFFEE
 
@@ -504,6 +510,36 @@ public class DataLoader implements ApplicationRunner {
         Instructions bloodyMaryInstruction3 = new Instructions("", bloodyMary);
         instructionRepository.save(bloodyMaryInstruction3);
 
+//        MULLED WINE
+        RecipeIngredient mulledIngredient1 = new RecipeIngredient(redWine, 750, "ml");
+        recipeIngredientRepository.save(mulledIngredient1);
+        RecipeIngredient mulledIngredient2 = new RecipeIngredient(cinnamon, 1, "large stick");
+        recipeIngredientRepository.save(mulledIngredient2);
+        RecipeIngredient mulledIngredient3 = new RecipeIngredient(starAnise, 2, "whole");
+        recipeIngredientRepository.save(mulledIngredient3);
+        RecipeIngredient mulledIngredient4 = new RecipeIngredient(clove, 4, "whole");
+        recipeIngredientRepository.save(mulledIngredient4);
+        RecipeIngredient mulledIngredient5 = new RecipeIngredient(lemonZest, 2, "strips");
+        recipeIngredientRepository.save(mulledIngredient5);
+        RecipeIngredient mulledIngredient6 = new RecipeIngredient(goldenCasterSugar, 4, "tbsp");
+        recipeIngredientRepository.save(mulledIngredient6);
+
+        Recipe mulledWine = new Recipe("Mulled Wine", "BBC Good Food", true, "Cocktail", "https://i.imgur.com/x8UccqL.jpg", "Easy", 45, "https://www.youtube.com/embed/r482JxBvQrA");
+        mulledWine.addIngredients(mulledIngredient1);
+        mulledWine.addIngredients(mulledIngredient2);
+        mulledWine.addIngredients(mulledIngredient3);
+        mulledWine.addIngredients(mulledIngredient4);
+        mulledWine.addIngredients(mulledIngredient5);
+        mulledWine.addIngredients(mulledIngredient6);
+        recipeRepository.save(mulledWine);
+
+        Instructions mulledInstruction1 = new Instructions("Put the red wine, cinnamon, star anise, cloves, lemon zest and sugar in a large pan. Cook on a low heat for 10 mins.", mulledWine);
+        instructionRepository.save(mulledInstruction1);
+        Instructions mulledInstruction2 = new Instructions("Remove from the heat and cool, leaving to infuse for about 30 mins.", mulledWine);
+        instructionRepository.save(mulledInstruction2);
+        Instructions mulledInstruction3 = new Instructions("To serve, heat without boiling and pour into mugs or heatproof glasses.", mulledWine);
+        instructionRepository.save(mulledInstruction3);
+
 //        TEAS:
 
 //        BROWN SUGAR BOBA
@@ -696,7 +732,7 @@ public class DataLoader implements ApplicationRunner {
         strawberryMilk.addIngredients(smIngredient5);
 
         Instructions smInstruction1 = new Instructions("Cut strawberries into cubes and add ⅔ of the strawberry into a pot.", strawberryMilk);
-        instructionRepository.save(smInstruction1)
+        instructionRepository.save(smInstruction1);
         Instructions smInstruction2 = new Instructions("In the pot, add honey, sugar, and lemon juice. Mix well to ensure all the strawberries are coated in sugar.", strawberryMilk);
         instructionRepository.save(smInstruction2);
         Instructions smInstruction3 = new Instructions("Turn the heat to medium and let it simmer for 15 minutes until the strawberry gets soft; keep stirring to prevent it from burning.", strawberryMilk);
