@@ -8,8 +8,8 @@ import martini from "../../images/martini.jpeg";
 
 const Homepage = ({ recipes }) => {
   return (
-    <div>
-      <section className="border-double border-4 border-gold-300">
+    <div className="border-double border-8 border-yellow-300 py-10 px-10">
+      <section className="">
         <h1 className="text-5xl font-medium text-center">WELCOME</h1>
         <h2 className="text-1xl font-medium text-center">
           EXPLORE & DOWNLOAD BEVERAGES.RECIPES OPEN API{" "}
@@ -17,37 +17,41 @@ const Homepage = ({ recipes }) => {
       </section>
 
       <article>
-        <div className="flex justify-center  ">
+        <div className="flex justify-center pt-10  ">
           <ul className="flex justify-center  ">
-            <HashLink smooth to={"/recipes#coffee"} className="nav-links">
-              <img className="w-48 " src={coffee}></img>
-              <button className="flex justify-center  bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+            <HashLink smooth to={"/recipes#coffee"}>
+
+              <img className="w-48 flex justify-center" src={coffee}></img>
+
+              <div className=" mx-14 py-2 text-2xl italic ">
                 Coffee
-              </button>
+              </div>
+
+
             </HashLink>
           </ul>
           <ul>
-            <HashLink smooth to={"/recipes#mocktail"} className="nav-links">
-              <img className="w-48" src={mocktail}></img>
-              <button className="flex justify-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+            <HashLink smooth to={"/recipes#mocktail"} >
+              <img className="w-48 flex justify-center" src={mocktail}></img>
+              <div className=" mx-12 py-2 text-2xl italic ">
                 Mocktail
-              </button>
+              </div>
             </HashLink>
           </ul>
           <ul>
-            <HashLink smooth to={"/recipes#cocktail"} className="nav-links">
-              <img className="w-48 h-42" src={cocktail}></img>
-              <button className="flex justify-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+            <HashLink smooth to={"/recipes#cocktail"}>
+              <img className="w-48 flex justify-center" src={cocktail}></img>
+              <div className=" mx-12 py-2 text-2xl italic ">
                 Cocktail
-              </button>
+              </div>
             </HashLink>
           </ul>
           <ul>
             <HashLink smooth to={"/recipes#martini"}>
-              <img className="w-48 h-42" src={martini}></img>
-              <button className="flex justify-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+              <img className="w-48 flex justify-center" src={martini}></img>
+              <div className=" mx-14 py-2 text-2xl italic">
                 Martini
-              </button>
+              </div>
             </HashLink>
           </ul>
         </div>
