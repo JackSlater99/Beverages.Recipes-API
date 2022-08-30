@@ -250,10 +250,7 @@ const ApiIndex = () => {
           <h3 className="mt-4 text-md font-semibold">Purpose</h3>
           <p className="mt-4">{selectedOption.description}</p>
 
-          <button
-            className="w-1/2 mt-4 border-solid border-2 border-green-500"
-            onClick={makeFetchRequest}
-          >
+          <button className="styled-btn" onClick={makeFetchRequest}>
             Try Button
           </button>
         </div>

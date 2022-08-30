@@ -28,25 +28,22 @@ const Homepage = ({ recipes }) => {
               className="nav-links"
             >
               <img className="w-48 " src={coffee}></img>
-              <button className="flex justify-center  bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                Coffee
-              </button>
+              <br />
+              <button className="styled-btn">Coffee</button>
             </Link>
           </ul>
           <ul>
             <Link to="/recipes" className="nav-links">
               <img className="w-48" src={mocktail}></img>
-              <button className="flex justify-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                Mocktail
-              </button>
+              <br />
+              <button className="styled-btn">Mocktail</button>
             </Link>
           </ul>
           <ul>
             <Link to="/recipes" className="nav-links">
               <img className="w-48 h-42" src={cocktail}></img>
-              <button className="flex justify-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                Cocktail
-              </button>
+              <br />
+              <button className="styled-btn">Cocktail</button>
             </Link>
           </ul>
         </div>
