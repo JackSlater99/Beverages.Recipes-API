@@ -110,7 +110,10 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(cinnamon);
         RawIngredient groundCardamom = new RawIngredient("", "https://i.imgur.com/g23azPo.jpg", Boolean.FALSE, "A spice consisting of whole or ground dried fruits, or seeds, of Elettaria cardamomum, a herbaceous perennial plant of the ginger family (Zingiberaceae). The seeds have a warm, slightly pungent, and highly aromatic flavour somewhat reminiscent of camphor.");
         ingredientRepository.save(groundCardamom);
-
+        RawIngredient instantCoffee = new RawIngredient("Instant Coffee", "https://i.imgur.com/KN5G31V.jpg", Boolean.FALSE, "Instant coffee is the dried soluble portion of roasted coffee, which can be presented to the consumer in either powder or granule form for immediate make-up in hot water.");
+        ingredientRepository.save(instantCoffee);
+        RawIngredient hotWater = new RawIngredient("Hot Water", "https://i.imgur.com/n7Lt7Y5.jpg", Boolean.FALSE, "Water that's been heated above its initial temperature. The ideal temperature for domestic hot water is 120 degrees Fahrenheit, or 49 degrees Celsius, to avoid the possibility of scalding.");
+        ingredientRepository.save(hotWater);
         // COFFEE
 
         RecipeIngredient coffeeIngredient1 = new RecipeIngredient(milk, 100, "ml");
@@ -234,6 +237,24 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(espressoMartiniInstruction3);
         Instructions espressoMartiniInstruction4 = new Instructions("Strain into the chilled glasses. Garnish each one with coffee beans if you like.", espressoMartini);
         instructionRepository.save(espressoMartiniInstruction4);
+
+        RecipeIngredient dalgonaIngredient1 = new RecipeIngredient(instantCoffee, 4, "tbsp");
+        recipeIngredientRepository.save(dalgonaIngredient1);
+        RecipeIngredient dalgonaIngredient2 = new RecipeIngredient(sugar, 4, "tbsp");
+        recipeIngredientRepository.save(dalgonaIngredient2);
+        RecipeIngredient dalgonaIngredient3 = new RecipeIngredient(hotWater, 4, "tbsp");
+        recipeIngredientRepository.save(dalgonaIngredient3);
+
+        Recipe dalgona = new Recipe("Dalgona", "SeonkyongLongest", false, "Coffee", "https://i.imgur.com/bmlB7pQ.jpg", "Easy", 5, "https://www.youtube.com/embed/d0mFY8PtmpA");
+        dalgona.addIngredients(dalgonaIngredient1);
+        dalgona.addIngredients(dalgonaIngredient2);
+        dalgona.addIngredients(dalgonaIngredient3);
+        recipeRepository.save(dalgona);
+
+        Instructions dalgonaInstruction1 = new Instructions("Combine instant coffee, sugar and hot water in a large mixing bowl. Whip with a hand mixer start from low speed and slowly increase the speed to high. Whip it until it’s foamy and soft pick, about 5 minutes.", dalgona);
+        instructionRepository.save(dalgonaInstruction1);
+        Instructions dalgonaInstruction2 = new Instructions("Fill up a glass with your choice of milk 3/4 way with or without ice. Top it up with foamy whipped coffee. Mix well before drink. Enjoy!", dalgona);
+        instructionRepository.save(dalgonaInstruction2);
 
         // MOCKTAILS
 
