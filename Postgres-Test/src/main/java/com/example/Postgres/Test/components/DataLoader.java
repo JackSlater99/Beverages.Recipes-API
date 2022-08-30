@@ -114,6 +114,11 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(instantCoffee);
         RawIngredient hotWater = new RawIngredient("Hot Water", "https://i.imgur.com/n7Lt7Y5.jpg", Boolean.FALSE, "Water that's been heated above its initial temperature. The ideal temperature for domestic hot water is 120 degrees Fahrenheit, or 49 degrees Celsius, to avoid the possibility of scalding.");
         ingredientRepository.save(hotWater);
+        RawIngredient strawberry = new RawIngredient("Strawberry", "https://i.imgur.com/VpHcS2w.jpg", Boolean.FALSE, "Strawberries are soft, sweet, bright red berries. They're also delicious. Strawberries have tiny edible seeds, which grow all over their surface. When ripe, strawberries smell wonderful and taste even better. You can make jam, pie, strawberry shortcake, and more with strawberries.");
+        ingredientRepository.save(strawberry);
+        RawIngredient honey = new RawIngredient("Honey", "https://i.imgur.com/X6wO5Lf.jpg", Boolean.FALSE, "Honey is a thick, sweet fluid produced by bees from plant nectars. It is commonly used as a sweetener in food, but should be avoided in infants. Some chemicals in honey might kill certain bacteria and fungus.");
+        ingredientRepository.save(honey);
+
         // COFFEE
 
         RecipeIngredient coffeeIngredient1 = new RecipeIngredient(milk, 100, "ml");
@@ -516,6 +521,8 @@ public class DataLoader implements ApplicationRunner {
 
 
 //        FRUIT
+
+//        MANGO LASSI
         RecipeIngredient lassiIngredient1 = new RecipeIngredient(mango, 1, "cup");
         recipeIngredientRepository.save(lassiIngredient1);
         RecipeIngredient lassiIngredient2 = new RecipeIngredient(plainYogurt, 1, "cup");
@@ -542,6 +549,38 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(lassiInstruction1);
         Instructions lassiInstruction2 = new Instructions("Puree until smooth. Serve immediately!", mangoLassi);
         instructionRepository.save(lassiInstruction2);
+
+//        KOREAN STRAWBERRY MILK
+        RecipeIngredient smIngredient1 = new RecipeIngredient(strawberry, 1.5, "lb");
+        recipeIngredientRepository.save(smIngredient1);
+        RecipeIngredient smIngredient2 = new RecipeIngredient(sugar, 0.25, "cup");
+        recipeIngredientRepository.save(smIngredient2);
+        RecipeIngredient smIngredient3 = new RecipeIngredient(honey, 3, "tbsp");
+        recipeIngredientRepository.save(smIngredient3);
+        RecipeIngredient smIngredient4 = new RecipeIngredient(lemonJuice, 1, "tbsp");
+        recipeIngredientRepository.save(smIngredient4);
+        RecipeIngredient smIngredient5 = new RecipeIngredient(milk, 0.5, "cup");
+        recipeIngredientRepository.save(smIngredient5);
+
+        Recipe strawberryMilk = new Recipe("Korean Strawberry Milk", "Tiffy Cooks", false, "Fruit", "https://i.imgur.com/qyNJYSG.jpg", "Easy", 20, "https://www.youtube.com/embed/FTScG6IWFiY");
+        strawberryMilk.addIngredients(smIngredient1);
+        strawberryMilk.addIngredients(smIngredient2);
+        strawberryMilk.addIngredients(smIngredient3);
+        strawberryMilk.addIngredients(smIngredient4);
+        strawberryMilk.addIngredients(smIngredient5);
+
+        Instructions smInstruction1 = new Instructions("Cut strawberries into cubes and add ⅔ of the strawberry into a pot.", strawberryMilk);
+        instructionRepository.save(smInstruction1)
+        Instructions smInstruction2 = new Instructions("In the pot, add honey, sugar, and lemon juice. Mix well to ensure all the strawberries are coated in sugar.", strawberryMilk);
+        instructionRepository.save(smInstruction2);
+        Instructions smInstruction3 = new Instructions("Turn the heat to medium and let it simmer for 15 minutes until the strawberry gets soft; keep stirring to prevent it from burning.", strawberryMilk);
+        instructionRepository.save(smInstruction3);
+        Instructions smInstruction4 = new Instructions("After 15 minutes, add the remaining strawberries and gently mix to cook for another 2 minutes.", strawberryMilk);
+        instructionRepository.save(smInstruction4);
+        Instructions smInstruction5 = new Instructions("Store the strawberry in a glass jar, and once it has cooled down, it can last in the fridge for three weeks.", strawberryMilk);
+        instructionRepository.save(smInstruction5);
+        Instructions smInstruction6 = new Instructions("Add around 2-4 tbsp syrup, pour in the milk, and ice. Shake it all up together when you are ready to drink!", strawberryMilk);
+        instructionRepository.save(smInstruction6);
     }
 
 }
