@@ -3,6 +3,7 @@ import ApiSelect from "./ApiSelect";
 import JsonView from "./JsonView";
 
 import "./ApiIndex.css";
+import { FaCopy, FaArrowRight } from "react-icons/fa";
 
 const ApiIndex = () => {
   const baseUrl = "http://localhost:8080/api";
@@ -26,15 +27,6 @@ const ApiIndex = () => {
       displayUrl: `${baseUrl}/recipes/1`,
       httpVerb: "GET",
     },
-    // {
-    //   id: 3,
-    //   section: "recipes",
-    //   title: "Recipes Create",
-    //   description: "Add a recipe to our database by sending JSON in the format shown.",
-    //   endPointUrl: `${baseUrl}/recipes/2`,
-    //   displayUrl: `${baseUrl}/recipes`,
-    //   httpVerb: "POST"
-    // },
     {
       id: 4,
       section: "recipes",
@@ -107,24 +99,6 @@ const ApiIndex = () => {
       displayUrl: `${baseUrl}/ingredients/1`,
       httpVerb: "GET",
     },
-    // {
-    //   id:12,
-    //   section: "ingredients",
-    //   title: "Ingredient Create",
-    //   description: "Create an ingredient by sending JSON in the format show using HTTP POST.",
-    //   endPointUrl: `${baseUrl}/ingredients/1`,
-    //   displayUrl: `${baseUrl}/ingredients`,
-    //   httpVerb: "POST"
-    // },
-    // {
-    //   id:13,
-    //   section: "ingredients",
-    //   title: "Ingredient Update",
-    //   description: "Update an ingredient by sending JSON in the format show using an HTTP PUT",
-    //   endPointUrl: `${baseUrl}/ingredients/1`,
-    //   displayUrl: `${baseUrl}/ingredients/22`,
-    //   httpVerb: "PUT"
-    // },
     {
       id: 14,
       section: "instructions",
@@ -133,52 +107,7 @@ const ApiIndex = () => {
       endPointUrl: `${baseUrl}/instructions/1`,
       displayUrl: `${baseUrl}/instructions`,
       httpVerb: "GET",
-    },
-    // {
-    //   id:15,
-    //   section: "instructions",
-    //   title: "Instructions by ID",
-    //   description: "Get instruction by ID",
-    //   endPointUrl: `${baseUrl}/instructions/1`,
-    //   displayUrl: `${baseUrl}/instructions/1`,
-    //   httpVerb: "GET"
-    // },
-    // {
-    //   id:16,
-    //   section: "instructions",
-    //   title: "Instructions Create",
-    //   description: "Create an instructions by POSTing JSON as shown",
-    //   endPointUrl: `${baseUrl}/instructions/1`,
-    //   displayUrl: `${baseUrl}/instructions`,
-    //   httpVerb: "POST"
-    // },
-    // {
-    //   id:17,
-    //   section: "recipe-ingredients",
-    //   title: "Recipe Ingredients Index",
-    //   description: "Show all recipe ingredients",
-    //   endPointUrl: `${baseUrl}/recipe-ingredients/1`,
-    //   displayUrl: `${baseUrl}/recipe-ingredients`,
-    //   httpVerb: "GET"
-    // },
-    // {
-    //   id:18,
-    //   section: "recipe-ingredients",
-    //   title: "Recipe Ingredients by ID",
-    //   description: "Show recipe ingredients by ID",
-    //   endPointUrl: `${baseUrl}/recipe-ingredients/1`,
-    //   displayUrl: `${baseUrl}/recipe-ingredients/1`,
-    //   httpVerb: "GET"
-    // },
-    // {
-    //   id:19,
-    //   section: "recipe-ingredients",
-    //   title: "Add a recipe ingredient",
-    //   description: "Add a new recipe ingredient by POSTing JSON in the format shown.",
-    //   endPointUrl: `${baseUrl}/recipe-ingredients/1`,
-    //   displayUrl: `${baseUrl}/recipe-ingredients/1`,
-    //   httpVerb: "POST"
-    // },
+    }
   ];
 
   const [jsonData, setJsonData] = useState({});
@@ -212,13 +141,18 @@ const ApiIndex = () => {
 
   return (
     <main className="flex">
-      <section className="p-4 w-1/2">
+      <section className="px-16 w-1/2">
+
+        <h1 className="mb-4 mt-8">Recipe Open API</h1>
+        <p className="mb-8">Please select an endpoint from the dropdown to see sample JSON, the enpoint URL and the HTTP method.</p>
+
+        <h3 className="mt-4 mb-4 text-md font-semibold">Select Endpoint <span className="pl-12 text-gray-500">{selectedOption.title}</span></h3>
         <div className="ep-select">
           <ApiSelect endPoints={endPoints} onSelectionChange={onSelectChange} />
         </div>
 
         <div>
-          <p className="">{selectedOption.title}</p>
+
           <input
             readOnly
             className="invisible"
@@ -234,23 +168,23 @@ const ApiIndex = () => {
                 navigator.clipboard.writeText(selectedOption.endPointUrl);
               }}
             >
-              Copy URL
+              <FaCopy color="222B36" />
             </button>
           </p>
 
-          <h3 className="mt-4 text-md font-semibold">HTTP Method</h3>
+          <h3 className="mt-8 text-md font-semibold">HTTP Method</h3>
           <p className="ep-display-url">{selectedOption.httpVerb}</p>
 
-          <h3 className="mt-4 text-md font-semibold">Purpose</h3>
+          <h3 className="mt-8 text-md font-semibold">Purpose</h3>
           <p className="mt-4">{selectedOption.description}</p>
 
-          <button className="styled-btn" onClick={makeFetchRequest}>
-            Try Button
+          <button className="styled-btn mt-8 items-end flex place-content-center" onClick={makeFetchRequest}>
+            Try Button <FaArrowRight className="ml-8" />
           </button>
         </div>
       </section>
 
-      <section className="w-1/2">
+      <section className="w-1/2 mt-8 px-8">
         <JsonView jsonApiData={jsonData} />
       </section>
     </main>
