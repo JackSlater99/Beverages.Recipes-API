@@ -8,9 +8,9 @@ import martini from "../../images/martini.jpeg";
 
 const Homepage = ({ recipes }) => {
   return (
-    <div className="border-double border-8 border-yellow-300 py-10 px-10">
+    <div className="border-double border-8 border-gray-400 py-10 px-10">
       <section className="">
-        <h1 className="text-5xl font-medium text-center">WELCOME</h1>
+        <h1 className="text-5xl font-medium text-center underline">WELCOME</h1>
         <h2 className="text-1xl font-medium text-center">
           EXPLORE & DOWNLOAD BEVERAGES.RECIPES OPEN API{" "}
         </h2>
@@ -21,7 +21,7 @@ const Homepage = ({ recipes }) => {
           <ul className="flex justify-center  ">
             <HashLink smooth to={"/recipes#coffee"}>
 
-              <img className="w-48 flex justify-center" src={coffee}></img>
+              <img className="w-48 flex justify-center " src={coffee}></img>
 
               <div className=" mx-14 py-2 text-2xl italic ">
                 Coffee
