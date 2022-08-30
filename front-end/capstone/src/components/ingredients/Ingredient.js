@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import RecipeCard from '../recipes/RecipeCard';
+import { Link } from "react-router-dom";
+
 
 const Ingredient = ({ ingredients, recipes }) => {
 

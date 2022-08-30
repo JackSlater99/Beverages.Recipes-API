@@ -1,25 +1,32 @@
-import React, { useEffect, useState, useNavigate } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router';
 import styled from "styled-components"
 
 const Search = () => {
     
     const [recipeSearchId, setRecipeSearchId] = useState();
+    const [isLoaded, setIsLoaded] = useState(false)
+    let navigate = useNavigate();
+
 
     const getRecipeSearch = async (search) => {
       const resp = await fetch(`http://localhost:8080/api/recipes?name=${search}`);
       const data = await resp.json();
-      setRecipeSearchId(data);
-      console.log(recipeSearchId)
+      setIsLoaded(true);
+      setRecipeSearchId(data[0].id);
     };
   
-    const handleSearch = (event) => {
+    const handleSearch = async (event) => {
         event.preventDefault();
-        getRecipeSearch(event.target.search.value);
-    };
-
-    useEffect((recipeSearchId) => {
-    //   window.location.href = `http://localhost:8080/api/recipes/${recipeSearchId}`
-      }, []);
+        await getRecipeSearch(event.target.search.value);
+      };
+      
+    useEffect(() => {
+      if (!isLoaded){
+        return
+      }
+      navigate(`/recipes/${recipeSearchId}`)
+    }, [recipeSearchId])
 
     return(
         <Form onSubmit={handleSearch}>

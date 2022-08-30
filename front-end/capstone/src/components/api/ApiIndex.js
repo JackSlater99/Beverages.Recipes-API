@@ -25,15 +25,15 @@ const ApiIndex = () => {
       displayUrl: `${baseUrl}/recipes/1`,
       httpVerb: "GET"
     },
-    {
-      id: 3,
-      section: "recipes",
-      title: "Recipes Create",
-      description: "Add a recipe to our database by sending JSON in the format shown.",
-      endPointUrl: `${baseUrl}/recipes/2`,
-      displayUrl: `${baseUrl}/recipes`,
-      httpVerb: "POST"
-    },
+    // {
+    //   id: 3,
+    //   section: "recipes",
+    //   title: "Recipes Create",
+    //   description: "Add a recipe to our database by sending JSON in the format shown.",
+    //   endPointUrl: `${baseUrl}/recipes/2`,
+    //   displayUrl: `${baseUrl}/recipes`,
+    //   httpVerb: "POST"
+    // },
     {
       id:4,
       section: "recipes",
@@ -106,24 +106,24 @@ const ApiIndex = () => {
       displayUrl: `${baseUrl}/ingredients/1`,
       httpVerb: "GET"
     },
-    {
-      id:12,
-      section: "ingredients",
-      title: "Ingredient Create",
-      description: "Create an ingredient by sending JSON in the format show using HTTP POST.",
-      endPointUrl: `${baseUrl}/ingredients/1`,
-      displayUrl: `${baseUrl}/ingredients`,
-      httpVerb: "POST"
-    },
-    {
-      id:13,
-      section: "ingredients",
-      title: "Ingredient Update",
-      description: "Update an ingredient by sending JSON in the format show using an HTTP PUT",
-      endPointUrl: `${baseUrl}/ingredients/1`,
-      displayUrl: `${baseUrl}/ingredients/22`,
-      httpVerb: "PUT"
-    },
+    // {
+    //   id:12,
+    //   section: "ingredients",
+    //   title: "Ingredient Create",
+    //   description: "Create an ingredient by sending JSON in the format show using HTTP POST.",
+    //   endPointUrl: `${baseUrl}/ingredients/1`,
+    //   displayUrl: `${baseUrl}/ingredients`,
+    //   httpVerb: "POST"
+    // },
+    // {
+    //   id:13,
+    //   section: "ingredients",
+    //   title: "Ingredient Update",
+    //   description: "Update an ingredient by sending JSON in the format show using an HTTP PUT",
+    //   endPointUrl: `${baseUrl}/ingredients/1`,
+    //   displayUrl: `${baseUrl}/ingredients/22`,
+    //   httpVerb: "PUT"
+    // },
     {
       id:14,
       section: "instructions",
@@ -133,51 +133,51 @@ const ApiIndex = () => {
       displayUrl: `${baseUrl}/instructions`,
       httpVerb: "GET"
     },
-    {
-      id:15,
-      section: "instructions",
-      title: "Instructions by ID",
-      description: "Get instruction by ID",
-      endPointUrl: `${baseUrl}/instructions/1`,
-      displayUrl: `${baseUrl}/instructions/1`,
-      httpVerb: "GET"
-    },
-    {
-      id:16,
-      section: "instructions",
-      title: "Instructions Create",
-      description: "Create an instructions by POSTing JSON as shown",
-      endPointUrl: `${baseUrl}/instructions/1`,
-      displayUrl: `${baseUrl}/instructions`,
-      httpVerb: "POST"
-    },
-    {
-      id:17,
-      section: "recipe-ingredients",
-      title: "Recipe Ingredients Index",
-      description: "Show all recipe ingredients",
-      endPointUrl: `${baseUrl}/recipe-ingredients/1`,
-      displayUrl: `${baseUrl}/recipe-ingredients`,
-      httpVerb: "GET"
-    },
-    {
-      id:18,
-      section: "recipe-ingredients",
-      title: "Recipe Ingredients by ID",
-      description: "Show recipe ingredients by ID",
-      endPointUrl: `${baseUrl}/recipe-ingredients/1`,
-      displayUrl: `${baseUrl}/recipe-ingredients/1`,
-      httpVerb: "GET"
-    },
-    {
-      id:19,
-      section: "recipe-ingredients",
-      title: "Add a recipe ingredient",
-      description: "Add a newe recipe ingredient by POSTing JSON in the format shown.",
-      endPointUrl: `${baseUrl}/recipe-ingredients/1`,
-      displayUrl: `${baseUrl}/recipe-ingredients/1`,
-      httpVerb: "POST"
-    },
+    // {
+    //   id:15,
+    //   section: "instructions",
+    //   title: "Instructions by ID",
+    //   description: "Get instruction by ID",
+    //   endPointUrl: `${baseUrl}/instructions/1`,
+    //   displayUrl: `${baseUrl}/instructions/1`,
+    //   httpVerb: "GET"
+    // },
+    // {
+    //   id:16,
+    //   section: "instructions",
+    //   title: "Instructions Create",
+    //   description: "Create an instructions by POSTing JSON as shown",
+    //   endPointUrl: `${baseUrl}/instructions/1`,
+    //   displayUrl: `${baseUrl}/instructions`,
+    //   httpVerb: "POST"
+    // },
+    // {
+    //   id:17,
+    //   section: "recipe-ingredients",
+    //   title: "Recipe Ingredients Index",
+    //   description: "Show all recipe ingredients",
+    //   endPointUrl: `${baseUrl}/recipe-ingredients/1`,
+    //   displayUrl: `${baseUrl}/recipe-ingredients`,
+    //   httpVerb: "GET"
+    // },
+    // {
+    //   id:18,
+    //   section: "recipe-ingredients",
+    //   title: "Recipe Ingredients by ID",
+    //   description: "Show recipe ingredients by ID",
+    //   endPointUrl: `${baseUrl}/recipe-ingredients/1`,
+    //   displayUrl: `${baseUrl}/recipe-ingredients/1`,
+    //   httpVerb: "GET"
+    // },
+    // {
+    //   id:19,
+    //   section: "recipe-ingredients",
+    //   title: "Add a recipe ingredient",
+    //   description: "Add a new recipe ingredient by POSTing JSON in the format shown.",
+    //   endPointUrl: `${baseUrl}/recipe-ingredients/1`,
+    //   displayUrl: `${baseUrl}/recipe-ingredients/1`,
+    //   httpVerb: "POST"
+    // },
 
   ];
 

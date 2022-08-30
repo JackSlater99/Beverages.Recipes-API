@@ -1,28 +1,13 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import mocktail from "/Users/user/codeclan_work/week_14/beverages/Beverages.Recipes-API/front-end/capstone/src/images/mocktail.jpeg"
-import coffee from "/Users/user/codeclan_work/week_14/beverages/Beverages.Recipes-API/front-end/capstone/src/images/coffee3.jpeg"
-import cocktail from "/Users/user/codeclan_work/week_14/beverages/Beverages.Recipes-API/front-end/capstone/src/images/cocktail.webp"
-
-
-
-
-
-
-
+import React, {useState, useEffect, Component, useRef} from 'react';
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link"
+import mocktail from "../../images/mocktail.jpeg"
+import coffee from "../../images/coffee3.jpeg"
+import cocktail from "../../images/cocktail.webp"
+import martini from "../../images/martini.jpeg"
 
 
 const Homepage = ({ recipes }) => {
-
-    const baseUrl1 = "http://localhost:8080/api/recipes?type=beer";
-
-
-    const getRecipes = () => {
-        return fetch(baseUrl)
-            .then(res => res.json())
-    };
-
-
 
     return (
         <div>
@@ -35,31 +20,37 @@ const Homepage = ({ recipes }) => {
 
                 <div className="flex justify-center  ">
                     <ul className="flex justify-center  ">
-                        <Link to="http://localhost:8080/api/recipes?type=beer">
+                        <HashLink smooth to={"/recipes#coffee"} >
                             <img className="w-48 " src={coffee} ></img>
                             <button className="flex justify-center  bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                                 Coffee
                             </button>
-                        </Link>
-
+                        </HashLink >
                     </ul>
                     <ul>
-                        <Link to="/recipes">
+                        <HashLink smooth to={"/recipes#mocktail"} >
                             <img className="w-48" src={mocktail} ></img>
                             <button className="flex justify-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                                 Mocktail
                             </button>
-                        </Link>
-
+                        </HashLink >
                     </ul>
                     <ul>
-                        <Link to="/recipes">
+                        <HashLink smooth to={"/recipes#cocktail"} >
                             <img className="w-48 h-42" src={cocktail} ></img>
                             <button className="flex justify-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                                 Cocktail
                             </button>
-                        </Link>
+                        </HashLink >
 
+                    </ul>
+                    <ul>
+                        <HashLink smooth to={"/recipes#martini"}>
+                            <img className="w-48 h-42" src={martini} ></img>
+                            <button className="flex justify-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                                Martini
+                            </button>
+                        </HashLink>
                     </ul>
                 </div>
             </article>
