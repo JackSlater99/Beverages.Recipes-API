@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import LoginButton from "../AuthComponents/LoginButton";
 import styled from "styled-components";
+import logo from "../../images/logo.png";
 
 const NavBar = () => {
   const [styling, setStyling] = useState(false);
   return (
     <Nav>
       <Logo href="/">
-        <img src="https://i.imgur.com/vV1MWDJ.png" width="100" />
+        <img src={logo} width="100" />
       </Logo>
       <Hamburger onClick={() => setStyling(!styling)}>
         <span></span>

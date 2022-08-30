@@ -40,9 +40,9 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(milk);
         RawIngredient groundEspresso = new RawIngredient("Ground Espresso", "https://i.imgur.com/eOvIK87.jpg", Boolean.FALSE, "Because espresso is roasted, ground, and brewed differently, it has a unique flavor compared to drip coffee. It usually has a bolder, less acidic taste, with a well-rounded and full-bodied finish. It tastes “stronger,” meaning that it has a rich coffee flavor. The roasting process especially brings out more oils in the beans, so it often has a heavier feel. " );
         ingredientRepository.save(groundEspresso);
-        RawIngredient drinkingChocolate = new RawIngredient("Drinking Chocolate", "https://i.imgur.com/wISoodZ.jpg", Boolean.FALSE, "Drinking chocolate, or sipping chocolate, is exactly what it sounds like – luxurious, melted chocolate you can drink!");
+        RawIngredient drinkingChocolate = new RawIngredient("Drinking Chocolate", "https://i.imgur.com/OaES1rn.jpg", Boolean.FALSE, "Drinking chocolate, or sipping chocolate, is exactly what it sounds like – luxurious, melted chocolate you can drink!");
         ingredientRepository.save(drinkingChocolate);
-        RawIngredient goldenCasterSugar = new RawIngredient("Golden Caster Sugar", "https://i.imgur.com/JfZDDbO.jpg", Boolean.FALSE, "Golden caster sugar: loosely packed and sandy in texture with a warm, golden colour, golden caster sugar is a fine sugar that is ideal for use in creamed sponge cakes. It's the same as normal caster sugar, but it's unrefined, so has more caramel flavours.");
+        RawIngredient goldenCasterSugar = new RawIngredient("Golden Caster Sugar", "https://i.imgur.com/v9LR6kn.jpg", Boolean.FALSE, "Golden caster sugar: loosely packed and sandy in texture with a warm, golden colour, golden caster sugar is a fine sugar that is ideal for use in creamed sponge cakes. It's the same as normal caster sugar, but it's unrefined, so has more caramel flavours.");
         ingredientRepository.save(goldenCasterSugar);
         RawIngredient vodka = new RawIngredient("Vodka", "https://i.imgur.com/te8EcH1.png", Boolean.TRUE, "Vodka, distilled liquor, clear and colourless and without definite aroma or taste, ranging in alcoholic content from about 40 to 55 percent.");
         ingredientRepository.save(vodka);
