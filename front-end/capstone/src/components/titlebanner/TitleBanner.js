@@ -14,7 +14,7 @@ const TitleBanner = () => {
     const [showModal, setShowModal] = useState(false);
     return(
         <SecondNav>
-            {/* <Search /> */}
+            <Search />
             {/* <Favourites /> */}
             <AuthNav/>
             <FAIconHeart><i className="fa fa-heart fa-2x"></i></FAIconHeart>

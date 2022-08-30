@@ -34,8 +34,8 @@ const Ratings = ({ recipe }) => {
     <div className="ratings text-center">
       <p>Rating: {recipe.rating}</p>
       <p>Number of Ratings: {recipe.numberOfRatings}</p>
-      <p>Accumulated Rating: {recipe.accumulatedRating}</p>
-      <p>Average Ratign: {averageRating()}</p>
+      {/* <p>Accumulated Rating: {recipe.accumulatedRating}</p>
+      <p>Average Ratign: {averageRating()}</p> */}
       {makeStars(recipe)}
     </div>
   );

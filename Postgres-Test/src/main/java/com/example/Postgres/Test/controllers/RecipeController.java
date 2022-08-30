@@ -37,7 +37,7 @@ public class RecipeController {
         } else if (prepTime != null) {
             return new ResponseEntity<>(recipeRepository.findAllByPrepTimeLessThanEqual(prepTime), HttpStatus.OK);
         }
-        return new ResponseEntity<>(recipeRepository.findAllByApprovedTrue(), HttpStatus.OK);
+        return new ResponseEntity<>(recipeRepository.findAllByApprovedTrueOrderByTypeAsc(), HttpStatus.OK);
     }
 
     @GetMapping(value="/recipes/alcoholic")

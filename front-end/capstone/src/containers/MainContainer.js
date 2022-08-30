@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
   Switch,
@@ -58,47 +58,48 @@ const MainContainer = () => {
     return <Loading />;
   }
 
+  
+
   return (
     <div className="container mx-auto">
       <Header />
+        <Routes>
+          <Route
+            element={<Homepage recipes={recipesJson} />}
+            path="/"
+            exact
+            component={<Homepage />}
+          />
+          <Route
+            element={<Recipes recipes={recipesJson} />}
+            path="/recipes"
+            exact
+            component={<Recipes />}
+          />
+          <Route
+            element={
+              <RecipeFull recipes={recipesJson} getAllRecipes={getAllRecipes} />
+            }
+            path="/recipes/:id"
+            exact
+            component={<RecipeFull />}
+          />
+          <Route
+            element={<Ingredients ingredients={ingredientsJson} />}
+            path="/ingredients"
+            exact
+            component={<Ingredients />}
+          />
+          <Route
+            element={<Ingredient recipes={recipesJson} ingredients={ingredientsJson} />}
+            path="/ingredients/:id"
+            exact
+            component={<Ingredient />}
+          />
 
-      <Routes>
-        <Route
-          element={<Homepage recipes={recipesJson} />}
-          path="/"
-          exact
-          component={<Homepage />}
-        />
-        <Route
-          element={<Recipes recipes={recipesJson} />}
-          path="/recipes"
-          exact
-          component={<Recipes />}
-        />
-        <Route
-          element={
-            <RecipeFull recipes={recipesJson} getAllRecipes={getAllRecipes} />
-          }
-          path="/recipes/:id"
-          exact
-          component={<RecipeFull />}
-        />
-        <Route
-          element={<Ingredients ingredients={ingredientsJson} />}
-          path="/ingredients"
-          exact
-          component={<Ingredients />}
-        />
-        <Route
-          element={<Ingredient recipes={recipesJson} ingredients={ingredientsJson} />}
-          path="/ingredients/:id"
-          exact
-          component={<Ingredient />}
-        />
-
-        <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
-        <Route element={<Profile />} path="/profile" component={<Profile />} />
-      </Routes>
+          <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
+          <Route element={<Profile />} path="/profile" component={<Profile />} />
+        </Routes>
       <BackToTopButton />
 
       <Footer />
