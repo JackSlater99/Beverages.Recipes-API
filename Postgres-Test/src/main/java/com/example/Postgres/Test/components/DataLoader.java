@@ -118,9 +118,22 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(strawberry);
         RawIngredient honey = new RawIngredient("Honey", "https://i.imgur.com/X6wO5Lf.jpg", Boolean.FALSE, "Honey is a thick, sweet fluid produced by bees from plant nectars. It is commonly used as a sweetener in food, but should be avoided in infants. Some chemicals in honey might kill certain bacteria and fungus.");
         ingredientRepository.save(honey);
+        RawIngredient whiteRice = new RawIngredient("White Rice", "https://i.imgur.com/35RoUbm.jpg", Boolean.FALSE, "The starchy seeds of an annual southeast Asian cereal grass (Oryza sativa) that are cooked and used for food");
+        ingredientRepository.save(whiteRice);
+        RawIngredient choppedAlmonds = new RawIngredient("Chopped Almonds", "https://i.imgur.com/IxLf1jK.jpg", Boolean.FALSE, "The almond is the edible kernel of the fruit of the sweet almond tree. It is a bright white fruti and wrapped in a reddish brown cover. It is consumed as dry fruit, fried and/or salted. Some well-known products, such as nougat and marzipan, are made of almonds.");
+        ingredientRepository.save(choppedAlmonds);
+        RawIngredient vanilla = new RawIngredient("Vanilla", "https://i.imgur.com/aretJyR.jpg", Boolean.FALSE, "Vanilla is strongly aromatic and contributes warm, floral notes. It’s a gentle but distinct flavor that complements many other spices and foods.");
+        ingredientRepository.save(vanilla);
+        RawIngredient evaporatedMilk = new RawIngredient("Evaporated Milk", "https://i.imgur.com/zfPg1ux.jpg", Boolean.FALSE, "Evaporated milk, known in some countries as \"unsweetened condensed milk\", is a shelf-stable canned cow’s milk product where about 60% of the water has been removed from fresh milk. It differs from sweetened condensed milk, which contains added sugar.");
+        ingredientRepository.save(evaporatedMilk);
+        RawIngredient thaiTea = new RawIngredient("Thai Tea", "https://i.imgur.com/NbOtDaR.jpg", Boolean.FALSE, "Thai tea is infused with star anise and cloves and sweetened with sugar or sweetened condensed milk.");
+        ingredientRepository.save(thaiTea);
+        RawIngredient sweetenedCondensedMilk = new RawIngredient("Sweetened Condensed Milk", "https://i.imgur.com/4jwn0B3.jpg", Boolean.FALSE, "Sweetened condensed milk is made by removing most of the water from cow's milk. It's sweeter and higher in calories than evaporated milk, as sugar is added as a preservative. It can add flavor to desserts, coffee and certain stews but is unsuitable for people with milk protein allergy or lactose intolerance.");
+        ingredientRepository.save(sweetenedCondensedMilk);
 
         // COFFEE
 
+//        FLAT WHITE
         RecipeIngredient coffeeIngredient1 = new RecipeIngredient(milk, 100, "ml");
         recipeIngredientRepository.save(coffeeIngredient1);
         RecipeIngredient coffeeIngredient2 = new RecipeIngredient(groundEspresso, 18, "g");
@@ -159,7 +172,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions flatWhiteInstruction2 = new Instructions("Steam the milk with the steamer attachment so that it has around 1-2cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming to pour into the centre. Once the milk jug is almost touching the surface of the coffee, tilt the jug to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top.", flatWhite);
         instructionRepository.save(flatWhiteInstruction2);
 
-
+//        MOCHA
         Recipe mocha = new Recipe(
                 "Mocha",
                 "Jack",
@@ -180,6 +193,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions mochaInstruction2 = new Instructions("Steam the milk with the steamer attachment so that it has around 4-6cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming into the centre. Once the milk jug is almost touching the surface of the coffee, tilt to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top.", mocha);
         instructionRepository.save(mochaInstruction2);
 
+//        CAPPUCCINO
         Recipe cappuccino = new Recipe(
                 "Cappuccino",
                 "Jack",
@@ -199,6 +213,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions cappuccinoInstruction2 = new Instructions("Steam the milk with the steamer attachment so that it has around 4-6cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming to pour into the centre. Once the milk jug is almost touching the surface of the coffee, tilt the jug to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top. Dust the surface with a little cocoa powder if you like.", cappuccino);
         instructionRepository.save(cappuccinoInstruction2);
 
+//        LATTE
         Recipe latte = new Recipe(
                 "Latte",
                 "Jack",
@@ -218,6 +233,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions latteInstruction2 = new Instructions("Steam the milk with the steamer attachment so that it has around 2-3cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming to pour into the centre. Once the milk jug is almost touching the surface of the coffee, tilt to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top.", latte);
         instructionRepository.save(latteInstruction2);
 
+//        ESPRESSO MARTINI
         Recipe espressoMartini = new Recipe(
                 "Espresso Martini",
                 "Jack",
@@ -243,6 +259,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions espressoMartiniInstruction4 = new Instructions("Strain into the chilled glasses. Garnish each one with coffee beans if you like.", espressoMartini);
         instructionRepository.save(espressoMartiniInstruction4);
 
+//        DALGONA
         RecipeIngredient dalgonaIngredient1 = new RecipeIngredient(instantCoffee, 4, "tbsp");
         recipeIngredientRepository.save(dalgonaIngredient1);
         RecipeIngredient dalgonaIngredient2 = new RecipeIngredient(sugar, 4, "tbsp");
@@ -263,6 +280,7 @@ public class DataLoader implements ApplicationRunner {
 
         // MOCKTAILS
 
+//        SUMMER CUP MOCKTAIL
         RecipeIngredient summerCupMocktailIngredient1 = new RecipeIngredient(cucumber, 1, "cm");
         recipeIngredientRepository.save(summerCupMocktailIngredient1);
         RecipeIngredient summerCupMocktailIngredient2 = new RecipeIngredient(mint, 1, "sprig");
@@ -294,6 +312,7 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(summerCupMocktailInstruction2);
 
 
+//        VIRGIN MOJITO
         RecipeIngredient virginMojitoIngredient1 = new RecipeIngredient(sugar, 1, "tbsp");
         recipeIngredientRepository.save(virginMojitoIngredient1);
         RecipeIngredient virginMojitoIngredient2 = new RecipeIngredient(mint, 1, "sprig");
@@ -325,6 +344,7 @@ public class DataLoader implements ApplicationRunner {
 
     // MARTINIS
 
+//        VODKA MARTINI
         RecipeIngredient martiniIngredient1 = new RecipeIngredient(vodka, 60, "ml");
         recipeIngredientRepository.save(martiniIngredient1);
         RecipeIngredient martiniIngredient2 = new RecipeIngredient(vermouth, 1, "tbsp");
@@ -349,7 +369,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions vodkaMartiniInstruction2 = new Instructions("Strain into a chilled martini glass. Serve with an olive on a cocktail stick or a twist of lemon peel.", vodkaMartini);
         instructionRepository.save(vodkaMartiniInstruction2);
 
-
+//        COSMOPOLITAN
         RecipeIngredient martiniIngredient3 = new RecipeIngredient(vodka, 120, "ml");
         recipeIngredientRepository.save(martiniIngredient3);
         RecipeIngredient martiniIngredient4 = new RecipeIngredient(orangeLiqueur, 60, "ml");
@@ -379,7 +399,7 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(cosmopolitanInstruction1);
 
 
-
+//        DIRTY MARTINI
         RecipeIngredient martiniIngredient7 = new RecipeIngredient(olive, 6, "pitted with brine");
         recipeIngredientRepository.save(martiniIngredient7);
         RecipeIngredient martiniIngredient8 = new RecipeIngredient(londonDryGin, 150, "ml");
@@ -411,6 +431,7 @@ public class DataLoader implements ApplicationRunner {
 
 //        // Cocktail
 
+//        CLASSIC SHANDY
         RecipeIngredient classicShandyIngredient1 = new RecipeIngredient(lemon , 2, "slices");
         recipeIngredientRepository.save(classicShandyIngredient1);
         RecipeIngredient classicShandyIngredient2 = new RecipeIngredient(bitterBeer, 200, "ml");
@@ -438,6 +459,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions classicShandyInstruction2 = new Instructions("Stir well, then make a small cut in a second lemon slice and use this to garnish the rim of the glass.", classicShandy);
         instructionRepository.save(classicShandyInstruction2);
 
+//        BLOODY MARY
         RecipeIngredient maryIngredient1 = new RecipeIngredient(vodka, 100, "ml");
         recipeIngredientRepository.save(maryIngredient1);
         RecipeIngredient maryIngredient2 = new RecipeIngredient(tomatoJuice, 500, "ml");
@@ -477,6 +499,8 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(bloodyMaryInstruction3);
 
 //        TEAS:
+
+//        BROWN SUGAR BOBA
         RecipeIngredient bobaIngredient1 = new RecipeIngredient(tapiocaStarch, 160, "g");
         recipeIngredientRepository.save(bobaIngredient1);
         RecipeIngredient bobaIngredient2 = new RecipeIngredient(brownSugar, 160, "g");
@@ -519,8 +543,43 @@ public class DataLoader implements ApplicationRunner {
         Instructions bobaInstructions9 = new Instructions("Using two tea bags, steep ¼ cup of tea. In a cup, add in the brown sugar boba, swirl the brown sugar boba around the cup, so it leaves a tiger pattern. Add in steep tea, ice, and milk. Enjoy!", brownSugarBoba);
         instructionRepository.save(bobaInstructions9);
 
+//        THAI ICED TEA
+        RecipeIngredient thaiTeaIngredient1 = new RecipeIngredient(thaiTea, 45, "ml");
+        recipeIngredientRepository.save(thaiTeaIngredient1);
+        RecipeIngredient thaiTeaIngredient2 = new RecipeIngredient(hotWater, 240, "ml");
+        recipeIngredientRepository.save(thaiTeaIngredient2);
+        RecipeIngredient thaiTeaIngredient3 = new RecipeIngredient(sweetenedCondensedMilk, 22, "ml");
+        recipeIngredientRepository.save(thaiTeaIngredient3);
+        RecipeIngredient thaiTeaIngredient4 = new RecipeIngredient(sugar, 10, "ml");
+        recipeIngredientRepository.save(thaiTeaIngredient4);
+        RecipeIngredient thaiTeaIngredient5 = new RecipeIngredient(salt, 1, "pinch");
+        recipeIngredientRepository.save(thaiTeaIngredient5);
+        RecipeIngredient thaiTeaIngredient6 = new RecipeIngredient(evaporatedMilk, 20, "ml");
+        recipeIngredientRepository.save(thaiTeaIngredient6);
+        RecipeIngredient thaiTeaIngredient7 = new RecipeIngredient(ice, 1, "handful");
+        recipeIngredientRepository.save(thaiTeaIngredient7);
 
-//        FRUIT
+        Recipe thaiIcedTea = new Recipe("Thai Iced Tea", "Hot Thai Kitchen", false, "Tea", "https://i.imgur.com/DLR4vcD.jpg", "Easy", 10, "https://www.youtube.com/embed/rIncobztk6E");
+        thaiIcedTea.addIngredients(thaiTeaIngredient1);
+        thaiIcedTea.addIngredients(thaiTeaIngredient2);
+        thaiIcedTea.addIngredients(thaiTeaIngredient3);
+        thaiIcedTea.addIngredients(thaiTeaIngredient4);
+        thaiIcedTea.addIngredients(thaiTeaIngredient5);
+        thaiIcedTea.addIngredients(thaiTeaIngredient6);
+        thaiIcedTea.addIngredients(thaiTeaIngredient7);
+        recipeRepository.save(thaiIcedTea);
+
+        Instructions thaiTeaInstruction1 = new Instructions("Steep Thai tea leaves in the hot water for 3-5 minutes—you can steep the tea in a cloth filter bag (as shown in video) or just in a cup and then pour it through a paper filter.", thaiIcedTea);
+        instructionRepository.save(thaiTeaInstruction1);
+        Instructions thaiTeaInstruction2 = new Instructions("While the tea steeps, combine condensed milk, sugar, salt in a mixing glass. Once the tea is ready, pour the brewed tea into the glass and stir to dissolve the sugar and condensed milk.", thaiIcedTea);
+        instructionRepository.save(thaiTeaInstruction2);
+        Instructions thaiTeaInstruction3 = new Instructions("When ready to serve, fill a glass all the way to the top with ice and pour in the mixed tea, leaving a little room on top.", thaiIcedTea);
+        instructionRepository.save(thaiTeaInstruction3);
+        Instructions thaiTeaInstruction4 = new Instructions("Drizzle the top with some evaporated milk and enjoy.", thaiIcedTea);
+        instructionRepository.save(thaiTeaInstruction4);
+
+
+//        MILK
 
 //        MANGO LASSI
         RecipeIngredient lassiIngredient1 = new RecipeIngredient(mango, 1, "cup");
@@ -581,6 +640,47 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(smInstruction5);
         Instructions smInstruction6 = new Instructions("Add around 2-4 tbsp syrup, pour in the milk, and ice. Shake it all up together when you are ready to drink!", strawberryMilk);
         instructionRepository.save(smInstruction6);
+
+//        HORCHATA
+        RecipeIngredient horchataIngredient1 = new RecipeIngredient(whiteRice, 1, "cup");
+        recipeIngredientRepository.save(horchataIngredient1);
+        RecipeIngredient horchataIngredient2 = new RecipeIngredient(sugar, 1, "cup");
+        recipeIngredientRepository.save(horchataIngredient2);
+        RecipeIngredient horchataIngredient3 = new RecipeIngredient(choppedAlmonds, 0.5, "cup");
+        recipeIngredientRepository.save(horchataIngredient3);
+        RecipeIngredient horchataIngredient4 = new RecipeIngredient(cinnamon, 1, "stick");
+        recipeIngredientRepository.save(horchataIngredient4);
+        RecipeIngredient horchataIngredient5 = new RecipeIngredient(vanilla, 1, "tbsp");
+        recipeIngredientRepository.save(horchataIngredient5);
+        RecipeIngredient horchataIngredient6 = new RecipeIngredient(evaporatedMilk, 340, "g");
+        recipeIngredientRepository.save(horchataIngredient6);
+        RecipeIngredient horchataIngredient7 = new RecipeIngredient(milk, 1.5, "cups");
+        recipeIngredientRepository.save(horchataIngredient7);
+        RecipeIngredient horchataIngredient8 = new RecipeIngredient(water, 1, "liter");
+        recipeIngredientRepository.save(horchataIngredient8);
+        RecipeIngredient horchataIngredient9 = new RecipeIngredient(ice, 1, "handful");
+        recipeIngredientRepository.save(horchataIngredient9);
+
+        Recipe horchata = new Recipe("Horchata", "My Latina Table", false, "Misc", "https://i.imgur.com/J5qC8k4.jpg", "Easy", 5.5, "https://www.youtube.com/embed/JtwqQEaxIQg");
+        horchata.addIngredients(horchataIngredient1);
+        horchata.addIngredients(horchataIngredient2);
+        horchata.addIngredients(horchataIngredient3);
+        horchata.addIngredients(horchataIngredient4);
+        horchata.addIngredients(horchataIngredient5);
+        horchata.addIngredients(horchataIngredient6);
+        horchata.addIngredients(horchataIngredient7);
+        horchata.addIngredients(horchataIngredient8);
+        horchata.addIngredients(horchataIngredient9);
+        recipeRepository.save(horchata);
+
+        Instructions horchataInstruction1 = new Instructions("Start by soaking the rice, cinnamon, and almonds in a bowl of water all night, or at least for 5 hours so that the rice softens slightly.", horchata);
+        instructionRepository.save(horchataInstruction1);
+        Instructions horchataInstruction2 = new Instructions("Strain the water from the cinnamon, rice, and almond mixture that were soaking, disposing of water.", horchata);
+        instructionRepository.save(horchataInstruction2);
+        Instructions horchataInstruction3 = new Instructions("Blend the cinnamon, rice, and almond mixture with evaporated milk until a smoother mix is formed and the grains of rice are completely ground.", horchata);
+        instructionRepository.save(horchataInstruction3);
+        Instructions horchataInstruction4 = new Instructions("Strain the resulting liquid into a pitcher, and add the sugar, vanilla, and milk. Mix well until everything is well combined.Add a liter of water, and serve with ice. Enjoy!", horchata);
+        instructionRepository.save(horchataInstruction4);
     }
 
 }
