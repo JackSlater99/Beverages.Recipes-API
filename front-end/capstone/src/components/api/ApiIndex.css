@@ -1,0 +1,28 @@
+.ep-select {
+    width: 100%;
+    background-color: #000;
+
+}
+
+
+select {
+    padding: 1rem;
+    width: 100%
+}
+
+.ep-display-url {
+    width: 100%;
+    padding: 0;
+    border: 1px solid #666;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.ep-display-url button{
+    display: inline-block;
+    margin:0;
+    padding: 0;
+    height: 100%;
+    background-color: #f20;
+}

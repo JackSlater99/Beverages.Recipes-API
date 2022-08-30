@@ -217,12 +217,12 @@ const ApiIndex = () => {
   return (
     <main className="flex">
       <section className="p-4 w-1/2">
-        <div className="pb-8">
+        <div className="ep-select">
           <ApiSelect endPoints={endPoints} onSelectionChange={onSelectChange} />
         </div>
 
         <div>
-          <h2 className="text-lg font-semibold">{selectedOption.title}</h2>
+          <p className="">{selectedOption.title}</p>
           <input
             readOnly
             className="invisible"
@@ -231,8 +231,8 @@ const ApiIndex = () => {
           />
 
           <h3 className="mt-4 mb-2 text-md font-semibold">Endpoint URL</h3>
-          <p>
-            <span className="mr-8 pl-8 pr-8 pt-1 pb-1 border-solid border-2 border-gray-200">
+          <p className="ep-display-url">
+            <span className="">
               {selectedOption.displayUrl}
             </span>
             <button
@@ -245,7 +245,7 @@ const ApiIndex = () => {
           </p>
 
           <h3 className="mt-4 text-md font-semibold">HTTP Method</h3>
-          <p>{selectedOption.httpVerb}</p>
+          <p className="ep-display-url">{selectedOption.httpVerb}</p>
 
           <h3 className="mt-4 text-md font-semibold">Purpose</h3>
           <p className="mt-4">{selectedOption.description}</p>
