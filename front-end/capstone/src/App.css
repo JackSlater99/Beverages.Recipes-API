@@ -6,6 +6,10 @@
   --fourth-colour: #e3e3e3;
 }
 
+* {
+  margin: 0;
+}
+
 body {
   font-family: var(--default-font);
 }
