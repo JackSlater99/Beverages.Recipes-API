@@ -21,7 +21,7 @@ a {
 }
 
 a:hover {
-  color: var(--secondary-colour);
+  color: var(--third-colour);
 }
 
 a::before {
@@ -77,14 +77,6 @@ input[type="radio"] {
     display: block;
     margin: 0.2em auto;
   }
-}
-
-.nav-links {
-  text-decoration: none;
-}
-
-.nav-links:hover {
-  text-decoration: none;
 }
 
 .nav-links:before {
