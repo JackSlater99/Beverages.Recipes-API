@@ -108,7 +108,7 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(plainYogurt);
         RawIngredient cinnamon = new RawIngredient("Cinnamon", "https://i.imgur.com/QN1byhC.jpg", Boolean.FALSE, "The spice, consisting of the dried inner bark, is brown in colour and has a delicately fragrant aroma and a warm sweet flavour. Cinnamon is used to flavour a variety of foods, from confections to curries to beverages, and is popular in bakery goods in many places.");
         ingredientRepository.save(cinnamon);
-        RawIngredient groundCardamom = new RawIngredient("", "https://i.imgur.com/g23azPo.jpg", Boolean.FALSE, "A spice consisting of whole or ground dried fruits, or seeds, of Elettaria cardamomum, a herbaceous perennial plant of the ginger family (Zingiberaceae). The seeds have a warm, slightly pungent, and highly aromatic flavour somewhat reminiscent of camphor.");
+        RawIngredient groundCardamom = new RawIngredient("Ground Cardamom", "https://i.imgur.com/g23azPo.jpg", Boolean.FALSE, "A spice consisting of whole or ground dried fruits, or seeds, of Elettaria cardamomum, a herbaceous perennial plant of the ginger family (Zingiberaceae). The seeds have a warm, slightly pungent, and highly aromatic flavour somewhat reminiscent of camphor.");
         ingredientRepository.save(groundCardamom);
         RawIngredient instantCoffee = new RawIngredient("Instant Coffee", "https://i.imgur.com/KN5G31V.jpg", Boolean.FALSE, "Instant coffee is the dried soluble portion of roasted coffee, which can be presented to the consumer in either powder or granule form for immediate make-up in hot water.");
         ingredientRepository.save(instantCoffee);

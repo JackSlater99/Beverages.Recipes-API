@@ -12,7 +12,7 @@ const IngredientsCard = ({ ingredient }) => {
         element={<Ingredient />}
       >
         <img
-          className="w-80 mb-4 rounded"
+          className="w-96 mb-4 rounded"
           src={ingredient.image}
           alt={ingredient.name}
         />
