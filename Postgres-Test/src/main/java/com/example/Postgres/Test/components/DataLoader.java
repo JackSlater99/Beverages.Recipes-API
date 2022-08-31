@@ -253,33 +253,8 @@ public class DataLoader implements ApplicationRunner {
         Instructions latteInstruction2 = new Instructions("Steam the milk with the steamer attachment so that it has around 2-3cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming to pour into the centre. Once the milk jug is almost touching the surface of the coffee, tilt to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top.", latte);
         instructionRepository.save(latteInstruction2);
 
-//        ESPRESSO MARTINI
-        Recipe espressoMartini = new Recipe(
-                "Espresso Martini",
-                "Jack",
-                true,
-                "Coffee",
-                "https://i.imgur.com/aUGAqRN.jpg",
-                "Easy",
-                5,
-                "https://www.youtube.com/embed/U4WJ7Ljy4K0"
-        );
+        //
 
-        espressoMartini.addIngredients(coffeeIngredient6);
-        espressoMartini.addIngredients(coffeeIngredient7);
-        espressoMartini.addIngredients(coffeeIngredient8);
-        espressoMartini.addIngredients(coffeeIngredient9);
-        recipeRepository.save(espressoMartini);
-        Instructions espressoMartiniInstruction1 = new Instructions("Start by making the sugar syrup. Put the caster sugar in a small pan over a medium heat and pour in 50ml water. Stir, and bring to the boil.", espressoMartini);
-        instructionRepository.save(espressoMartiniInstruction1);
-        Instructions espressoMartiniInstruction2 = new Instructions("Turn off the heat and allow the mixture to cool. Put 2 martini glasses in the fridge to chill.", espressoMartini);
-        instructionRepository.save(espressoMartiniInstruction2);
-        Instructions espressoMartiniInstruction3 = new Instructions("Once the sugar syrup is cold, pour 1 tbsp into a cocktail shaker along with a handful of ice, the vodka, espresso and coffee liqueur. Shake until the outside of the cocktail shaker feels icy cold.", espressoMartini);
-        instructionRepository.save(espressoMartiniInstruction3);
-        Instructions espressoMartiniInstruction4 = new Instructions("Strain into the chilled glasses. Garnish each one with coffee beans if you like.", espressoMartini);
-        instructionRepository.save(espressoMartiniInstruction4);
-
-//        DALGONA
         RecipeIngredient dalgonaIngredient1 = new RecipeIngredient(instantCoffee, 4, "tbsp");
         recipeIngredientRepository.save(dalgonaIngredient1);
         RecipeIngredient dalgonaIngredient2 = new RecipeIngredient(sugar, 4, "tbsp");
@@ -298,9 +273,11 @@ public class DataLoader implements ApplicationRunner {
         Instructions dalgonaInstruction2 = new Instructions("Fill up a glass with your choice of milk 3/4 way with or without ice. Top it up with foamy whipped coffee. Mix well before drink. Enjoy!", dalgona);
         instructionRepository.save(dalgonaInstruction2);
 
+
+
         // MOCKTAILS
 
-//        SUMMER CUP MOCKTAIL
+       // SUMMER CUP MOCKTAIL
         RecipeIngredient summerCupMocktailIngredient1 = new RecipeIngredient(cucumber, 1, "cm");
         recipeIngredientRepository.save(summerCupMocktailIngredient1);
         RecipeIngredient summerCupMocktailIngredient2 = new RecipeIngredient(mint, 1, "sprig");
@@ -332,7 +309,7 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(summerCupMocktailInstruction2);
 
 
-//        VIRGIN MOJITO
+        //        VIRGIN MOJITO
         RecipeIngredient virginMojitoIngredient1 = new RecipeIngredient(sugar, 1, "tbsp");
         recipeIngredientRepository.save(virginMojitoIngredient1);
         RecipeIngredient virginMojitoIngredient2 = new RecipeIngredient(mint, 1, "sprig");
@@ -363,34 +340,35 @@ public class DataLoader implements ApplicationRunner {
         Instructions virginMojitoInstruction2 = new Instructions("Put a handful of crushed ice into 2 tall glasses. Divide the lime juice between the glasses with the mint mix. Add a straw and top up with soda water.", virginMojito);
         instructionRepository.save(virginMojitoInstruction2);
 
-        // MARTINIS
 
-//        VODKA MARTINI
-        RecipeIngredient martiniIngredient1 = new RecipeIngredient(vodka, 60, "ml");
-        recipeIngredientRepository.save(martiniIngredient1);
-        RecipeIngredient martiniIngredient2 = new RecipeIngredient(vermouth, 1, "tbsp");
-        recipeIngredientRepository.save(martiniIngredient2);
-
-        Recipe vodkaMartini = new Recipe(
-                "Vodka Martini",
+//        ESPRESSO MARTINI
+        Recipe espressoMartini = new Recipe(
+                "Espresso Martini",
                 "Jack",
                 true,
-                "Martini",
-                "https://i.imgur.com/cKCXoJj.jpg",
+                "Cocktail",
+                "https://i.imgur.com/aUGAqRN.jpg",
                 "Easy",
                 5,
-                "https://www.youtube.com/embed/n5RNgIUtPv0"
+                "https://www.youtube.com/embed/U4WJ7Ljy4K0"
         );
 
-        vodkaMartini.addIngredients(martiniIngredient1);
-        vodkaMartini.addIngredients(martiniIngredient2);
-        recipeRepository.save(vodkaMartini);
-        Instructions vodkaMartiniInstruction1 = new Instructions("Stir the vodka, dry vermouth and a little ice together or put them in a cocktail shaker to combine.", vodkaMartini);
-        instructionRepository.save(vodkaMartiniInstruction1);
-        Instructions vodkaMartiniInstruction2 = new Instructions("Strain into a chilled martini glass. Serve with an olive on a cocktail stick or a twist of lemon peel.", vodkaMartini);
-        instructionRepository.save(vodkaMartiniInstruction2);
+        espressoMartini.addIngredients(coffeeIngredient6);
+        espressoMartini.addIngredients(coffeeIngredient7);
+        espressoMartini.addIngredients(coffeeIngredient8);
+        espressoMartini.addIngredients(coffeeIngredient9);
+        recipeRepository.save(espressoMartini);
+        Instructions espressoMartiniInstruction1 = new Instructions("Start by making the sugar syrup. Put the caster sugar in a small pan over a medium heat and pour in 50ml water. Stir, and bring to the boil.", espressoMartini);
+        instructionRepository.save(espressoMartiniInstruction1);
+        Instructions espressoMartiniInstruction2 = new Instructions("Turn off the heat and allow the mixture to cool. Put 2 martini glasses in the fridge to chill.", espressoMartini);
+        instructionRepository.save(espressoMartiniInstruction2);
+        Instructions espressoMartiniInstruction3 = new Instructions("Once the sugar syrup is cold, pour 1 tbsp into a cocktail shaker along with a handful of ice, the vodka, espresso and coffee liqueur. Shake until the outside of the cocktail shaker feels icy cold.", espressoMartini);
+        instructionRepository.save(espressoMartiniInstruction3);
+        Instructions espressoMartiniInstruction4 = new Instructions("Strain into the chilled glasses. Garnish each one with coffee beans if you like.", espressoMartini);
+        instructionRepository.save(espressoMartiniInstruction4);
 
-//        COSMOPOLITAN
+
+        //        COSMOPOLITAN
         RecipeIngredient martiniIngredient3 = new RecipeIngredient(vodka, 120, "ml");
         recipeIngredientRepository.save(martiniIngredient3);
         RecipeIngredient martiniIngredient4 = new RecipeIngredient(orangeLiqueur, 60, "ml");
@@ -404,7 +382,7 @@ public class DataLoader implements ApplicationRunner {
                 "Cosmopolitan",
                 "Jack",
                 true,
-                "Martini",
+                "Cocktail",
                 "https://i.imgur.com/vwdoYKl.jpg",
                 "Easy",
                 5,
@@ -419,39 +397,8 @@ public class DataLoader implements ApplicationRunner {
         Instructions cosmopolitanInstruction1 = new Instructions("Stir the ingredients and a little ice together or put them in a cocktail shaker to combine. Strain into two chilled martini glasses.", cosmopolitan);
         instructionRepository.save(cosmopolitanInstruction1);
 
-//        DIRTY MARTINI
-        RecipeIngredient martiniIngredient7 = new RecipeIngredient(olive, 6, "pitted with brine");
-        recipeIngredientRepository.save(martiniIngredient7);
-        RecipeIngredient martiniIngredient8 = new RecipeIngredient(londonDryGin, 150, "ml");
-        recipeIngredientRepository.save(martiniIngredient8);
-        RecipeIngredient martiniIngredient9 = new RecipeIngredient(vermouth, 25, "ml");
-        recipeIngredientRepository.save(martiniIngredient9);
 
-        Recipe dirtyMartini = new Recipe(
-                "Dirty Martini",
-                "Jack",
-                true,
-                "Martini",
-                "https://i.imgur.com/CqoVEws.jpg",
-                "Easy",
-                5,
-                "https://www.youtube.com/embed/3GZH-qgsybI"
-        );
-
-        dirtyMartini.addIngredients(martiniIngredient7);
-        dirtyMartini.addIngredients(martiniIngredient8);
-        dirtyMartini.addIngredients(martiniIngredient9);
-        recipeRepository.save(dirtyMartini);
-        Instructions dirtyMartiniInstruction1 = new Instructions("Put two martini glasses in the fridge to chill. Thread the olives onto two cocktail sticks and set aside.", dirtyMartini);
-        instructionRepository.save(dirtyMartiniInstruction1);
-        Instructions dirtyMartiniInstruction2 = new Instructions("Fill a jug or mixing glass with the ice, then pour in the gin, vermouth and olive brine. Stir until the outside of the jug feels cold. Taste to make sure that it's icy cold and that you’re happy with the dilution.", dirtyMartini);
-        instructionRepository.save(dirtyMartiniInstruction2);
-        Instructions dirtyMartiniInstruction3 = new Instructions("Strain the mix into the chilled glasses and garnish with the olive skewers.", dirtyMartini);
-        instructionRepository.save(dirtyMartiniInstruction3);
-
-//        // Cocktail
-
-//        CLASSIC SHANDY
+        //        CLASSIC SHANDY
         RecipeIngredient classicShandyIngredient1 = new RecipeIngredient(lemon , 2, "slices");
         recipeIngredientRepository.save(classicShandyIngredient1);
         RecipeIngredient classicShandyIngredient2 = new RecipeIngredient(bitterBeer, 200, "ml");
@@ -518,7 +465,8 @@ public class DataLoader implements ApplicationRunner {
         Instructions bloodyMaryInstruction3 = new Instructions("Top up with fresh ice, add a celery stick and lemon slice to both glasses and enjoy.", bloodyMary);
         instructionRepository.save(bloodyMaryInstruction3);
 
-//        MULLED WINE
+
+        //        MULLED WINE
         RecipeIngredient mulledIngredient1 = new RecipeIngredient(redWine, 750, "ml");
         recipeIngredientRepository.save(mulledIngredient1);
         RecipeIngredient mulledIngredient2 = new RecipeIngredient(cinnamon, 1, "large stick");
@@ -547,6 +495,77 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(mulledInstruction2);
         Instructions mulledInstruction3 = new Instructions("To serve, heat without boiling and pour into mugs or heatproof glasses.", mulledWine);
         instructionRepository.save(mulledInstruction3);
+
+
+
+
+
+
+
+
+
+        // MARTINIS
+
+//        VODKA MARTINI
+        RecipeIngredient martiniIngredient1 = new RecipeIngredient(vodka, 60, "ml");
+        recipeIngredientRepository.save(martiniIngredient1);
+        RecipeIngredient martiniIngredient2 = new RecipeIngredient(vermouth, 1, "tbsp");
+        recipeIngredientRepository.save(martiniIngredient2);
+
+        Recipe vodkaMartini = new Recipe(
+                "Vodka Martini",
+                "Jack",
+                true,
+                "Martini",
+                "https://i.imgur.com/cKCXoJj.jpg",
+                "Easy",
+                5,
+                "https://www.youtube.com/embed/n5RNgIUtPv0"
+        );
+
+        vodkaMartini.addIngredients(martiniIngredient1);
+        vodkaMartini.addIngredients(martiniIngredient2);
+        recipeRepository.save(vodkaMartini);
+        Instructions vodkaMartiniInstruction1 = new Instructions("Stir the vodka, dry vermouth and a little ice together or put them in a cocktail shaker to combine.", vodkaMartini);
+        instructionRepository.save(vodkaMartiniInstruction1);
+        Instructions vodkaMartiniInstruction2 = new Instructions("Strain into a chilled martini glass. Serve with an olive on a cocktail stick or a twist of lemon peel.", vodkaMartini);
+        instructionRepository.save(vodkaMartiniInstruction2);
+
+
+
+//        DIRTY MARTINI
+        RecipeIngredient martiniIngredient7 = new RecipeIngredient(olive, 6, "pitted with brine");
+        recipeIngredientRepository.save(martiniIngredient7);
+        RecipeIngredient martiniIngredient8 = new RecipeIngredient(londonDryGin, 150, "ml");
+        recipeIngredientRepository.save(martiniIngredient8);
+        RecipeIngredient martiniIngredient9 = new RecipeIngredient(vermouth, 25, "ml");
+        recipeIngredientRepository.save(martiniIngredient9);
+
+        Recipe dirtyMartini = new Recipe(
+                "Dirty Martini",
+                "Jack",
+                true,
+                "Martini",
+                "https://i.imgur.com/CqoVEws.jpg",
+                "Easy",
+                5,
+                "https://www.youtube.com/embed/3GZH-qgsybI"
+        );
+
+        dirtyMartini.addIngredients(martiniIngredient7);
+        dirtyMartini.addIngredients(martiniIngredient8);
+        dirtyMartini.addIngredients(martiniIngredient9);
+        recipeRepository.save(dirtyMartini);
+        Instructions dirtyMartiniInstruction1 = new Instructions("Put two martini glasses in the fridge to chill. Thread the olives onto two cocktail sticks and set aside.", dirtyMartini);
+        instructionRepository.save(dirtyMartiniInstruction1);
+        Instructions dirtyMartiniInstruction2 = new Instructions("Fill a jug or mixing glass with the ice, then pour in the gin, vermouth and olive brine. Stir until the outside of the jug feels cold. Taste to make sure that it's icy cold and that you’re happy with the dilution.", dirtyMartini);
+        instructionRepository.save(dirtyMartiniInstruction2);
+        Instructions dirtyMartiniInstruction3 = new Instructions("Strain the mix into the chilled glasses and garnish with the olive skewers.", dirtyMartini);
+        instructionRepository.save(dirtyMartiniInstruction3);
+
+
+
+
 
 //        TEAS:
 
@@ -836,7 +855,7 @@ public class DataLoader implements ApplicationRunner {
         RecipeIngredient lassiIngredient6 = new RecipeIngredient(groundCardamom, 0.25, "tsp");
         recipeIngredientRepository.save(lassiIngredient6);
 
-        Recipe mangoLassi = new Recipe("Mango Lassi", "The Wanderlust Kitchen", false, "Fruit", "https://i.imgur.com/ZU2WM0o.jpg", "Easy", 5, "https://www.youtube.com/embed/mlEYpN5o2dQ");
+        Recipe mangoLassi = new Recipe("Mango Lassi", "The Wanderlust Kitchen", false, "Fruit Juice", "https://i.imgur.com/ZU2WM0o.jpg", "Easy", 5, "https://www.youtube.com/embed/mlEYpN5o2dQ");
         mangoLassi.addIngredients(lassiIngredient1);
         mangoLassi.addIngredients(lassiIngredient2);
         mangoLassi.addIngredients(lassiIngredient3);
@@ -904,7 +923,7 @@ public class DataLoader implements ApplicationRunner {
         RecipeIngredient horchataIngredient9 = new RecipeIngredient(ice, 1, "handful");
         recipeIngredientRepository.save(horchataIngredient9);
 
-        Recipe horchata = new Recipe("Horchata", "My Latina Table", false, "Misc", "https://i.imgur.com/J5qC8k4.jpg", "Easy", 360, "https://www.youtube.com/embed/JtwqQEaxIQg");
+        Recipe horchata = new Recipe("Horchata", "My Latina Table", false, "Milk", "https://i.imgur.com/J5qC8k4.jpg", "Easy", 360, "https://www.youtube.com/embed/JtwqQEaxIQg");
         horchata.addIngredients(horchataIngredient1);
         horchata.addIngredients(horchataIngredient2);
         horchata.addIngredients(horchataIngredient3);
