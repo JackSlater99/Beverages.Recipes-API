@@ -8,7 +8,7 @@ const Recipes = ({ recipes }) => {
 
   return (
     <>
-      <h2>Recipes Index (**Recipes**)</h2>
+      <h2>List of Ingredients</h2>
       <h2 id="cocktail">Cocktail</h2>
       <main className="grid grid-cols-4 gap-4">{cardNodes[0]}</main>
       <h2 id="coffee">Coffee</h2>
