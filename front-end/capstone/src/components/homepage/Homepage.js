@@ -7,8 +7,11 @@ import cocktail from "../../images/cocktail.webp";
 import martini from "../../images/martini.jpeg";
 import tea from "../../images/tea.webp";
 import milk from "../../images/milk.jpeg";
+import milkshakes from "../../images/milkshakes.jpeg";
+import fruitjuice from "../../images/fruitjuice.jpeg";
 
-const Homepage = ({}) => {
+
+const Homepage = ({ }) => {
   return (
     <div className="border-double border-8 border-gray-400 py-10 px-10 mt-20">
       <section className="">
@@ -65,6 +68,22 @@ const Homepage = ({}) => {
               <HashLink smooth to={"/recipes#milk"}>
                 <img className="" src={milk}></img>
                 <p className="text-center pr-16 ">Milk</p>
+              </HashLink>
+            </div>
+          </li>
+          <li>
+            <div className="max-w-min">
+              <HashLink smooth to={"/recipes#fruit"}>
+                <img className="" src={fruitjuice}></img>
+                <p className="text-center pr-16 ">Fruit Juice</p>
+              </HashLink>
+            </div>
+          </li>
+          <li>
+            <div className="max-w-min">
+              <HashLink smooth to={"/recipes#milkshake"}>
+                <img className="" src={milkshakes}></img>
+                <p className="text-center pr-16 ">Milkshake</p>
               </HashLink>
             </div>
           </li>
