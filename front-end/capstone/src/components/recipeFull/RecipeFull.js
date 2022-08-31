@@ -17,7 +17,7 @@ const RecipeFull = ({ recipes, getAllRecipes }) => {
   return (
     <main className="pb-8">
       <div className="grid grid-rows-1">
-        <h1 className="text-center">{recipe.name}</h1>
+        <h2 className="text-center">{recipe.name}</h2>
         <Ratings recipe={recipe} />
       </div>
       <div className="grid grid-cols-2 gap-4 p-6 center">
