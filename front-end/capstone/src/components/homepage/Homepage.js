@@ -5,8 +5,10 @@ import mocktail from "../../images/mocktail.jpeg";
 import coffee from "../../images/coffee3.jpeg";
 import cocktail from "../../images/cocktail.webp";
 import martini from "../../images/martini.jpeg";
+import tea from "../../images/tea.webp";
+import milk from "../../images/milk.jpeg";
 
-const Homepage = ({ recipes }) => {
+const Homepage = ({ }) => {
   return (
     <div className="border-double border-8 border-gray-400 py-10 px-10">
       <section className="">
@@ -16,46 +18,60 @@ const Homepage = ({ recipes }) => {
         </h2>
       </section>
 
-      <article>
-        <div className="flex justify-center pt-10  ">
-          <ul className="flex justify-center  ">
+      <section className="">
+        <div className="grid grid-cols-4 gap-4 p-6 center px-5">
+          <ul className="">
             <HashLink smooth to={"/recipes#coffee"}>
-
-              <img className="w-48 flex justify-center " src={coffee}></img>
-
-              <div className=" mx-14 py-2 text-2xl italic ">
+              <img className="" src={coffee}></img>
+              <div className="text-center pr-16 ">
                 Coffee
               </div>
-
-
             </HashLink>
           </ul>
           <ul>
             <HashLink smooth to={"/recipes#mocktail"} >
-              <img className="w-48 flex justify-center" src={mocktail}></img>
-              <div className=" mx-12 py-2 text-2xl italic ">
+              <img className="" src={mocktail}></img>
+              <div className="text-center pr-16 ">
                 Mocktail
               </div>
             </HashLink>
           </ul>
           <ul>
             <HashLink smooth to={"/recipes#cocktail"}>
-              <img className="w-48 flex justify-center" src={cocktail}></img>
-              <div className=" mx-12 py-2 text-2xl italic ">
+              <img className="" src={cocktail}></img>
+              <div className="text-center pr-16 ">
                 Cocktail
               </div>
             </HashLink>
           </ul>
           <ul>
             <HashLink smooth to={"/recipes#martini"}>
-              <img className="w-48 flex justify-center" src={martini}></img>
-              <div className=" mx-14 py-2 text-2xl italic">
+              <img className="" src={martini}></img>
+              <div className="text-center pr-16 ">
                 Martini
               </div>
             </HashLink>
           </ul>
+          <ul>
+            <HashLink smooth to={"/recipes#tea"} >
+              <img className="" src={tea}></img>
+              <div className="text-center pr-16 ">
+                Tea
+              </div>
+            </HashLink>
+          </ul>
+          <ul>
+            <HashLink smooth to={"/recipes#milk"} >
+              <img className="" src={milk}></img>
+              <div className="text-center pr-16 " >
+                Milk
+              </div>
+            </HashLink>
+          </ul>
+
+
         </div>
-      </article>
+      </section>
     </div>
   );
 };
