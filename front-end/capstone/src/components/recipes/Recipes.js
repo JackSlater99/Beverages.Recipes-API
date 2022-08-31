@@ -15,6 +15,12 @@ const Recipes = ({ recipes }) => {
       <main className="grid grid-cols-4 gap-4">{cardNodes.slice(1, 6)}</main>
       <h2 id="martini">Martini</h2>
       <main className="grid grid-cols-4 gap-4">{cardNodes.slice(6, 10)}</main>
+      <h2 id="mocktail">Mocktail</h2>
+      <main className="grid grid-cols-4 gap-4">{cardNodes.slice(6, 10)}</main>
+      <h2 id="tea">Tea</h2>
+      <main className="grid grid-cols-4 gap-4">{cardNodes.slice(6, 10)}</main>
+      <h2 id="milk">Milk</h2>
+      <main className="grid grid-cols-4 gap-4">{cardNodes.slice(6, 10)}</main>
     </>
   );
 };
