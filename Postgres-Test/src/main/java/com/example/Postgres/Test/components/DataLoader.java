@@ -142,27 +142,27 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(starAnise);
         RawIngredient lemonZest = new RawIngredient("Lemon Zest", "https://i.imgur.com/6sW7fi4.jpg", Boolean.FALSE, "Lemon zest is the yellow outside portion of its peel. It's often used with or without lemon juice to add tangy flavor to recipes. The zest can taste even stronger than the juice; it's often used in lemon-flavored baked or cooked recipes like lemon poppy seed pancakes.");
         ingredientRepository.save(lemonZest);
-        RawIngredient beet = new RawIngredient("Beet", "https://i.imgur.com/21nqqGX.jpeg", Boolean.FALSE, "Beetroot is the large and fleshy root growing in the plant of the same name, eaten as a vegetable. Its superficial, thin and smooth skin has a wide range of colours, from purple-pink and reddish-orange to a brownish tone. The pulp has a sweet taste and it is usually of a dark crimson red colour with purple tinges.");
+        RawIngredient beet = new RawIngredient("Beet", "https://i.imgur.com/EX5A3cy.jpg", Boolean.FALSE, "Beetroot is the large and fleshy root growing in the plant of the same name, eaten as a vegetable. Its superficial, thin and smooth skin has a wide range of colours, from purple-pink and reddish-orange to a brownish tone. The pulp has a sweet taste and it is usually of a dark crimson red colour with purple tinges.");
         ingredientRepository.save(beet);
-        RawIngredient carrot = new RawIngredient("Carrot", "https://i.imgur.com/Gl988Pj.jpeg", Boolean.FALSE, "Carrot, (Daucus carota), herbaceous, generally biennial plant of the Apiaceae family that produces an edible taproot. Among common varieties root shapes range from globular to long, with lower ends blunt to pointed. Besides the orange-coloured roots, white-, yellow-, and purple-fleshed varieties are known.");
+        RawIngredient carrot = new RawIngredient("Carrot", "https://i.imgur.com/C5dCsAc.jpg", Boolean.FALSE, "Carrot, (Daucus carota), herbaceous, generally biennial plant of the Apiaceae family that produces an edible taproot. Among common varieties root shapes range from globular to long, with lower ends blunt to pointed. Besides the orange-coloured roots, white-, yellow-, and purple-fleshed varieties are known.");
         ingredientRepository.save(carrot);
-        RawIngredient orange = new RawIngredient("Orange", "https://i.imgur.com/KYE0OWl.jpeg", Boolean.FALSE, "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp. The edible part of the orange is the flesh, consumed in fresh or in juice. The orange is also used to make stewed fruit, jams, for consumption as dehydrated fruit, etc.");
+        RawIngredient orange = new RawIngredient("Orange", "https://i.imgur.com/cdUJfuQ.jpg", Boolean.FALSE, "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp. The edible part of the orange is the flesh, consumed in fresh or in juice. The orange is also used to make stewed fruit, jams, for consumption as dehydrated fruit, etc.");
         ingredientRepository.save(orange);
-        RawIngredient watermelon = new RawIngredient("Watermelon", "https://i.imgur.com/ZvcPb7m.jpeg", Boolean.FALSE, "A large oblong or roundish fruit with a hard green or white rind often striped or variegated, a sweet watery pink, yellowish, or red pulp, and usually many seeds. 2 : A widely cultivated African vine (Citrullus lanatus synonym C. vulgaris) of the gourd family that bears watermelons.");
+        RawIngredient watermelon = new RawIngredient("Watermelon", "https://i.imgur.com/7AJbSqa.jpg", Boolean.FALSE, "A large oblong or roundish fruit with a hard green or white rind often striped or variegated, a sweet watery pink, yellowish, or red pulp, and usually many seeds. 2 : A widely cultivated African vine (Citrullus lanatus synonym C. vulgaris) of the gourd family that bears watermelons.");
         ingredientRepository.save(watermelon);
-        RawIngredient vanillaIceCream = new RawIngredient("Vanilla ice-cream", "https://i.imgur.com/KRS2mjb.jpeg", Boolean.FALSE, "Vanilla ice cream is a sweet frozen dessert made from milk, cream, sugar, and vanilla flavoring from vanilla seeds, pure vanilla extract, vanilla seed paste, or a combination");
+        RawIngredient vanillaIceCream = new RawIngredient("Vanilla ice-cream", "https://i.imgur.com/iYGTWch.jpg", Boolean.FALSE, "Vanilla ice cream is a sweet frozen dessert made from milk, cream, sugar, and vanilla flavoring from vanilla seeds, pure vanilla extract, vanilla seed paste, or a combination");
         ingredientRepository.save(vanillaIceCream);
-        RawIngredient vanillaExtract = new RawIngredient("Vanilla Extract", "https://i.imgur.com/gxnm9y5.jpeg", Boolean.FALSE, "Vanilla extract is a solution made by macerating and percolating vanilla pods in a solution of ethanol and water");
+        RawIngredient vanillaExtract = new RawIngredient("Vanilla Extract", "https://i.imgur.com/jX9DyyM.jpg", Boolean.FALSE, "Vanilla extract is a solution made by macerating and percolating vanilla pods in a solution of ethanol and water");
         ingredientRepository.save(vanillaExtract);
-        RawIngredient chocolateSpread = new RawIngredient("Chocolate Spread", "https://i.imgur.com/sxcBK9d.jpeg", Boolean.FALSE, "Chocolate spread is a sweet chocolate-flavored paste which is eaten mostly spread on breads and toasts or similar grain items such as waffles, pancakes, muffins, and pitas.");
+        RawIngredient chocolateSpread = new RawIngredient("Chocolate Spread", "https://i.imgur.com/6jMORCO.jpg", Boolean.FALSE, "Chocolate spread is a sweet chocolate-flavored paste which is eaten mostly spread on breads and toasts or similar grain items such as waffles, pancakes, muffins, and pitas.");
         ingredientRepository.save(chocolateSpread);
-        RawIngredient chocolateIceCream = new RawIngredient("Chocolate Ice-cream", "https://i.imgur.com/24kaScH.jpeg", Boolean.FALSE, "Chocolate ice cream is a flavour of ice cream which is the second most common flavour of ice cream, after vanilla. Chocolate ice cream is made by blending in cocoa powder in along with the eggs (optional), cream, vanilla and sugar used to make ice cream.");
+        RawIngredient chocolateIceCream = new RawIngredient("Chocolate Ice-cream", "https://i.imgur.com/e5CyMy6.jpg", Boolean.FALSE, "Chocolate ice cream is a flavour of ice cream which is the second most common flavour of ice cream, after vanilla. Chocolate ice cream is made by blending in cocoa powder in along with the eggs (optional), cream, vanilla and sugar used to make ice cream.");
         ingredientRepository.save(chocolateIceCream);
-        RawIngredient marshmallow = new RawIngredient("Marshmallow", "https://i.imgur.com/JNH5XKX.jpeg", Boolean.FALSE, "A marshmallow is a sweet, soft treat. Marshmallows are sometimes melted and turned into a sugary topping for ice cream or a filling for baked goods. Marshmallows are made of gelatin and sugar, with a dusty powdered sugar surface, and they squish like a sponge when you squeeze or bite down on them.");
+        RawIngredient marshmallow = new RawIngredient("Marshmallow", "https://i.imgur.com/NWkPA2b.jpg", Boolean.FALSE, "A marshmallow is a sweet, soft treat. Marshmallows are sometimes melted and turned into a sugary topping for ice cream or a filling for baked goods. Marshmallows are made of gelatin and sugar, with a dusty powdered sugar surface, and they squish like a sponge when you squeeze or bite down on them.");
         ingredientRepository.save(marshmallow);
-        RawIngredient doubleCream = new RawIngredient("Double Cream", "https://i.imgur.com/gxvL72i.jpeg", Boolean.FALSE, "Double cream is the British term for heavy or whipping cream in the United States, but it is a little thicker than our whipping cream. It contains about 48% butterfat. Double cream is so rich, in fact, that it is easy to over whip it and get it too thick.");
+        RawIngredient doubleCream = new RawIngredient("Double Cream", "https://i.imgur.com/dVUl5gM.jpg", Boolean.FALSE, "Double cream is the British term for heavy or whipping cream in the United States, but it is a little thicker than our whipping cream. It contains about 48% butterfat. Double cream is so rich, in fact, that it is easy to over whip it and get it too thick.");
         ingredientRepository.save(doubleCream);
-        RawIngredient hazelnuts = new RawIngredient("Hazelnuts", "https://i.imgur.com/omdeCec.jpeg", Boolean.FALSE, "The hazelnut is the fruit of the hazel, small, round, cinnamon coloured shell and white-yellowish flesh, sweet flavoured and rich in oil. The fruit is consumed raw, roasted or as an ingredient for different product processing, mainly nougat and chocolate.");
+        RawIngredient hazelnuts = new RawIngredient("Hazelnuts", "https://i.imgur.com/56Is6Lt.jpg", Boolean.FALSE, "The hazelnut is the fruit of the hazel, small, round, cinnamon coloured shell and white-yellowish flesh, sweet flavoured and rich in oil. The fruit is consumed raw, roasted or as an ingredient for different product processing, mainly nougat and chocolate.");
         ingredientRepository.save(hazelnuts);
 
         // COFFEE
@@ -306,7 +306,7 @@ public class DataLoader implements ApplicationRunner {
                 "Jack",
                 true,
                 "Mocktail",
-                "https://i.imgur.com/zFrmj7z.jpg",
+                "https://i.imgur.com/govP8PI.jpg",
                 "Easy",
                 5,
                 "https://www.youtube.com/embed/FXR_gyXlCVs"
@@ -738,7 +738,7 @@ public class DataLoader implements ApplicationRunner {
                 "Jack",
                 true,
                 "Fruit Juice",
-                "https://i.imgur.com/SjLmrGC.jpeg",
+                "https://i.imgur.com/UNBYrIk.jpg",
                 "Easy",
                 10,
                 "https://www.youtube.com/embed/tkiUMKG92f0"
@@ -766,7 +766,7 @@ public class DataLoader implements ApplicationRunner {
                 "Jack",
                 true,
                 "Fruit Juice",
-                "https://i.imgur.com/XTBhRZp.jpeg",
+                "https://i.imgur.com/dhvWleA.jpg",
                 "Easy",
                 10,
                 "https://www.youtube.com/embed/aRisxe4IdVg"
@@ -800,7 +800,7 @@ public class DataLoader implements ApplicationRunner {
                 "Jack",
                 true,
                 "Fruit Juice",
-                "https://i.imgur.com/LSxXxii.jpeg",
+                "https://i.imgur.com/iHsxs5u.jpg",
                 "Easy",
                 5,
                 "https://www.youtube.com/embed/6X-z0JaaSgM"
@@ -836,7 +836,7 @@ public class DataLoader implements ApplicationRunner {
                 "Jack",
                 true,
                 "Fruit Juice",
-                "https://i.imgur.com/htEAGUc.jpeg",
+                "https://i.imgur.com/A5Q8L8n.jpg",
                 "Easy",
                 10,
                 "https://www.youtube.com/embed/145WlH4OO04"
@@ -973,7 +973,7 @@ public class DataLoader implements ApplicationRunner {
                 "Jack",
                 true,
                 "Milkshake",
-                "https://i.imgur.com/E8DILpZ.jpeg",
+                "https://i.imgur.com/vbdUHUm.jpg",
                 "Easy",
                 10,
                 "https://www.youtube.com/embed/yBMmbXgv7tc"
@@ -1009,7 +1009,7 @@ public class DataLoader implements ApplicationRunner {
                 "Jack",
                 true,
                 "Milkshake",
-                "https://i.imgur.com/4XN56ud.jpeg",
+                "https://i.imgur.com/HV3Vyrc.jpg",
                 "Easy",
                 10,
                 "https://www.youtube.com/embed/EA4yMzlHo9U"
