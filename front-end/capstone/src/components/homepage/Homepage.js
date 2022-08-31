@@ -10,8 +10,7 @@ import milk from "../../images/milk.jpeg";
 import milkshakes from "../../images/milkshakes.jpeg";
 import fruitjuice from "../../images/fruitjuice.jpeg";
 
-
-const Homepage = ({ }) => {
+const Homepage = ({}) => {
   return (
     <div className="border-double border-8 border-gray-400 py-10 px-10 mt-20">
       <section className="">
@@ -27,7 +26,7 @@ const Homepage = ({ }) => {
             <div className="max-w-min">
               <HashLink smooth to={"/recipes#coffee"}>
                 <img className="" src={coffee}></img>
-                <p className="text-center pr-16 ">Coffee</p>
+                <p className="text-center">Coffee</p>
               </HashLink>
             </div>
           </li>
@@ -35,7 +34,7 @@ const Homepage = ({ }) => {
             <div className="max-w-min">
               <HashLink smooth to={"/recipes#mocktail"}>
                 <img className="" src={mocktail}></img>
-                <p className="text-center pr-16 ">Mocktail</p>
+                <p className="text-center ">Mocktail</p>
               </HashLink>
             </div>
           </li>
@@ -43,7 +42,7 @@ const Homepage = ({ }) => {
             <div className="max-w-min">
               <HashLink smooth to={"/recipes#cocktail"}>
                 <img className="" src={cocktail}></img>
-                <p className="text-center pr-16 ">Cocktail</p>
+                <p className="text-center">Cocktail</p>
               </HashLink>
             </div>
           </li>
@@ -51,7 +50,7 @@ const Homepage = ({ }) => {
             <div className="max-w-min">
               <HashLink smooth to={"/recipes#martini"}>
                 <img className="" src={martini}></img>
-                <p className="text-center pr-16 ">Martini</p>
+                <p className="text-center">Martini</p>
               </HashLink>
             </div>
           </li>
@@ -59,7 +58,7 @@ const Homepage = ({ }) => {
             <div className="max-w-min">
               <HashLink smooth to={"/recipes#tea"}>
                 <img className="" src={tea}></img>
-                <p className="text-center pr-16 ">Tea</p>
+                <p className="text-center">Tea</p>
               </HashLink>
             </div>
           </li>
@@ -67,7 +66,7 @@ const Homepage = ({ }) => {
             <div className="max-w-min">
               <HashLink smooth to={"/recipes#milk"}>
                 <img className="" src={milk}></img>
-                <p className="text-center pr-16 ">Milk</p>
+                <p className="text-center">Milk</p>
               </HashLink>
             </div>
           </li>
@@ -75,7 +74,7 @@ const Homepage = ({ }) => {
             <div className="max-w-min">
               <HashLink smooth to={"/recipes#fruit"}>
                 <img className="" src={fruitjuice}></img>
-                <p className="text-center pr-16 ">Fruit Juice</p>
+                <p className="text-center">Fruit Juice</p>
               </HashLink>
             </div>
           </li>
@@ -83,7 +82,7 @@ const Homepage = ({ }) => {
             <div className="max-w-min">
               <HashLink smooth to={"/recipes#milkshake"}>
                 <img className="" src={milkshakes}></img>
-                <p className="text-center pr-16 ">Milkshake</p>
+                <p className="text-center">Milkshake</p>
               </HashLink>
             </div>
           </li>
