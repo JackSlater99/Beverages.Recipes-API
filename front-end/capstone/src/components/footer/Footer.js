@@ -68,8 +68,8 @@ const Row = styled.div`
 
 const FooterLink = styled.a`
   color: #fff;
-  margin-bottom: 20px;
-  font-size: 18px;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   &:hover {
     color: #f95959;
@@ -78,7 +78,7 @@ const FooterLink = styled.a`
 `;
 
 const Heading = styled.p`
-  font-size: 24px;
+  font-size: 2.2rem;
   color: #fff;
   margin-bottom: 40px;
   font-weight: bold;

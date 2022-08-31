@@ -2,9 +2,11 @@
   --default-font: "Poppins", sans-serif;
   --branding-colour: #233142;
   --secondary-colour: #455d7a;
-  --third-colour: #f95959;
+  --third-colour: #455d7a;
   --fourth-colour: #e3e3e3;
 }
+
+/* #f95959 */
 
 * {
   margin: 0;
