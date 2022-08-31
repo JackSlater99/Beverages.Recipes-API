@@ -47,7 +47,7 @@ const Hamburger = styled.div`
     margin-bottom: 4px;
     border-radius: 5px;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 932px) {
     display: flex;
   }
 `;
@@ -57,7 +57,7 @@ const Menu = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  @media (max-width: 1200px) {
+  @media (max-width: 932px) {
     overflow: hidden;
     flex-direction: column;
     width: 100%;

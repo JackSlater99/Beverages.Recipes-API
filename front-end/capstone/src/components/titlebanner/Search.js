@@ -45,8 +45,8 @@ padding-inline:1rem;
 `
 
 const SearchBar = styled.input`
-padding: 10px;
-font-size: 17px;
+padding: 0 1rem;
+font-size: 1.4rem;
 border: 1px solid grey;
 width: 80%;
 background: #f1f1f1;
@@ -54,10 +54,10 @@ background: #f1f1f1;
 
 const SearchButton = styled.button`
 width: 20%;
-padding: 10px;
+// padding: 1rem;
 background: #2196F3;
 color: white;
-font-size: 17px;
+font-size: 1.2rem;
 border: 1px solid grey;
 border-left: none;
 cursor: pointer;
