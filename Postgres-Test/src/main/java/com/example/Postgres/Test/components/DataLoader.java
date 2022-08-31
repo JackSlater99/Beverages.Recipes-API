@@ -142,14 +142,28 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(starAnise);
         RawIngredient lemonZest = new RawIngredient("Lemon Zest", "https://i.imgur.com/6sW7fi4.jpg", Boolean.FALSE, "Lemon zest is the yellow outside portion of its peel. It's often used with or without lemon juice to add tangy flavor to recipes. The zest can taste even stronger than the juice; it's often used in lemon-flavored baked or cooked recipes like lemon poppy seed pancakes.");
         ingredientRepository.save(lemonZest);
-        RawIngredient beet = new RawIngredient("Beet", "IMAGE", Boolean.FALSE, "Beetroot is the large and fleshy root growing in the plant of the same name, eaten as a vegetable. Its superficial, thin and smooth skin has a wide range of colours, from purple-pink and reddish-orange to a brownish tone. The pulp has a sweet taste and it is usually of a dark crimson red colour with purple tinges.");
+        RawIngredient beet = new RawIngredient("Beet", "https://imgur.com/21nqqGX", Boolean.FALSE, "Beetroot is the large and fleshy root growing in the plant of the same name, eaten as a vegetable. Its superficial, thin and smooth skin has a wide range of colours, from purple-pink and reddish-orange to a brownish tone. The pulp has a sweet taste and it is usually of a dark crimson red colour with purple tinges.");
         ingredientRepository.save(beet);
-        RawIngredient carrot = new RawIngredient("Carrot", "IMAGE", Boolean.FALSE, "Carrot, (Daucus carota), herbaceous, generally biennial plant of the Apiaceae family that produces an edible taproot. Among common varieties root shapes range from globular to long, with lower ends blunt to pointed. Besides the orange-coloured roots, white-, yellow-, and purple-fleshed varieties are known.");
+        RawIngredient carrot = new RawIngredient("Carrot", "https://imgur.com/Gl988Pj", Boolean.FALSE, "Carrot, (Daucus carota), herbaceous, generally biennial plant of the Apiaceae family that produces an edible taproot. Among common varieties root shapes range from globular to long, with lower ends blunt to pointed. Besides the orange-coloured roots, white-, yellow-, and purple-fleshed varieties are known.");
         ingredientRepository.save(carrot);
-        RawIngredient orange = new RawIngredient("Orange", "IMAGE", Boolean.FALSE, "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp. The edible part of the orange is the flesh, consumed in fresh or in juice. The orange is also used to make stewed fruit, jams, for consumption as dehydrated fruit, etc.");
+        RawIngredient orange = new RawIngredient("Orange", "https://imgur.com/KYE0OWl", Boolean.FALSE, "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp. The edible part of the orange is the flesh, consumed in fresh or in juice. The orange is also used to make stewed fruit, jams, for consumption as dehydrated fruit, etc.");
         ingredientRepository.save(orange);
-        RawIngredient watermelon = new RawIngredient("Watermelon", "IMAGE", Boolean.FALSE, "A large oblong or roundish fruit with a hard green or white rind often striped or variegated, a sweet watery pink, yellowish, or red pulp, and usually many seeds. 2 : A widely cultivated African vine (Citrullus lanatus synonym C. vulgaris) of the gourd family that bears watermelons.");
+        RawIngredient watermelon = new RawIngredient("Watermelon", "https://imgur.com/ZvcPb7m", Boolean.FALSE, "A large oblong or roundish fruit with a hard green or white rind often striped or variegated, a sweet watery pink, yellowish, or red pulp, and usually many seeds. 2 : A widely cultivated African vine (Citrullus lanatus synonym C. vulgaris) of the gourd family that bears watermelons.");
         ingredientRepository.save(watermelon);
+        RawIngredient vanillaIceCream = new RawIngredient("Vanilla ice-cream", "https://imgur.com/KRS2mjb", Boolean.FALSE, "Vanilla ice cream is a sweet frozen dessert made from milk, cream, sugar, and vanilla flavoring from vanilla seeds, pure vanilla extract, vanilla seed paste, or a combination");
+        ingredientRepository.save(vanillaIceCream);
+        RawIngredient vanillaExtract = new RawIngredient("Vanilla Extract", "https://imgur.com/gxnm9y5", Boolean.FALSE, "Vanilla extract is a solution made by macerating and percolating vanilla pods in a solution of ethanol and water");
+        ingredientRepository.save(vanillaExtract);
+        RawIngredient chocolateSpread = new RawIngredient("Chocolate Spread", "https://imgur.com/sxcBK9d", Boolean.FALSE, "Chocolate spread is a sweet chocolate-flavored paste which is eaten mostly spread on breads and toasts or similar grain items such as waffles, pancakes, muffins, and pitas.");
+        ingredientRepository.save(chocolateSpread);
+        RawIngredient chocolateIceCream = new RawIngredient("Chocolate Ice-cream", "https://imgur.com/24kaScH", Boolean.FALSE, "Chocolate ice cream is a flavour of ice cream which is the second most common flavour of ice cream, after vanilla. Chocolate ice cream is made by blending in cocoa powder in along with the eggs (optional), cream, vanilla and sugar used to make ice cream.");
+        ingredientRepository.save(chocolateIceCream);
+        RawIngredient marshmallow = new RawIngredient("Marshmallow", "https://imgur.com/JNH5XKX", Boolean.FALSE, "A marshmallow is a sweet, soft treat. Marshmallows are sometimes melted and turned into a sugary topping for ice cream or a filling for baked goods. Marshmallows are made of gelatin and sugar, with a dusty powdered sugar surface, and they squish like a sponge when you squeeze or bite down on them.");
+        ingredientRepository.save(marshmallow);
+        RawIngredient doubleCream = new RawIngredient("Double Cream", "https://imgur.com/gxvL72i", Boolean.FALSE, "Double cream is the British term for heavy or whipping cream in the United States, but it is a little thicker than our whipping cream. It contains about 48% butterfat. Double cream is so rich, in fact, that it is easy to over whip it and get it too thick.");
+        ingredientRepository.save(doubleCream);
+        RawIngredient hazelnuts = new RawIngredient("Hazelnuts", "https://imgur.com/omdeCec", Boolean.FALSE, "The hazelnut is the fruit of the hazel, small, round, cinnamon coloured shell and white-yellowish flesh, sweet flavoured and rich in oil. The fruit is consumed raw, roasted or as an ingredient for different product processing, mainly nougat and chocolate.");
+        ingredientRepository.save(hazelnuts);
 
         // COFFEE
 
@@ -222,7 +236,7 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/Gglcd3D.jpg",
                 "Easy",
                 3,
-                "https://youtu.be/gvPetTPFsZM"
+                "https://www.youtube.com/embed/gvPetTPFsZM"
         );
 
         cappuccino.addIngredients(coffeeIngredient2);
@@ -290,7 +304,7 @@ public class DataLoader implements ApplicationRunner {
         Recipe summerCupMocktail = new Recipe(
                 "Summer Cup Mocktail",
                 "Jack",
-                false,
+                true,
                 "Mocktail",
                 "https://i.imgur.com/zFrmj7z.jpg",
                 "Easy",
@@ -583,7 +597,7 @@ public class DataLoader implements ApplicationRunner {
         RecipeIngredient bobaIngredient6 = new RecipeIngredient(ice, 1, "handful");
         recipeIngredientRepository.save(bobaIngredient6);
 
-        Recipe brownSugarBoba = new Recipe("Brown Sugar Boba", "Tiffy Cooks", false, "Tea", "https://i.imgur.com/2zBworp.jpg", "Medium", 10, "https://www.youtube.com/embed/EA1skTLzBnQ");
+        Recipe brownSugarBoba = new Recipe("Brown Sugar Boba", "Tiffy Cooks", true, "Tea", "https://i.imgur.com/2zBworp.jpg", "Medium", 10, "https://www.youtube.com/embed/EA1skTLzBnQ");
 
         brownSugarBoba.addIngredients(bobaIngredient1);
         brownSugarBoba.addIngredients(bobaIngredient2);
@@ -628,7 +642,7 @@ public class DataLoader implements ApplicationRunner {
         RecipeIngredient thaiTeaIngredient7 = new RecipeIngredient(ice, 1, "handful");
         recipeIngredientRepository.save(thaiTeaIngredient7);
 
-        Recipe thaiIcedTea = new Recipe("Thai Iced Tea", "Hot Thai Kitchen", false, "Tea", "https://i.imgur.com/DLR4vcD.jpg", "Easy", 10, "https://www.youtube.com/embed/rIncobztk6E");
+        Recipe thaiIcedTea = new Recipe("Thai Iced Tea", "Hot Thai Kitchen", true, "Tea", "https://i.imgur.com/DLR4vcD.jpg", "Easy", 10, "https://www.youtube.com/embed/rIncobztk6E");
         thaiIcedTea.addIngredients(thaiTeaIngredient1);
         thaiIcedTea.addIngredients(thaiTeaIngredient2);
         thaiIcedTea.addIngredients(thaiTeaIngredient3);
@@ -653,7 +667,7 @@ public class DataLoader implements ApplicationRunner {
         RecipeIngredient yujaIngredient2 = new RecipeIngredient(sugar, 1, "cup");
         recipeIngredientRepository.save(yujaIngredient2);
 
-        Recipe yujacha = new Recipe("Yujacha", "Maangchi", false, "Tea", "https://i.imgur.com/tgWms1H.jpg", "Easy", 5, "https://www.youtube.com/embed/DOV-gx8Wjmc");
+        Recipe yujacha = new Recipe("Yujacha", "Maangchi", true, "Tea", "https://i.imgur.com/tgWms1H.jpg", "Easy", 5, "https://www.youtube.com/embed/DOV-gx8Wjmc");
         yujacha.addIngredients(yujaIngredient1);
         yujacha.addIngredients(yujaIngredient2);
         recipeRepository.save(yujacha);
@@ -683,7 +697,7 @@ public class DataLoader implements ApplicationRunner {
         RecipeIngredient doodhIngredient7 = new RecipeIngredient(blackTea, 8, "g");
         recipeIngredientRepository.save(doodhIngredient7);
 
-        Recipe doodhCha = new Recipe("Doodh Chat", "Bong Eats", false, "Tea", "https://i.imgur.com/UCcuAVP.jpg", "Medium", 15, "https://www.youtube.com/embed/ntigmnhKrAY");
+        Recipe doodhCha = new Recipe("Doodh Chat", "Bong Eats", true, "Tea", "https://i.imgur.com/UCcuAVP.jpg", "Medium", 15, "https://www.youtube.com/embed/ntigmnhKrAY");
         doodhCha.addIngredients(doodhIngredient1);
         doodhCha.addIngredients(doodhIngredient2);
         doodhCha.addIngredients(doodhIngredient3);
@@ -724,7 +738,7 @@ public class DataLoader implements ApplicationRunner {
                 "Jack",
                 true,
                 "Fruit Juice",
-                "IMAGE",
+                "https://imgur.com/SjLmrGC",
                 "Easy",
                 10,
                 "https://www.youtube.com/embed/tkiUMKG92f0"
@@ -752,7 +766,7 @@ public class DataLoader implements ApplicationRunner {
                 "Jack",
                 true,
                 "Fruit Juice",
-                "IMAGE",
+                "https://imgur.com/XTBhRZp",
                 "Easy",
                 10,
                 "https://www.youtube.com/embed/aRisxe4IdVg"
@@ -786,7 +800,7 @@ public class DataLoader implements ApplicationRunner {
                 "Jack",
                 true,
                 "Fruit Juice",
-                "IMAGE",
+                "https://imgur.com/LSxXxii",
                 "Easy",
                 5,
                 "https://www.youtube.com/embed/6X-z0JaaSgM"
@@ -822,7 +836,7 @@ public class DataLoader implements ApplicationRunner {
                 "Jack",
                 true,
                 "Fruit Juice",
-                "IMAGE",
+                "https://imgur.com/htEAGUc",
                 "Easy",
                 10,
                 "https://www.youtube.com/embed/145WlH4OO04"
@@ -855,7 +869,7 @@ public class DataLoader implements ApplicationRunner {
         RecipeIngredient lassiIngredient6 = new RecipeIngredient(groundCardamom, 0.25, "tsp");
         recipeIngredientRepository.save(lassiIngredient6);
 
-        Recipe mangoLassi = new Recipe("Mango Lassi", "The Wanderlust Kitchen", false, "Fruit Juice", "https://i.imgur.com/ZU2WM0o.jpg", "Easy", 5, "https://www.youtube.com/embed/mlEYpN5o2dQ");
+        Recipe mangoLassi = new Recipe("Mango Lassi", "The Wanderlust Kitchen", true, "Fruit Juice", "https://i.imgur.com/ZU2WM0o.jpg", "Easy", 5, "https://www.youtube.com/embed/mlEYpN5o2dQ");
         mangoLassi.addIngredients(lassiIngredient1);
         mangoLassi.addIngredients(lassiIngredient2);
         mangoLassi.addIngredients(lassiIngredient3);
@@ -923,7 +937,7 @@ public class DataLoader implements ApplicationRunner {
         RecipeIngredient horchataIngredient9 = new RecipeIngredient(ice, 1, "handful");
         recipeIngredientRepository.save(horchataIngredient9);
 
-        Recipe horchata = new Recipe("Horchata", "My Latina Table", false, "Milk", "https://i.imgur.com/J5qC8k4.jpg", "Easy", 360, "https://www.youtube.com/embed/JtwqQEaxIQg");
+        Recipe horchata = new Recipe("Horchata", "My Latina Table", true, "Milk", "https://i.imgur.com/J5qC8k4.jpg", "Easy", 360, "https://www.youtube.com/embed/JtwqQEaxIQg");
         horchata.addIngredients(horchataIngredient1);
         horchata.addIngredients(horchataIngredient2);
         horchata.addIngredients(horchataIngredient3);
@@ -943,6 +957,77 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(horchataInstruction3);
         Instructions horchataInstruction4 = new Instructions("Strain the resulting liquid into a pitcher, and add the sugar, vanilla, and milk. Mix well until everything is well combined.Add a liter of water, and serve with ice. Enjoy!", horchata);
         instructionRepository.save(horchataInstruction4);
+
+
+        // Milkshake
+
+        RecipeIngredient vanillaMilkshakeIngredient1 = new RecipeIngredient(vanillaIceCream, 1, "200g");
+        recipeIngredientRepository.save(vanillaMilkshakeIngredient1);
+        RecipeIngredient vanillaMilkshakeIngredient2 = new RecipeIngredient(milk, 1, "500ml");
+        recipeIngredientRepository.save(vanillaMilkshakeIngredient2);
+        RecipeIngredient vanillaMilkshakeIngredient3 = new RecipeIngredient(vanillaExtract, 2, "tsp");
+        recipeIngredientRepository.save(vanillaMilkshakeIngredient3);
+
+        Recipe vanillaMilkshake = new Recipe(
+                "Vanilla Milkshake",
+                "Jack",
+                true,
+                "Milkshake",
+                "https://imgur.com/E8DILpZ",
+                "Easy",
+                10,
+                "https://www.youtube.com/embed/yBMmbXgv7tc"
+        );
+
+        vanillaMilkshake.addIngredients(vanillaMilkshakeIngredient1);
+        vanillaMilkshake.addIngredients(vanillaMilkshakeIngredient2);
+        vanillaMilkshake.addIngredients(vanillaMilkshakeIngredient3);
+        recipeRepository.save(vanillaMilkshake);
+        Instructions vanillaMilkshakeInstruction1 = new Instructions("Blitz the ice cream, milk and vanilla in a blender until combined and creamy. Pour into a large jug.", vanillaMilkshake);
+        instructionRepository.save(vanillaMilkshakeInstruction1);
+        Instructions vanillaMilkshakeInstruction2 = new Instructions("If you like, dip the rims of the glasses into the melted chocolate, then some sprinkles. Leave to set slightly, then divide the milkshake between glasses. Let everyone customise their shake with the toppings and squirty cream, and serve with the paper straws.", vanillaMilkshake);
+        instructionRepository.save(vanillaMilkshakeInstruction2);
+
+
+
+        RecipeIngredient chocolateMilkshakeIngredient1 = new RecipeIngredient(chocolateIceCream, 1, "200g");
+        recipeIngredientRepository.save(chocolateMilkshakeIngredient1);
+        RecipeIngredient chocolateMilkshakeIngredient2 = new RecipeIngredient(chocolateSpread, 1, "Tbsp");
+        recipeIngredientRepository.save(chocolateMilkshakeIngredient2);
+        RecipeIngredient chocolateMilkshakeIngredient3 = new RecipeIngredient(milk, 1, "250ml");
+        recipeIngredientRepository.save(chocolateMilkshakeIngredient3);
+        RecipeIngredient chocolateMilkshakeIngredient4 = new RecipeIngredient(marshmallow, 5, "whole");
+        recipeIngredientRepository.save(chocolateMilkshakeIngredient4);
+        RecipeIngredient chocolateMilkshakeIngredient5 = new RecipeIngredient(doubleCream, 1, "30ml");
+        recipeIngredientRepository.save(chocolateMilkshakeIngredient5);
+        RecipeIngredient chocolateMilkshakeIngredient6 = new RecipeIngredient(hazelnuts, 1, "tsp");
+        recipeIngredientRepository.save(chocolateMilkshakeIngredient6);
+
+
+        Recipe chocolateMilkshake = new Recipe(
+                "Chocolate Milkshake",
+                "Jack",
+                true,
+                "Milkshake",
+                "https://imgur.com/4XN56ud",
+                "Easy",
+                10,
+                "https://www.youtube.com/embed/EA4yMzlHo9U"
+        );
+
+        chocolateMilkshake.addIngredients(chocolateMilkshakeIngredient1);
+        chocolateMilkshake.addIngredients(chocolateMilkshakeIngredient2);
+        chocolateMilkshake.addIngredients(chocolateMilkshakeIngredient3);
+        chocolateMilkshake.addIngredients(chocolateMilkshakeIngredient4);
+        chocolateMilkshake.addIngredients(chocolateMilkshakeIngredient5);
+        chocolateMilkshake.addIngredients(chocolateMilkshakeIngredient6);
+        recipeRepository.save(chocolateMilkshake);
+        Instructions chocolateMilkshakeInstruction1 = new Instructions("Load the back of a teaspoon with a little of the chocolate spread and spread it in a long line from the bottom of the inside of the glass to the top. Put the rest of the chocolate spread into a bowl in the microwave or in a small saucepan over a low heat. Warm through for a few seconds just until runny and set aside.", chocolateMilkshake);
+        instructionRepository.save(chocolateMilkshakeInstruction1);
+        Instructions chocolateMilkshakeInstruction2 = new Instructions("Put the milk and chocolate ice cream into a blender. Whizz everything up until smooth then pour into your prepared glass.", chocolateMilkshake);
+        instructionRepository.save(chocolateMilkshakeInstruction2);
+        Instructions chocolateMilkshakeInstruction3 = new Instructions("Top with a layer of the marshmallows and a spoonful of whipped cream. Decorate with a drizzle of the warmed chocolate spread and a few toasted hazelnuts. Serve immediately with a straw.", chocolateMilkshake);
+        instructionRepository.save(chocolateMilkshakeInstruction3);
     }
 
 }
