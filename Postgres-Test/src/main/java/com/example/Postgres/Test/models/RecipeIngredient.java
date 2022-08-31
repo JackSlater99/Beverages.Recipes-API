@@ -26,6 +26,7 @@ public class RecipeIngredient {
 
     @ManyToMany
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @JsonIgnoreProperties({"recipes"})
     @JoinTable(
             name = "recipes_ingredients",
             joinColumns = {@JoinColumn(name = "recipe_ingredient_id", nullable = false, updatable = false)},
@@ -75,4 +76,5 @@ public class RecipeIngredient {
     public void setUnits(String units) {
         this.units = units;
     }
+    
 }

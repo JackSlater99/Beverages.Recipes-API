@@ -19,6 +19,7 @@ public class Instructions {
 
     @ManyToOne
     @JoinColumn(name = "recipe_id", nullable = false)
+    @JsonIgnoreProperties({"instructions"})
     private Recipe recipe;
 
     public Instructions(String instruction, Recipe recipe) {
@@ -45,4 +46,11 @@ public class Instructions {
         this.instruction = instruction;
     }
 
+    public Recipe getRecipe() {
+        return recipe;
+    }
+
+    public void setRecipe(Recipe recipe) {
+        this.recipe = recipe;
+    }
 }

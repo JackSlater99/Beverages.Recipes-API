@@ -1,112 +1,194 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import ApiSelect from "./ApiSelect";
 import JsonView from "./JsonView";
 
+import "./ApiIndex.css";
+import { FaCopy, FaArrowRight } from "react-icons/fa";
+
 const ApiIndex = () => {
+  const baseUrl = "http://localhost:8080/api";
 
-    const endPoints = [
-        { 
-            id: 1,
-            title: "Recipies Index",
-            description: "Get all recipies as an array of Objects.",
-            endPointUrl: "http://javaBackEnd:3000/recipies",
-        },
-        { 
-            id: 2,
-            title: "Recipies Show",
-            description: "Get a single recipe by (id, name).",
-            endPointUrl: "http://javaBackEnd:3000/recipies/id",
-        }, 
-        { 
-            id: 3,
-            title: "Recipies Create",
-            description: "Create a single recipe by (id, name).",
-            endPointUrl: "http://javaBackEnd:3000/recipiesCREATE",
-        }
-    ]
+  const endPoints = [
+    {
+      id: 1,
+      section: "recipes",
+      title: "Recipes Index",
+      description: "Get all recipes as an array of Objects.",
+      endPointUrl: `${baseUrl}/recipes/1`,
+      displayUrl: `${baseUrl}/recipes/`,
+      httpVerb: "GET",
+    },
+    {
+      id: 2,
+      section: "recipes",
+      title: "Recipes Show",
+      description: "Get a single recipe by (id, name).",
+      endPointUrl: `${baseUrl}/recipes/1`,
+      displayUrl: `${baseUrl}/recipes/1`,
+      httpVerb: "GET",
+    },
+    {
+      id: 4,
+      section: "recipes",
+      title: "Recipe By Name",
+      description: "Recipe Get by name.",
+      endPointUrl: `${baseUrl}/recipes?name=flat white`,
+      displayUrl: `${baseUrl}/recipes?name=flat white`,
+      httpVerb: "GET",
+    },
+    {
+      id: 5,
+      section: "recipes",
+      title: "Recipe By Author",
+      description: "Recipe Get by Author (Name)",
+      endPointUrl: `${baseUrl}/recipes?author=jack`,
+      displayUrl: `${baseUrl}/recipes?author=jack`,
+      httpVerb: "GET",
+    },
+    {
+      id: 6,
+      section: "recipes",
+      title: "Recipe By Type",
+      description: "Recipe Get by Type (Beer, Coffee).",
+      endPointUrl: `${baseUrl}/recipes?type=Coffee`,
+      displayUrl: `${baseUrl}/recipes?type=Coffee`,
+      httpVerb: "GET",
+    },
+    {
+      id: 7,
+      section: "recipes",
+      title: "Recipe By Difficulty",
+      description: "Recipe Get by Difficulty (Easy, Medium, Difficult).",
+      endPointUrl: `${baseUrl}/recipes?difficulty=medium`,
+      displayUrl: `${baseUrl}/recipes?difficulty=medium`,
+      httpVerb: "GET",
+    },
+    {
+      id: 8,
+      section: "recipes",
+      title: "Recipe By Preparation Time",
+      description: "Recipe Get by time to preapare (minutes).",
+      endPointUrl: `${baseUrl}/recipes?preptime=5`,
+      displayUrl: `${baseUrl}/recipes?preptime=5`,
+      httpVerb: "GET",
+    },
+    {
+      id: 9,
+      section: "recipes",
+      title: "Recipe Contains Alcohol",
+      description: "Recipes that contain one or more alhoholic ingredients.",
+      endPointUrl: `${baseUrl}/recipes/alcoholic`,
+      displayUrl: `${baseUrl}/recipes/alcoholic`,
+      httpVerb: "GET",
+    },
+    {
+      id: 10,
+      section: "ingredients",
+      title: "Ingredients Index",
+      description: "Show all ingredients from all recipes",
+      endPointUrl: `${baseUrl}/ingredients/1`,
+      displayUrl: `${baseUrl}/ingredients`,
+      httpVerb: "GET",
+    },
+    {
+      id: 11,
+      section: "ingredients",
+      title: "Ingredient by ID",
+      description: "Show ingredient by ID",
+      endPointUrl: `${baseUrl}/ingredients/1`,
+      displayUrl: `${baseUrl}/ingredients/1`,
+      httpVerb: "GET",
+    },
+    {
+      id: 14,
+      section: "instructions",
+      title: "Instructions Index",
+      description: "Show all instructions",
+      endPointUrl: `${baseUrl}/instructions/1`,
+      displayUrl: `${baseUrl}/instructions`,
+      httpVerb: "GET",
+    }
+  ];
 
+  const [jsonData, setJsonData] = useState({});
 
+  const [selectedOption, setSelectedOption] = useState({
+    id: 2,
+    section: "recipes",
+    title: "Recipes Show",
+    description: "Get a single recipe by (id, name).",
+    endPointUrl: `${baseUrl}/recipes/1`,
+    displayUrl: `${baseUrl}/recipes`,
+    httpVerb: "GET",
+  });
 
+  const onSelectChange = (event) => {
+    const selectedEndPoint = endPoints.find(
+      (endPoint) => endPoint.id === parseInt(event.target.value)
+    );
+    setSelectedOption(selectedEndPoint);
+  };
 
-    const [selectedOption, setSelectedOption] = useState({ 
-        id: 1,
-        title: "Recipies Index",
-        description: "Get all recipies as an array of Objects.",
-        endPointUrl: "http://javaBackEnd:3000/recipies",
-    });
+  const makeFetchRequest = async (event) => {
+    const resp = await fetch(selectedOption.endPointUrl);
+    const jsonData = await resp.json();
+    setJsonData(jsonData);
+  };
 
+  useEffect(() => {
+    makeFetchRequest();
+  }, []);
 
-    const test_json = {
-        "bev_id": 34,
-        "title": "Drink",
-        "rating": 5,
-        "ingredients" : {
-          "whisky": {
-            "quantity": 10,
-            "units": "ml"
-          },
-          "banana": {
-            "quantity": 10,
-            "units": "ml"
-          },
-          "batman": {
-            "quantity": 10,
-            "units": "ml"
-          }
-        },
-        "Instructions": {
-          "summary": "take the batman and soak him in whisky for at least 45 minutes.  He will then sing and want to eat the banana.",
-          "steps": {
-            1: "Peel batman",
-            2: "Drink Whisky",
-            3: "Eat the banana"
-          }
-        },
-        "image_link": "http://beverages.recipies/images/batman.jpg",
-        "thumb_nail": "http://beverages.recipies/images/batman.jpg",
-        "youtube": "http://youtube.com/jshsduse",
-        "uri": "http://beverages.recipies/drinks/34",
-        "country": "link"
-      }
+  return (
+    <main className="flex">
+      <section className="px-16 w-1/2">
 
+        <h1 className="mb-4 mt-8">Recipe Open API</h1>
+        <p className="mb-8">Please select an endpoint from the dropdown to see sample JSON, the enpoint URL and the HTTP method.</p>
 
+        <h3 className="mt-4 mb-4 text-md font-semibold">Select Endpoint <span className="pl-12 text-gray-500 font-normal">{selectedOption.title}</span></h3>
+        <div className="ep-select">
+          <ApiSelect endPoints={endPoints} onSelectionChange={onSelectChange} />
+        </div>
 
+        <div>
 
-        const onSelectChange = (event) => {
-            const selectedEndPoint = endPoints.find( (endPoint) => endPoint.id === parseInt(event.target.value));
-            setSelectedOption(selectedEndPoint);
-        }
+          <input
+            readOnly
+            className="invisible"
+            type="text"
+            value={selectedOption.endPointUrl}
+          />
 
-        const makeFetchRequest = (event) => {
-            console.log(selectedOption.endPointUrl);
-        }
+          <h3 className="mt-4 mb-2 text-md font-semibold">Endpoint URL</h3>
+          <p className="ep-display-url">
+            <span>{selectedOption.displayUrl}</span>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(selectedOption.endPointUrl);
+              }}
+            >
+              <FaCopy className="fa-copy" color="222B36" />
+            </button>
+          </p>
 
+          <h3 className="mt-8 text-md font-semibold">HTTP Method</h3>
+          <p className="ep-display-url">{selectedOption.httpVerb}</p>
 
-    return (
-        <main className="flex">
+          <h3 className="mt-8 text-md font-semibold">Purpose</h3>
+          <p className="mt-4">{selectedOption.description}</p>
 
-            <section className="p-4 w-2/3">
-                <div className="pb-8">
-                    <ApiSelect endPoints={endPoints} onSelectionChange={onSelectChange} />
-                </div>
+          <button className="styled-btn mt-8 items-end flex place-content-center" onClick={makeFetchRequest}>
+            Try Button <FaArrowRight className="ml-8" />
+          </button>
+        </div>
+      </section>
 
-                <div>
-                    <h2 className="text-lg font-semibold">{selectedOption.title}</h2>
-                    <input className="w-full border-solid border-2 border-gray-500" type="text" value={selectedOption.endPointUrl} />
-
-                    
-                    <p className="mt-8 " >{selectedOption.description}</p>
-                    <button className="w-1/2 mt-8 border-solid border-2 border-gray-500" onClick={makeFetchRequest}>Try Button</button>
-
-                </div>
-            </section>
-
-
-            <section className="max-w-3x1">
-                <JsonView jsonApiData={test_json} />
-            </section>
-        </main>
-    )
-}
+      <section className="w-1/2 mt-8">
+        <JsonView jsonApiData={jsonData} />
+      </section>
+    </main>
+  );
+};
 
 export default ApiIndex;
