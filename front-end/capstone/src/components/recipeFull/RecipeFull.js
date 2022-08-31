@@ -17,7 +17,7 @@ const RecipeFull = ({ recipes, getAllRecipes }) => {
   return (
     <main className="pb-8">
       <div className="grid grid-rows-1">
-        <h2 className="text-center">{recipe.name}</h2>
+        <h2 className="text-center mt-20">{recipe.name}</h2>
         <Ratings recipe={recipe} />
       </div>
       <div className="grid grid-cols-2 gap-4 p-6 center">
@@ -25,10 +25,10 @@ const RecipeFull = ({ recipes, getAllRecipes }) => {
           <img
             src={recipe.image}
             alt={recipe.name}
-            className="max-w-md rounded"
+            className="rounded recipe-img"
           />
 
-          <p>
+          <p className="mt-10">
             <span className="font-bold">Type of Drink:</span> {recipe.type}
           </p>
           <p>
@@ -45,7 +45,7 @@ const RecipeFull = ({ recipes, getAllRecipes }) => {
             <span className="font-bold">Ingredients:</span>
             <RecipesIngredients ingredients={recipe.ingredients} />
           </p>
-          <p>
+          <p className="mt-10">
             <span className="font-bold">Instructions:</span>
             <RecipesInstruction instructions={recipe.instructions} />
           </p>

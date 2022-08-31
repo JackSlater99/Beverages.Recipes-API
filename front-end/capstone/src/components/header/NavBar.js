@@ -10,6 +10,7 @@ const NavBar = () => {
     <Nav>
       <Logo href="/">
         <img src={logo} width="100" alt="logo" />
+        <h1>BEVERAGES.RECIPES</h1>
       </Logo>
       <Hamburger onClick={() => setStyling(!styling)}>
         <span></span>
@@ -73,7 +74,7 @@ const MenuLink = styled(Link)`
   text-decoration: none;
   color: white;
   transition: all 0.2s ease-in;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   &:hover {
     color: #f95959;
@@ -90,6 +91,14 @@ const Logo = styled.a`
     font-weight: 300;
     font-size: 3rem;
   }
+  img {
+    margin-right: 2rem;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  display: flex;
+  align-items: center;
 `;
 
 export default NavBar;

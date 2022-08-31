@@ -107,7 +107,7 @@ const ApiIndex = () => {
       endPointUrl: `${baseUrl}/instructions/1`,
       displayUrl: `${baseUrl}/instructions`,
       httpVerb: "GET",
-    }
+    },
   ];
 
   const [jsonData, setJsonData] = useState({});
@@ -140,19 +140,25 @@ const ApiIndex = () => {
   }, []);
 
   return (
-    <main className="flex">
+    <main className="flex mt-20">
       <section className="px-16 w-1/2">
+        <h2 className="mb-4">Recipe Open API</h2>
+        <p className="mb-8">
+          Please select an endpoint from the dropdown to see sample JSON, the
+          enpoint URL and the HTTP method.
+        </p>
 
-        <h1 className="mb-4 mt-8">Recipe Open API</h1>
-        <p className="mb-8">Please select an endpoint from the dropdown to see sample JSON, the enpoint URL and the HTTP method.</p>
-
-        <h3 className="mt-4 mb-4 text-md font-semibold">Select Endpoint <span className="pl-12 text-gray-500 font-normal">{selectedOption.title}</span></h3>
+        <h3 className="mt-4 mb-4 text-md font-semibold">
+          Select Endpoint{" "}
+          <span className="pl-12 text-gray-500 font-normal">
+            {selectedOption.title}
+          </span>
+        </h3>
         <div className="ep-select">
           <ApiSelect endPoints={endPoints} onSelectionChange={onSelectChange} />
         </div>
 
         <div>
-
           <input
             readOnly
             className="invisible"
@@ -178,7 +184,10 @@ const ApiIndex = () => {
           <h3 className="mt-8 text-md font-semibold">Purpose</h3>
           <p className="mt-4">{selectedOption.description}</p>
 
-          <button className="styled-btn mt-8 items-end flex place-content-center" onClick={makeFetchRequest}>
+          <button
+            className="styled-btn mt-8 items-end flex place-content-center"
+            onClick={makeFetchRequest}
+          >
             Try Button <FaArrowRight className="ml-8" />
           </button>
         </div>
