@@ -78,27 +78,82 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(lemon);
         RawIngredient bitterBeer = new RawIngredient("Bitter Beer", "https://i.imgur.com/7JgQQHl.jpg", Boolean.TRUE, "Bitter belongs to the pale ale beer style and can have a great variety of strength, flavour and appearance, from dark amber to a golden summer ale. It can be under 3% abv and as high as 7% with premium or strong bitters. The colour may be controlled by the addition of caramel colouring.");
         ingredientRepository.save(bitterBeer);
+        RawIngredient tomatoJuice = new RawIngredient("Tomato Juice", "https://i.imgur.com/dDog3GF.jpg", Boolean.FALSE, "Juice extracted from fresh tomatoes by cooking them and then exposing the heated tomatoes to a process that separates the skins and seeds from the juice. The juice is then bottled or canned and can be salted or unsalted, and at times other seasonings are added. Tomato juice is served as a beverage or can be added to dishes for flavoring.");
+        ingredientRepository.save(tomatoJuice);
+        RawIngredient lemonJuice = new RawIngredient("Lemon Juice", "https://i.imgur.com/vrtVHvQ.jpg", Boolean.FALSE, "The juice from a fresh lemon, which is the best form of lemon flavor. Bottled lemon juice can be substituted if fresh lemons are not available.");
+        ingredientRepository.save(lemonJuice);
+        RawIngredient worcestershireSauce = new RawIngredient("Worcestershire Sauce", "https://i.imgur.com/21QSNYL.jpg", Boolean.FALSE, "A popular condiment that has a savory flavor and is used to season a wide variety of dishes. This thin dark sauce is made with soy sauce, garlic, onion, molasses, vinegar, anchovies, lime, and a variety of other seasonings. The name Worcestershire refers to the town of Worcester, England where the sauce was first produced commercially.");
+        ingredientRepository.save(worcestershireSauce);
+        RawIngredient tabasco = new RawIngredient("Tabasco", "https://i.imgur.com/7o0dxot.jpg", Boolean.FALSE, "A trademarked hot sauce that consists of red chile peppers, salt and vinegar. The small, very hot pepper originated in Tabasco, Mexico and the hot sauce was developed by the McIlhenny family more than 125 years ago. Its spicy flavor is used in making Bloody Mary cocktails and many spicy dishes.");
+        ingredientRepository.save(tabasco);
+        RawIngredient celery = new RawIngredient("Celery", "https://i.imgur.com/XsPGpf7.jpg", Boolean.FALSE, "Celery is a vegetable with long petioles, meaty and succulent that are known by the name of stalks. They may be eaten raw in salads or alone, fried, boiled, with sauces and as a condiment for soups, stews, etc. It can also be used as an aromatic and besides the stalks, the leaves and seeds of the plant are used.");
+        ingredientRepository.save(celery);
+        RawIngredient ice = new RawIngredient("Ice", "https://i.imgur.com/G6B3CZf.jpg", Boolean.FALSE, "A small block of artificial ice formed in a mold or cut from a larger block and commonly used for icing drinks.");
+        ingredientRepository.save(ice);
+        RawIngredient salt = new RawIngredient("Salt", "https://i.imgur.com/XGSFQuq.jpg", Boolean.FALSE, "A colorless or white substance that consists of sodium and chlorine and is used in seasoning and preserving food and in industry.");
+        ingredientRepository.save(salt);
+        RawIngredient blackPepper = new RawIngredient("Black Pepper", "https://i.imgur.com/I5YIIZT.jpg", Boolean.FALSE, "Black pepper is a plant that grows in the tropics, especially in India. The plant is a perennial vine that bears flowers. People cultivate the plant for its fruit, the peppercorn. The peppercorn can be used as a spice or condiment. Usually, it makes things hot.");
+        ingredientRepository.save(blackPepper);
+        RawIngredient tapiocaStarch = new RawIngredient("Tapioca Starch", "https://i.imgur.com/GQW7INj.jpg", Boolean.FALSE, "Tapioca starch is a gluten-free flour that comes from the cassava plant. You can use it to thicken soups, stews, and gravies, or you can swap out wheat flour with tapioca for gluten-free baking.");
+        ingredientRepository.save(tapiocaStarch);
+        RawIngredient brownSugar = new RawIngredient("Brown Sugar", "https://i.imgur.com/Jwi8C89.jpg", Boolean.FALSE, "Brown sugar is granulated cane sugar with added molasses. It is coarser and more moist than white sugar and imparts a unique flavor and dark color to food systems.");
+        ingredientRepository.save(brownSugar);
+        RawIngredient water = new RawIngredient("Water", "https://i.imgur.com/HmarZRY.jpg", Boolean.FALSE, "A substance composed of the chemical elements hydrogen and oxygen and existing in gaseous, liquid, and solid states. It is one of the most plentiful and essential of compounds. A tasteless and odourless liquid at room temperature, it has the important ability to dissolve many other substances.");
+        ingredientRepository.save(water);
+        RawIngredient blackTea = new RawIngredient("Black Tea", "https://i.imgur.com/oVRMmWq.jpg", Boolean.FALSE, "A type of tea that is more oxidized than oolong, yellow, white and green teas. Black tea is generally stronger in flavour than other teas.");
+        ingredientRepository.save(blackTea);
+        RawIngredient mango = new RawIngredient("Mango", "https://i.imgur.com/q4zX0im.jpg", Boolean.FALSE, "A mango is a sweet tropical fruit, and it's also the name of the trees on which the fruit grows. Ripe mangoes are juicy, fleshy, and delicious.");
+        ingredientRepository.save(mango);
+        RawIngredient plainYogurt = new RawIngredient("Plain Yogurt", "https://i.imgur.com/i6DL0bs.jpg", Boolean.FALSE, "Made from whole, low-fat, or nonfat milk that is fermented with bacterial cultures, the bacteria in Yogurt allows the milk to congeal, giving it a thick, creamy texture. The flavor is slightly acidic and it is often blended with natural fruit flavors or pieces of fruit to enhance the flavor. Yogurt is high in protein and calcium along with many B vitamins.");
+        ingredientRepository.save(plainYogurt);
+        RawIngredient cinnamon = new RawIngredient("Cinnamon", "https://i.imgur.com/QN1byhC.jpg", Boolean.FALSE, "The spice, consisting of the dried inner bark, is brown in colour and has a delicately fragrant aroma and a warm sweet flavour. Cinnamon is used to flavour a variety of foods, from confections to curries to beverages, and is popular in bakery goods in many places.");
+        ingredientRepository.save(cinnamon);
+        RawIngredient groundCardamom = new RawIngredient("", "https://i.imgur.com/g23azPo.jpg", Boolean.FALSE, "A spice consisting of whole or ground dried fruits, or seeds, of Elettaria cardamomum, a herbaceous perennial plant of the ginger family (Zingiberaceae). The seeds have a warm, slightly pungent, and highly aromatic flavour somewhat reminiscent of camphor.");
+        ingredientRepository.save(groundCardamom);
+        RawIngredient instantCoffee = new RawIngredient("Instant Coffee", "https://i.imgur.com/KN5G31V.jpg", Boolean.FALSE, "Instant coffee is the dried soluble portion of roasted coffee, which can be presented to the consumer in either powder or granule form for immediate make-up in hot water.");
+        ingredientRepository.save(instantCoffee);
+        RawIngredient hotWater = new RawIngredient("Hot Water", "https://i.imgur.com/n7Lt7Y5.jpg", Boolean.FALSE, "Water that's been heated above its initial temperature. The ideal temperature for domestic hot water is 120 degrees Fahrenheit, or 49 degrees Celsius, to avoid the possibility of scalding.");
+        ingredientRepository.save(hotWater);
+        RawIngredient strawberry = new RawIngredient("Strawberry", "https://i.imgur.com/VpHcS2w.jpg", Boolean.FALSE, "Strawberries are soft, sweet, bright red berries. They're also delicious. Strawberries have tiny edible seeds, which grow all over their surface. When ripe, strawberries smell wonderful and taste even better. You can make jam, pie, strawberry shortcake, and more with strawberries.");
+        ingredientRepository.save(strawberry);
+        RawIngredient honey = new RawIngredient("Honey", "https://i.imgur.com/X6wO5Lf.jpg", Boolean.FALSE, "Honey is a thick, sweet fluid produced by bees from plant nectars. It is commonly used as a sweetener in food, but should be avoided in infants. Some chemicals in honey might kill certain bacteria and fungus.");
+        ingredientRepository.save(honey);
+        RawIngredient whiteRice = new RawIngredient("White Rice", "https://i.imgur.com/35RoUbm.jpg", Boolean.FALSE, "The starchy seeds of an annual southeast Asian cereal grass (Oryza sativa) that are cooked and used for food");
+        ingredientRepository.save(whiteRice);
+        RawIngredient choppedAlmonds = new RawIngredient("Chopped Almonds", "https://i.imgur.com/IxLf1jK.jpg", Boolean.FALSE, "The almond is the edible kernel of the fruit of the sweet almond tree. It is a bright white fruti and wrapped in a reddish brown cover. It is consumed as dry fruit, fried and/or salted. Some well-known products, such as nougat and marzipan, are made of almonds.");
+        ingredientRepository.save(choppedAlmonds);
+        RawIngredient vanilla = new RawIngredient("Vanilla", "https://i.imgur.com/aretJyR.jpg", Boolean.FALSE, "Vanilla is strongly aromatic and contributes warm, floral notes. It’s a gentle but distinct flavor that complements many other spices and foods.");
+        ingredientRepository.save(vanilla);
+        RawIngredient evaporatedMilk = new RawIngredient("Evaporated Milk", "https://i.imgur.com/zfPg1ux.jpg", Boolean.FALSE, "Evaporated milk, known in some countries as \"unsweetened condensed milk\", is a shelf-stable canned cow’s milk product where about 60% of the water has been removed from fresh milk. It differs from sweetened condensed milk, which contains added sugar.");
+        ingredientRepository.save(evaporatedMilk);
+        RawIngredient thaiTea = new RawIngredient("Thai Tea", "https://i.imgur.com/NbOtDaR.jpg", Boolean.FALSE, "Thai tea is infused with star anise and cloves and sweetened with sugar or sweetened condensed milk.");
+        ingredientRepository.save(thaiTea);
+        RawIngredient sweetenedCondensedMilk = new RawIngredient("Sweetened Condensed Milk", "https://i.imgur.com/4jwn0B3.jpg", Boolean.FALSE, "Sweetened condensed milk is made by removing most of the water from cow's milk. It's sweeter and higher in calories than evaporated milk, as sugar is added as a preservative. It can add flavor to desserts, coffee and certain stews but is unsuitable for people with milk protein allergy or lactose intolerance.");
+        ingredientRepository.save(sweetenedCondensedMilk);
+        RawIngredient yuja = new RawIngredient("Yuja", "https://i.imgur.com/YVxglUb.jpg", Boolean.FALSE, "Intensely aromatic, its major antecedent among several arcane citruses is the mandarin, which thus gives a sweet-sharp flavour that is both orangey and lemony but also includes a fresh hint of green that all combine to make something lively and individual; some detect the presence of grapefruit flavour too.");
+        ingredientRepository.save(yuja);
+        RawIngredient ginger = new RawIngredient("Ginger", "https://i.imgur.com/1klXEvE.jpg", Boolean.FALSE, "Ginger is used as a cooking spice throughout the world. It's used as a food flavoring and medicine. Ginger contains chemicals that might reduce nausea and swelling.");
+        ingredientRepository.save(ginger);
+        RawIngredient clove = new RawIngredient("Clove", "https://i.imgur.com/8c0QnWp.jpg", Boolean.FALSE, "Cloves are a pungent warm spice with an intense flavor and aroma. The flavor comes from the compound eugenol. On the tongue, you'll detect sweetness, bitterness, and astringency (drying the mouth), with a noticeable amount of heat.");
+        ingredientRepository.save(clove);
+        RawIngredient redWine = new RawIngredient("Red Wine", "https://i.imgur.com/l4sY6J7.jpg", Boolean.TRUE, "Red wine is a type of wine made from dark-colored grape varieties.");
+        ingredientRepository.save(redWine);
+        RawIngredient starAnise = new RawIngredient("Star Anise", "https://i.imgur.com/3MkBVlS.jpg", Boolean.FALSE, "Star anise is a spice made from the fruit of the Chinese evergreen tree Illicium verum. It's aptly named for the star-shaped pods from which the spice seeds are harvested and has a flavor that is reminiscent of licorice.");
+        ingredientRepository.save(starAnise);
+        RawIngredient lemonZest = new RawIngredient("Lemon Zest", "https://i.imgur.com/6sW7fi4.jpg", Boolean.FALSE, "Lemon zest is the yellow outside portion of its peel. It's often used with or without lemon juice to add tangy flavor to recipes. The zest can taste even stronger than the juice; it's often used in lemon-flavored baked or cooked recipes like lemon poppy seed pancakes.");
+        ingredientRepository.save(lemonZest);
         RawIngredient beet = new RawIngredient("Beet", "IMAGE", Boolean.FALSE, "Beetroot is the large and fleshy root growing in the plant of the same name, eaten as a vegetable. Its superficial, thin and smooth skin has a wide range of colours, from purple-pink and reddish-orange to a brownish tone. The pulp has a sweet taste and it is usually of a dark crimson red colour with purple tinges.");
         ingredientRepository.save(beet);
         RawIngredient carrot = new RawIngredient("Carrot", "IMAGE", Boolean.FALSE, "Carrot, (Daucus carota), herbaceous, generally biennial plant of the Apiaceae family that produces an edible taproot. Among common varieties root shapes range from globular to long, with lower ends blunt to pointed. Besides the orange-coloured roots, white-, yellow-, and purple-fleshed varieties are known.");
         ingredientRepository.save(carrot);
-        RawIngredient ginger = new RawIngredient("Ginger", "IMAGE", Boolean.FALSE, "Ginger is a 2-4 feet tall slender perennial with grass-like leaves and greenish-yellow flowers. Once the leaves of the plant die, the thick rhizomes, about 6 inches long, are dug up. Ginger is often referred to as a root but this is technically incorrect.");
-        ingredientRepository.save(ginger);
-        RawIngredient water = new RawIngredient("Water", "IMAGE", Boolean.FALSE, "Water, a substance composed of the chemical elements hydrogen and oxygen and existing in gaseous, liquid, and solid states. It is one of the most plentiful and essential of compounds. A tasteless and odourless liquid at room temperature, it has the important ability to dissolve many other substances.");
-        ingredientRepository.save(water);
         RawIngredient orange = new RawIngredient("Orange", "IMAGE", Boolean.FALSE, "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp. The edible part of the orange is the flesh, consumed in fresh or in juice. The orange is also used to make stewed fruit, jams, for consumption as dehydrated fruit, etc.");
         ingredientRepository.save(orange);
-        RawIngredient ice = new RawIngredient("Ice", "IMAGE", Boolean.FALSE, "Ice is water in its frozen, solid form. Ice often forms on lakes, rivers and the ocean in cold weather. It can be very thick or very thin. It occurs as frost, snow, sleet and hail. Water will freeze at zero degrees Celsius (32 degrees Fahrenheit).");
-        ingredientRepository.save(ice);
-        RawIngredient strawberry = new RawIngredient("Strawberry", "IMAGE", Boolean.FALSE, "Strawberries are soft, sweet, bright red berries. They're also delicious. Strawberries have tiny edible seeds, which grow all over their surface. When ripe, strawberries smell wonderful and taste even better. You can make jam, pie, strawberry shortcake, and more with strawberries.");
-        ingredientRepository.save(strawberry);
         RawIngredient watermelon = new RawIngredient("Watermelon", "IMAGE", Boolean.FALSE, "A large oblong or roundish fruit with a hard green or white rind often striped or variegated, a sweet watery pink, yellowish, or red pulp, and usually many seeds. 2 : A widely cultivated African vine (Citrullus lanatus synonym C. vulgaris) of the gourd family that bears watermelons.");
         ingredientRepository.save(watermelon);
 
-
-
         // COFFEE
 
+//        FLAT WHITE
         RecipeIngredient coffeeIngredient1 = new RecipeIngredient(milk, 100, "ml");
         recipeIngredientRepository.save(coffeeIngredient1);
         RecipeIngredient coffeeIngredient2 = new RecipeIngredient(groundEspresso, 18, "g");
@@ -137,7 +192,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions flatWhiteInstruction2 = new Instructions("Steam the milk with the steamer attachment so that it has around 1-2cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming to pour into the centre. Once the milk jug is almost touching the surface of the coffee, tilt the jug to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top.", flatWhite);
         instructionRepository.save(flatWhiteInstruction2);
 
-
+//        MOCHA
         Recipe mocha = new Recipe(
                 "Mocha",
                 "Jack",
@@ -158,6 +213,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions mochaInstruction2 = new Instructions("Steam the milk with the steamer attachment so that it has around 4-6cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming into the centre. Once the milk jug is almost touching the surface of the coffee, tilt to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top.", mocha);
         instructionRepository.save(mochaInstruction2);
 
+//        CAPPUCCINO
         Recipe cappuccino = new Recipe(
                 "Cappuccino",
                 "Jack",
@@ -177,6 +233,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions cappuccinoInstruction2 = new Instructions("Steam the milk with the steamer attachment so that it has around 4-6cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming to pour into the centre. Once the milk jug is almost touching the surface of the coffee, tilt the jug to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top. Dust the surface with a little cocoa powder if you like.", cappuccino);
         instructionRepository.save(cappuccinoInstruction2);
 
+//        LATTE
         Recipe latte = new Recipe(
                 "Latte",
                 "Jack",
@@ -196,6 +253,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions latteInstruction2 = new Instructions("Steam the milk with the steamer attachment so that it has around 2-3cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming to pour into the centre. Once the milk jug is almost touching the surface of the coffee, tilt to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top.", latte);
         instructionRepository.save(latteInstruction2);
 
+//        ESPRESSO MARTINI
         Recipe espressoMartini = new Recipe(
                 "Espresso Martini",
                 "Jack",
@@ -221,8 +279,28 @@ public class DataLoader implements ApplicationRunner {
         Instructions espressoMartiniInstruction4 = new Instructions("Strain into the chilled glasses. Garnish each one with coffee beans if you like.", espressoMartini);
         instructionRepository.save(espressoMartiniInstruction4);
 
+//        DALGONA
+        RecipeIngredient dalgonaIngredient1 = new RecipeIngredient(instantCoffee, 4, "tbsp");
+        recipeIngredientRepository.save(dalgonaIngredient1);
+        RecipeIngredient dalgonaIngredient2 = new RecipeIngredient(sugar, 4, "tbsp");
+        recipeIngredientRepository.save(dalgonaIngredient2);
+        RecipeIngredient dalgonaIngredient3 = new RecipeIngredient(hotWater, 4, "tbsp");
+        recipeIngredientRepository.save(dalgonaIngredient3);
+
+        Recipe dalgona = new Recipe("Dalgona", "SeonkyongLongest", false, "Coffee", "https://i.imgur.com/bmlB7pQ.jpg", "Easy", 5, "https://www.youtube.com/embed/d0mFY8PtmpA");
+        dalgona.addIngredients(dalgonaIngredient1);
+        dalgona.addIngredients(dalgonaIngredient2);
+        dalgona.addIngredients(dalgonaIngredient3);
+        recipeRepository.save(dalgona);
+
+        Instructions dalgonaInstruction1 = new Instructions("Combine instant coffee, sugar and hot water in a large mixing bowl. Whip with a hand mixer start from low speed and slowly increase the speed to high. Whip it until it’s foamy and soft pick, about 5 minutes.", dalgona);
+        instructionRepository.save(dalgonaInstruction1);
+        Instructions dalgonaInstruction2 = new Instructions("Fill up a glass with your choice of milk 3/4 way with or without ice. Top it up with foamy whipped coffee. Mix well before drink. Enjoy!", dalgona);
+        instructionRepository.save(dalgonaInstruction2);
+
         // MOCKTAILS
 
+//        SUMMER CUP MOCKTAIL
         RecipeIngredient summerCupMocktailIngredient1 = new RecipeIngredient(cucumber, 1, "cm");
         recipeIngredientRepository.save(summerCupMocktailIngredient1);
         RecipeIngredient summerCupMocktailIngredient2 = new RecipeIngredient(mint, 1, "sprig");
@@ -254,6 +332,7 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(summerCupMocktailInstruction2);
 
 
+//        VIRGIN MOJITO
         RecipeIngredient virginMojitoIngredient1 = new RecipeIngredient(sugar, 1, "tbsp");
         recipeIngredientRepository.save(virginMojitoIngredient1);
         RecipeIngredient virginMojitoIngredient2 = new RecipeIngredient(mint, 1, "sprig");
@@ -286,6 +365,7 @@ public class DataLoader implements ApplicationRunner {
 
         // MARTINIS
 
+//        VODKA MARTINI
         RecipeIngredient martiniIngredient1 = new RecipeIngredient(vodka, 60, "ml");
         recipeIngredientRepository.save(martiniIngredient1);
         RecipeIngredient martiniIngredient2 = new RecipeIngredient(vermouth, 1, "tbsp");
@@ -310,7 +390,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions vodkaMartiniInstruction2 = new Instructions("Strain into a chilled martini glass. Serve with an olive on a cocktail stick or a twist of lemon peel.", vodkaMartini);
         instructionRepository.save(vodkaMartiniInstruction2);
 
-
+//        COSMOPOLITAN
         RecipeIngredient martiniIngredient3 = new RecipeIngredient(vodka, 120, "ml");
         recipeIngredientRepository.save(martiniIngredient3);
         RecipeIngredient martiniIngredient4 = new RecipeIngredient(orangeLiqueur, 60, "ml");
@@ -339,7 +419,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions cosmopolitanInstruction1 = new Instructions("Stir the ingredients and a little ice together or put them in a cocktail shaker to combine. Strain into two chilled martini glasses.", cosmopolitan);
         instructionRepository.save(cosmopolitanInstruction1);
 
-
+//        DIRTY MARTINI
         RecipeIngredient martiniIngredient7 = new RecipeIngredient(olive, 6, "pitted with brine");
         recipeIngredientRepository.save(martiniIngredient7);
         RecipeIngredient martiniIngredient8 = new RecipeIngredient(londonDryGin, 150, "ml");
@@ -371,7 +451,8 @@ public class DataLoader implements ApplicationRunner {
 
 //        // Cocktail
 
-        RecipeIngredient classicShandyIngredient1 = new RecipeIngredient(lemon, 2, "slices");
+//        CLASSIC SHANDY
+        RecipeIngredient classicShandyIngredient1 = new RecipeIngredient(lemon , 2, "slices");
         recipeIngredientRepository.save(classicShandyIngredient1);
         RecipeIngredient classicShandyIngredient2 = new RecipeIngredient(bitterBeer, 200, "ml");
         recipeIngredientRepository.save(classicShandyIngredient2);
@@ -397,6 +478,216 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(classicShandyInstruction1);
         Instructions classicShandyInstruction2 = new Instructions("Stir well, then make a small cut in a second lemon slice and use this to garnish the rim of the glass.", classicShandy);
         instructionRepository.save(classicShandyInstruction2);
+
+//        BLOODY MARY
+        RecipeIngredient maryIngredient1 = new RecipeIngredient(vodka, 100, "ml");
+        recipeIngredientRepository.save(maryIngredient1);
+        RecipeIngredient maryIngredient2 = new RecipeIngredient(tomatoJuice, 500, "ml");
+        recipeIngredientRepository.save(maryIngredient2);
+        RecipeIngredient maryIngredient3 = new RecipeIngredient(lemonJuice, 1, "tbsp");
+        recipeIngredientRepository.save(maryIngredient3);
+        RecipeIngredient maryIngredient4 = new RecipeIngredient(worcestershireSauce, 3, "shakes");
+        recipeIngredientRepository.save(maryIngredient4);
+        RecipeIngredient maryIngredient5 = new RecipeIngredient(tabasco, 3, "shakes");
+        recipeIngredientRepository.save(maryIngredient5);
+        RecipeIngredient maryIngredient6 = new RecipeIngredient(celery, 2, "sticks");
+        recipeIngredientRepository.save(maryIngredient6);
+        RecipeIngredient maryIngredient7 = new RecipeIngredient(ice, 1, "handful");
+        recipeIngredientRepository.save(maryIngredient7);
+        RecipeIngredient maryIngredient8 = new RecipeIngredient(salt, 1, "pinch");
+        recipeIngredientRepository.save(maryIngredient8);
+        RecipeIngredient maryIngredient9 = new RecipeIngredient(blackPepper, 1, "pinch");
+        recipeIngredientRepository.save(maryIngredient9);
+
+        Recipe bloodyMary = new Recipe("Bloody Mary", "BBC Good Food", true, "Cocktail", "https://i.imgur.com/74rMM8s.jpg", "Easy", 5, "https://www.youtube.com/embed/C5XvpOKrJds");
+        bloodyMary.addIngredients(maryIngredient1);
+        bloodyMary.addIngredients(maryIngredient2);
+        bloodyMary.addIngredients(maryIngredient3);
+        bloodyMary.addIngredients(maryIngredient4);
+        bloodyMary.addIngredients(maryIngredient5);
+        bloodyMary.addIngredients(maryIngredient6);
+        bloodyMary.addIngredients(maryIngredient7);
+        bloodyMary.addIngredients(maryIngredient8);
+        bloodyMary.addIngredients(maryIngredient9);
+        recipeRepository.save(bloodyMary);
+
+        Instructions bloodyMaryInstruction1 = new Instructions("Place the ice in a large jug. Measure the vodka, tomato juice and lemon juice and pour it straight onto the ice.", bloodyMary);
+        instructionRepository.save(bloodyMaryInstruction1);
+        Instructions bloodyMaryInstruction2 = new Instructions("Add 3 shakes of Worcestershire sauce and Tabasco (or more if you like it very spicy) and a pinch of salt and pepper. Stir until the outside of the jug feels cold, then strain the cocktail into 2 tall glasses.", bloodyMary);
+        instructionRepository.save(bloodyMaryInstruction2);
+        Instructions bloodyMaryInstruction3 = new Instructions("Top up with fresh ice, add a celery stick and lemon slice to both glasses and enjoy.", bloodyMary);
+        instructionRepository.save(bloodyMaryInstruction3);
+
+//        MULLED WINE
+        RecipeIngredient mulledIngredient1 = new RecipeIngredient(redWine, 750, "ml");
+        recipeIngredientRepository.save(mulledIngredient1);
+        RecipeIngredient mulledIngredient2 = new RecipeIngredient(cinnamon, 1, "large stick");
+        recipeIngredientRepository.save(mulledIngredient2);
+        RecipeIngredient mulledIngredient3 = new RecipeIngredient(starAnise, 2, "whole");
+        recipeIngredientRepository.save(mulledIngredient3);
+        RecipeIngredient mulledIngredient4 = new RecipeIngredient(clove, 4, "whole");
+        recipeIngredientRepository.save(mulledIngredient4);
+        RecipeIngredient mulledIngredient5 = new RecipeIngredient(lemonZest, 2, "strips");
+        recipeIngredientRepository.save(mulledIngredient5);
+        RecipeIngredient mulledIngredient6 = new RecipeIngredient(goldenCasterSugar, 4, "tbsp");
+        recipeIngredientRepository.save(mulledIngredient6);
+
+        Recipe mulledWine = new Recipe("Mulled Wine", "BBC Good Food", true, "Cocktail", "https://i.imgur.com/x8UccqL.jpg", "Easy", 45, "https://www.youtube.com/embed/r482JxBvQrA");
+        mulledWine.addIngredients(mulledIngredient1);
+        mulledWine.addIngredients(mulledIngredient2);
+        mulledWine.addIngredients(mulledIngredient3);
+        mulledWine.addIngredients(mulledIngredient4);
+        mulledWine.addIngredients(mulledIngredient5);
+        mulledWine.addIngredients(mulledIngredient6);
+        recipeRepository.save(mulledWine);
+
+        Instructions mulledInstruction1 = new Instructions("Put the red wine, cinnamon, star anise, cloves, lemon zest and sugar in a large pan. Cook on a low heat for 10 mins.", mulledWine);
+        instructionRepository.save(mulledInstruction1);
+        Instructions mulledInstruction2 = new Instructions("Remove from the heat and cool, leaving to infuse for about 30 mins.", mulledWine);
+        instructionRepository.save(mulledInstruction2);
+        Instructions mulledInstruction3 = new Instructions("To serve, heat without boiling and pour into mugs or heatproof glasses.", mulledWine);
+        instructionRepository.save(mulledInstruction3);
+
+//        TEAS:
+
+//        BROWN SUGAR BOBA
+        RecipeIngredient bobaIngredient1 = new RecipeIngredient(tapiocaStarch, 160, "g");
+        recipeIngredientRepository.save(bobaIngredient1);
+        RecipeIngredient bobaIngredient2 = new RecipeIngredient(brownSugar, 160, "g");
+        recipeIngredientRepository.save(bobaIngredient2);
+        RecipeIngredient bobaIngredient3 = new RecipeIngredient(water, 80, "ml");
+        recipeIngredientRepository.save(bobaIngredient3);
+        RecipeIngredient bobaIngredient4 = new RecipeIngredient(blackTea, 2, "bags");
+        recipeIngredientRepository.save(bobaIngredient4);
+        RecipeIngredient bobaIngredient5 = new RecipeIngredient(milk, 118, "ml");
+        recipeIngredientRepository.save(bobaIngredient5);
+        RecipeIngredient bobaIngredient6 = new RecipeIngredient(ice, 1, "handful");
+        recipeIngredientRepository.save(bobaIngredient6);
+
+        Recipe brownSugarBoba = new Recipe("Brown Sugar Boba", "Tiffy Cooks", false, "Tea", "https://i.imgur.com/2zBworp.jpg", "Medium", 10, "https://www.youtube.com/embed/EA1skTLzBnQ");
+
+        brownSugarBoba.addIngredients(bobaIngredient1);
+        brownSugarBoba.addIngredients(bobaIngredient2);
+        brownSugarBoba.addIngredients(bobaIngredient3);
+        brownSugarBoba.addIngredients(bobaIngredient4);
+        brownSugarBoba.addIngredients(bobaIngredient5);
+        brownSugarBoba.addIngredients(bobaIngredient6);
+        recipeRepository.save(brownSugarBoba);
+
+        Instructions bobaInstructions1 = new Instructions("In a pot, mix 3 tbsp of Tapioca Flour, 80 ml of water, and 60g of brown sugar. Make sure everything is thoroughly combined before bringing it to the stove.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions1);
+        Instructions bobaInstructions2 = new Instructions("Turn the heat to medium-high and keep stirring until it becomes a thick and sticky consistency. Turn the heat off, and add in the remaining tapioca starch. Mix until slightly cooled down and pour onto a clean surface. (Not everything will be mixed well, but it’s ok)", brownSugarBoba);
+        instructionRepository.save(bobaInstructions2);
+        Instructions bobaInstructions3 = new Instructions("Once it is safe to knead (warm), knead until it becomes a smooth consistency with no lumps. This process takes around 5 minutes. If it is too sticky, you can add in a bit of bit more Tapioca Starch, but make sure to keep kneading.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions3);
+        Instructions bobaInstructions4 = new Instructions("Cut into 4 pieces. Roll out each piece and cut it into small pieces. The size depends on how big you prefer your pearls to be. The pearls do expand a little bit once you cook them.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions4);
+        Instructions bobaInstructions5 = new Instructions("Roll the pieces into a ball and coat with tapioca starch. At this point, you can freeze the tapioca balls in the freezer for up to 1 month.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions5);
+        Instructions bobaInstructions6 = new Instructions("Boil a big pot of water and once everything is simmering, add in the tapioca starch. Let it cook on medium heat for 25 minutes. Make sure to stir occasionally, so it doesn’t stick to the bottom. After 25 minutes, put the lid on, turn the heat off and let it rest for another 15 minutes. (If you prefer your boba to be on the softer side, simmer for an extra 5 minutes, and rest for another 5 minutes.)", brownSugarBoba);
+        instructionRepository.save(bobaInstructions6);
+        Instructions bobaInstructions7 = new Instructions("Drain the boba and let it rest in cold water until ready to use.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions7);
+        Instructions bobaInstructions8 = new Instructions("To make the thick brown sugar glaze. In a pot, add in remaining brown sugar and turn the heat up to medium. Heat the brown sugar and mix for 2-3 minutes or until slightly melted. Add in drained boba and mix till it becomes a thick consistency, around another 2-3 minutes.", brownSugarBoba);
+        instructionRepository.save(bobaInstructions8);
+        Instructions bobaInstructions9 = new Instructions("Using two tea bags, steep ¼ cup of tea. In a cup, add in the brown sugar boba, swirl the brown sugar boba around the cup, so it leaves a tiger pattern. Add in steep tea, ice, and milk. Enjoy!", brownSugarBoba);
+        instructionRepository.save(bobaInstructions9);
+
+//        THAI ICED TEA
+        RecipeIngredient thaiTeaIngredient1 = new RecipeIngredient(thaiTea, 45, "ml");
+        recipeIngredientRepository.save(thaiTeaIngredient1);
+        RecipeIngredient thaiTeaIngredient2 = new RecipeIngredient(hotWater, 240, "ml");
+        recipeIngredientRepository.save(thaiTeaIngredient2);
+        RecipeIngredient thaiTeaIngredient3 = new RecipeIngredient(sweetenedCondensedMilk, 22, "ml");
+        recipeIngredientRepository.save(thaiTeaIngredient3);
+        RecipeIngredient thaiTeaIngredient4 = new RecipeIngredient(sugar, 10, "ml");
+        recipeIngredientRepository.save(thaiTeaIngredient4);
+        RecipeIngredient thaiTeaIngredient5 = new RecipeIngredient(salt, 1, "pinch");
+        recipeIngredientRepository.save(thaiTeaIngredient5);
+        RecipeIngredient thaiTeaIngredient6 = new RecipeIngredient(evaporatedMilk, 20, "ml");
+        recipeIngredientRepository.save(thaiTeaIngredient6);
+        RecipeIngredient thaiTeaIngredient7 = new RecipeIngredient(ice, 1, "handful");
+        recipeIngredientRepository.save(thaiTeaIngredient7);
+
+        Recipe thaiIcedTea = new Recipe("Thai Iced Tea", "Hot Thai Kitchen", false, "Tea", "https://i.imgur.com/DLR4vcD.jpg", "Easy", 10, "https://www.youtube.com/embed/rIncobztk6E");
+        thaiIcedTea.addIngredients(thaiTeaIngredient1);
+        thaiIcedTea.addIngredients(thaiTeaIngredient2);
+        thaiIcedTea.addIngredients(thaiTeaIngredient3);
+        thaiIcedTea.addIngredients(thaiTeaIngredient4);
+        thaiIcedTea.addIngredients(thaiTeaIngredient5);
+        thaiIcedTea.addIngredients(thaiTeaIngredient6);
+        thaiIcedTea.addIngredients(thaiTeaIngredient7);
+        recipeRepository.save(thaiIcedTea);
+
+        Instructions thaiTeaInstruction1 = new Instructions("Steep Thai tea leaves in the hot water for 3-5 minutes—you can steep the tea in a cloth filter bag (as shown in video) or just in a cup and then pour it through a paper filter.", thaiIcedTea);
+        instructionRepository.save(thaiTeaInstruction1);
+        Instructions thaiTeaInstruction2 = new Instructions("While the tea steeps, combine condensed milk, sugar, salt in a mixing glass. Once the tea is ready, pour the brewed tea into the glass and stir to dissolve the sugar and condensed milk.", thaiIcedTea);
+        instructionRepository.save(thaiTeaInstruction2);
+        Instructions thaiTeaInstruction3 = new Instructions("When ready to serve, fill a glass all the way to the top with ice and pour in the mixed tea, leaving a little room on top.", thaiIcedTea);
+        instructionRepository.save(thaiTeaInstruction3);
+        Instructions thaiTeaInstruction4 = new Instructions("Drizzle the top with some evaporated milk and enjoy.", thaiIcedTea);
+        instructionRepository.save(thaiTeaInstruction4);
+
+//        YUJACHA
+        RecipeIngredient yujaIngredient1 = new RecipeIngredient(yuja, 1, "cup");
+        recipeIngredientRepository.save(yujaIngredient1);
+        RecipeIngredient yujaIngredient2 = new RecipeIngredient(sugar, 1, "cup");
+        recipeIngredientRepository.save(yujaIngredient2);
+
+        Recipe yujacha = new Recipe("Yujacha", "Maangchi", false, "Tea", "https://i.imgur.com/tgWms1H.jpg", "Easy", 5, "https://www.youtube.com/embed/DOV-gx8Wjmc");
+        yujacha.addIngredients(yujaIngredient1);
+        yujacha.addIngredients(yujaIngredient2);
+        recipeRepository.save(yujacha);
+
+        Instructions yujachaInstruction1 = new Instructions("Slice the yuja thinly. Remove as many seeds as you can find. Add to a bowl.", yujacha);
+        instructionRepository.save(yujachaInstruction1);
+        Instructions yujachaInstruction2 = new Instructions("Add sugar. Mix.", yujacha);
+        instructionRepository.save(yujachaInstruction2);
+        Instructions yujachaInstruction3 = new Instructions("Add a couple tablespoons of yujacha in a cup or glass. Stir with boiling hot water. Serve right away, with a small spoon. You can drink the tea and eat the rinds and pulp with the spoon.", yujacha);
+        instructionRepository.save(yujachaInstruction3);
+        Instructions yujachaInstruction4 = new Instructions("It will keep in the fridge for a couple of months.", yujacha);
+        instructionRepository.save(yujachaInstruction4);
+
+//        DOODH CHA
+        RecipeIngredient doodhIngredient1 = new RecipeIngredient(water, 300, "g");
+        recipeIngredientRepository.save(doodhIngredient1);
+        RecipeIngredient doodhIngredient2 = new RecipeIngredient(milk, 300, "g");
+        recipeIngredientRepository.save(doodhIngredient2);
+        RecipeIngredient doodhIngredient3 = new RecipeIngredient(ginger, 8, "g");
+        recipeIngredientRepository.save(doodhIngredient3);
+        RecipeIngredient doodhIngredient4 = new RecipeIngredient(clove, 1, "piece");
+        recipeIngredientRepository.save(doodhIngredient4);
+        RecipeIngredient doodhIngredient5 = new RecipeIngredient(groundCardamom, 1, "pinch");
+        recipeIngredientRepository.save(doodhIngredient5);
+        RecipeIngredient doodhIngredient6 = new RecipeIngredient(sugar, 25, "g");
+        recipeIngredientRepository.save(doodhIngredient6);
+        RecipeIngredient doodhIngredient7 = new RecipeIngredient(blackTea, 8, "g");
+        recipeIngredientRepository.save(doodhIngredient7);
+
+        Recipe doodhCha = new Recipe("Doodh Chat", "Bong Eats", false, "Tea", "https://i.imgur.com/UCcuAVP.jpg", "Medium", 15, "https://www.youtube.com/embed/ntigmnhKrAY");
+        doodhCha.addIngredients(doodhIngredient1);
+        doodhCha.addIngredients(doodhIngredient2);
+        doodhCha.addIngredients(doodhIngredient3);
+        doodhCha.addIngredients(doodhIngredient4);
+        doodhCha.addIngredients(doodhIngredient5);
+        doodhCha.addIngredients(doodhIngredient6);
+        doodhCha.addIngredients(doodhIngredient7);
+        recipeRepository.save(doodhCha);
+
+        Instructions doodhInstruction1 = new Instructions("Using a mortar and pestle, roughly crush the clove and cardamom pod. This will help release their flavours.", doodhCha);
+        instructionRepository.save(doodhInstruction1);
+        Instructions doodhInstruction2 = new Instructions("Wash, peel, and dice the ginger roughly.", doodhCha);
+        instructionRepository.save(doodhInstruction2);
+        Instructions doodhInstruction3 = new Instructions("Set a saucepan over medium-high heat and add the water, clove, cardamom, and ginger.", doodhCha);
+        instructionRepository.save(doodhInstruction3);
+        Instructions doodhInstruction4 = new Instructions("Cover the pan and let the water come to a boil. Allow the spices to bubble in water for about 4 minutes.", doodhCha);
+        instructionRepository.save(doodhInstruction4);
+        Instructions doodhInstruction5 = new Instructions("Add the milk, and once it has heated up, add in the tea and sugar.", doodhCha);
+        instructionRepository.save(doodhInstruction5);
+        Instructions doodhInstruction6 = new Instructions("Allow this milky mixture to boil vigorously. Just when the tea is about to boil over, drop the heat and let it simmer for about 4 minutes. You can see the tea change colour from light brown to a rosy kind of orange.", doodhCha);
+        instructionRepository.save(doodhInstruction6);
+        Instructions doodhInstruction7 = new Instructions("Strain and serve immediately.", doodhCha);
+        instructionRepository.save(doodhInstruction7);
 
         // FRUIT JUICE
 
@@ -529,6 +820,110 @@ public class DataLoader implements ApplicationRunner {
         Instructions watermelonJuiceInstruction3 = new Instructions("Blend until smooth texture. Transfer it to a large bowl and mix lime juice. If watermelon is sweet, no need to add sugar, but if it is not, taste the juice and if required, add sugar. Add 1-ice cube in each serving glass and pour prepared watermelon juice into it.", watermelonJuice);
         instructionRepository.save(watermelonJuiceInstruction3);
 
+//        MILK
 
+//        MANGO LASSI
+        RecipeIngredient lassiIngredient1 = new RecipeIngredient(mango, 1, "cup");
+        recipeIngredientRepository.save(lassiIngredient1);
+        RecipeIngredient lassiIngredient2 = new RecipeIngredient(plainYogurt, 1, "cup");
+        recipeIngredientRepository.save(lassiIngredient2);
+        RecipeIngredient lassiIngredient3 = new RecipeIngredient(milk, 0.5, "cup");
+        recipeIngredientRepository.save(lassiIngredient3);
+        RecipeIngredient lassiIngredient4 = new RecipeIngredient(sugar, 2, "tbsp");
+        recipeIngredientRepository.save(lassiIngredient4);
+        RecipeIngredient lassiIngredient5 = new RecipeIngredient(cinnamon, 1, "dash");
+        recipeIngredientRepository.save(lassiIngredient5);
+        RecipeIngredient lassiIngredient6 = new RecipeIngredient(groundCardamom, 0.25, "tsp");
+        recipeIngredientRepository.save(lassiIngredient6);
+
+        Recipe mangoLassi = new Recipe("Mango Lassi", "The Wanderlust Kitchen", false, "Fruit", "https://i.imgur.com/ZU2WM0o.jpg", "Easy", 5, "https://www.youtube.com/embed/mlEYpN5o2dQ");
+        mangoLassi.addIngredients(lassiIngredient1);
+        mangoLassi.addIngredients(lassiIngredient2);
+        mangoLassi.addIngredients(lassiIngredient3);
+        mangoLassi.addIngredients(lassiIngredient4);
+        mangoLassi.addIngredients(lassiIngredient5);
+        mangoLassi.addIngredients(lassiIngredient6);
+        recipeRepository.save(mangoLassi);
+
+        Instructions lassiInstruction1 = new Instructions("Add all of the ingredients to the bowl of a blender.", mangoLassi);
+        instructionRepository.save(lassiInstruction1);
+        Instructions lassiInstruction2 = new Instructions("Puree until smooth. Serve immediately!", mangoLassi);
+        instructionRepository.save(lassiInstruction2);
+
+//        KOREAN STRAWBERRY MILK
+        RecipeIngredient strawberryMilkIngredient1 = new RecipeIngredient(strawberry, 680, "g");
+        recipeIngredientRepository.save(strawberryMilkIngredient1);
+        RecipeIngredient strawberryMilkIngredient2 = new RecipeIngredient(sugar, 50, "g");
+        recipeIngredientRepository.save(strawberryMilkIngredient2);
+        RecipeIngredient strawberryMilkIngredient3 = new RecipeIngredient(honey, 3, "tbsp");
+        recipeIngredientRepository.save(strawberryMilkIngredient3);
+        RecipeIngredient strawberryMilkIngredient4 = new RecipeIngredient(lemonJuice, 1, "tbsp");
+        recipeIngredientRepository.save(strawberryMilkIngredient4);
+        RecipeIngredient strawberryMilkIngredient5 = new RecipeIngredient(milk, 47, "ml");
+        recipeIngredientRepository.save(strawberryMilkIngredient5);
+
+        Recipe strawberryMilk = new Recipe("Korean Strawberry Milk", "Tiffy Cooks", true, "Milk", "https://i.imgur.com/qyNJYSG.jpg", "Easy", 45, "https://www.youtube.com/embed/FTScG6IWFiY");
+        strawberryMilk.addIngredients(strawberryMilkIngredient1);
+        strawberryMilk.addIngredients(strawberryMilkIngredient2);
+        strawberryMilk.addIngredients(strawberryMilkIngredient3);
+        strawberryMilk.addIngredients(strawberryMilkIngredient4);
+        strawberryMilk.addIngredients(strawberryMilkIngredient5);
+        recipeRepository.save(strawberryMilk);
+
+        Instructions strawberryMilkInstruction1 = new Instructions("Cut strawberries into cubes and add ⅔ of the strawberry into a pot.", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction1);
+        Instructions strawberryMilkInstruction2 = new Instructions("In the pot, add honey, sugar, and lemon juice. Mix well to ensure all the strawberries are coated in sugar.", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction2);
+        Instructions strawberryMilkInstruction3 = new Instructions("Turn the heat to medium and let it simmer for 15 minutes until the strawberry gets soft; keep stirring to prevent it from burning.", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction3);
+        Instructions strawberryMilkInstruction4 = new Instructions("After 15 minutes, add the remaining strawberries and gently mix to cook for another 2 minutes.", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction4);
+        Instructions strawberryMilkInstruction5 = new Instructions("Store the strawberry in a glass jar, and once it has cooled down, it can last in the fridge for three weeks.", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction5);
+        Instructions strawberryMilkInstruction6 = new Instructions("Add around 2-4 tbsp syrup, pour in the milk, and ice. Shake it all up together when you are ready to drink!", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction6);
+
+
+//        HORCHATA
+        RecipeIngredient horchataIngredient1 = new RecipeIngredient(whiteRice, 1, "cup");
+        recipeIngredientRepository.save(horchataIngredient1);
+        RecipeIngredient horchataIngredient2 = new RecipeIngredient(sugar, 1, "cup");
+        recipeIngredientRepository.save(horchataIngredient2);
+        RecipeIngredient horchataIngredient3 = new RecipeIngredient(choppedAlmonds, 0.5, "cup");
+        recipeIngredientRepository.save(horchataIngredient3);
+        RecipeIngredient horchataIngredient4 = new RecipeIngredient(cinnamon, 1, "stick");
+        recipeIngredientRepository.save(horchataIngredient4);
+        RecipeIngredient horchataIngredient5 = new RecipeIngredient(vanilla, 1, "tbsp");
+        recipeIngredientRepository.save(horchataIngredient5);
+        RecipeIngredient horchataIngredient6 = new RecipeIngredient(evaporatedMilk, 340, "g");
+        recipeIngredientRepository.save(horchataIngredient6);
+        RecipeIngredient horchataIngredient7 = new RecipeIngredient(milk, 1.5, "cups");
+        recipeIngredientRepository.save(horchataIngredient7);
+        RecipeIngredient horchataIngredient8 = new RecipeIngredient(water, 1, "liter");
+        recipeIngredientRepository.save(horchataIngredient8);
+        RecipeIngredient horchataIngredient9 = new RecipeIngredient(ice, 1, "handful");
+        recipeIngredientRepository.save(horchataIngredient9);
+
+        Recipe horchata = new Recipe("Horchata", "My Latina Table", false, "Misc", "https://i.imgur.com/J5qC8k4.jpg", "Easy", 360, "https://www.youtube.com/embed/JtwqQEaxIQg");
+        horchata.addIngredients(horchataIngredient1);
+        horchata.addIngredients(horchataIngredient2);
+        horchata.addIngredients(horchataIngredient3);
+        horchata.addIngredients(horchataIngredient4);
+        horchata.addIngredients(horchataIngredient5);
+        horchata.addIngredients(horchataIngredient6);
+        horchata.addIngredients(horchataIngredient7);
+        horchata.addIngredients(horchataIngredient8);
+        horchata.addIngredients(horchataIngredient9);
+        recipeRepository.save(horchata);
+
+        Instructions horchataInstruction1 = new Instructions("Start by soaking the rice, cinnamon, and almonds in a bowl of water all night, or at least for 5 hours so that the rice softens slightly.", horchata);
+        instructionRepository.save(horchataInstruction1);
+        Instructions horchataInstruction2 = new Instructions("Strain the water from the cinnamon, rice, and almond mixture that were soaking, disposing of water.", horchata);
+        instructionRepository.save(horchataInstruction2);
+        Instructions horchataInstruction3 = new Instructions("Blend the cinnamon, rice, and almond mixture with evaporated milk until a smoother mix is formed and the grains of rice are completely ground.", horchata);
+        instructionRepository.save(horchataInstruction3);
+        Instructions horchataInstruction4 = new Instructions("Strain the resulting liquid into a pitcher, and add the sugar, vanilla, and milk. Mix well until everything is well combined.Add a liter of water, and serve with ice. Enjoy!", horchata);
+        instructionRepository.save(horchataInstruction4);
     }
+
 }
