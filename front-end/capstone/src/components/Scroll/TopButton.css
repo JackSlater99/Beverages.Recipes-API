@@ -1,16 +1,13 @@
 .scroll {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    height: 30px;
-    width: 30px;
-    font-size: 20px;
-    border-radius: 20px;
-    background: transparent;
-
-}
-
-.scroll:hover {
-    background: white;
-    color: black;
+  position: fixed;
+  z-index: 2;
+  bottom: 30px;
+  right: 30px;
+  height: 30px;
+  width: 180px;
+  font-size: 15px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  background-color: #fff;
 }
