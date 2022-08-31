@@ -77,7 +77,7 @@ const FooterLink = styled.a`
   }
 `;
 
-const Heading = styled.p`
+const Heading = styled.h2`
   font-size: 2.2rem;
   color: #fff;
   margin-bottom: 40px;

@@ -2,7 +2,7 @@
   --default-font: "Poppins", sans-serif;
   --branding-colour: #233142;
   --secondary-colour: #455d7a;
-  --third-colour: #455d7a;
+  --third-colour: #f95959;
   --fourth-colour: #e3e3e3;
 }
 
@@ -16,12 +16,26 @@ body {
   font-family: var(--default-font);
 }
 
-h1, h2, h3 {
-  font-weight:600;
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+h1 {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
 }
 h2 {
-  font-size: 1.8rem;;
-  margin-bottom: 1.0rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+h4 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 figure {
@@ -31,10 +45,8 @@ figure {
 }
 
 figcaption {
-  background-color: var(--fourth-colour);
   text-align: center;
 }
-
 
 a {
   color: var(--branding-colour);
@@ -67,6 +79,23 @@ input[type="radio"] {
   display: none;
 }
 
+ul {
+  list-style: none;
+  place-items: center;
+}
+
+li > div {
+  margin-bottom: 3rem;
+}
+
+img {
+  box-shadow: 0.2rem 0.2rem 1rem 0.1rem rgb(0 0 0 / 0.3);
+}
+
+.recipe-img {
+  height: 415px;
+}
+
 .styled-btn {
   display: inline-block;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -79,16 +108,11 @@ input[type="radio"] {
   color: var(--secondary-colour);
   transition: all 150ms ease-in-out;
   cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
 .styled-btn:hover {
   background-color: var(--secondary-colour);
   color: #fff;
-}
-
-.nav-links:before {
-  content: none;
-  display: none;
 }

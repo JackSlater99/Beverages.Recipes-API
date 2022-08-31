@@ -33,16 +33,16 @@ const Ingredient = ({ ingredients, recipes }) => {
   };
 
   return (
-    <>
+    <div>
       <div className="grid grid-rows-1">
-        <h2 className="text-center">{foundIngredient.name}</h2>
+        <h2 className="text-center mt-20">{foundIngredient.name}</h2>
       </div>
       <div className="grid grid-cols-2 gap-4 p-6 center">
         <div className="p-4">
           <img
             src={foundIngredient.image}
             alt={foundIngredient.name}
-            className="max-w-md rounded"
+            className="recipe-img rounded"
           />
         </div>
         <div className="p-4">
@@ -55,9 +55,9 @@ const Ingredient = ({ ingredients, recipes }) => {
         </div>
       </div>
 
-      <h2 className="text-center">Recipes using {foundIngredient.name}</h2>
+      <h3 className="text-center">Recipes using {foundIngredient.name}</h3>
       <main className="grid grid-cols-4 gap-4">{cardNodes}</main>
-    </>
+    </div>
   );
 };
 
