@@ -38,7 +38,7 @@ public class DataLoader implements ApplicationRunner {
 
         RawIngredient milk = new RawIngredient("Milk", "https://i.imgur.com/gyWpF8r.jpg", Boolean.FALSE, "Milk is an excellent source of vitamins and minerals, including “nutrients of concern,” which are under-consumed by many populations. It provides potassium, B12, calcium and vitamin D, which are lacking in many diets. Milk is also a good source of vitamin A, magnesium, zinc and thiamine.");
         ingredientRepository.save(milk);
-        RawIngredient groundEspresso = new RawIngredient("Ground Espresso", "https://i.imgur.com/d5Kx6mA.jpg", Boolean.FALSE, "Because espresso is roasted, ground, and brewed differently, it has a unique flavor compared to drip coffee. It usually has a bolder, less acidic taste, with a well-rounded and full-bodied finish. It tastes “stronger,” meaning that it has a rich coffee flavor. The roasting process especially brings out more oils in the beans, so it often has a heavier feel. " );
+        RawIngredient groundEspresso = new RawIngredient("Ground Espresso", "https://i.imgur.com/d5Kx6mA.jpg", Boolean.FALSE, "Because espresso is roasted, ground, and brewed differently, it has a unique flavor compared to drip coffee. It usually has a bolder, less acidic taste, with a well-rounded and full-bodied finish. It tastes “stronger,” meaning that it has a rich coffee flavor. The roasting process especially brings out more oils in the beans, so it often has a heavier feel. ");
         ingredientRepository.save(groundEspresso);
         RawIngredient drinkingChocolate = new RawIngredient("Drinking Chocolate", "https://i.imgur.com/OaES1rn.jpg", Boolean.FALSE, "Drinking chocolate, or sipping chocolate, is exactly what it sounds like – luxurious, melted chocolate you can drink!");
         ingredientRepository.save(drinkingChocolate);
@@ -78,6 +78,23 @@ public class DataLoader implements ApplicationRunner {
         ingredientRepository.save(lemon);
         RawIngredient bitterBeer = new RawIngredient("Bitter Beer", "https://i.imgur.com/7JgQQHl.jpg", Boolean.TRUE, "Bitter belongs to the pale ale beer style and can have a great variety of strength, flavour and appearance, from dark amber to a golden summer ale. It can be under 3% abv and as high as 7% with premium or strong bitters. The colour may be controlled by the addition of caramel colouring.");
         ingredientRepository.save(bitterBeer);
+        RawIngredient beet = new RawIngredient("Beet", "IMAGE", Boolean.FALSE, "Beetroot is the large and fleshy root growing in the plant of the same name, eaten as a vegetable. Its superficial, thin and smooth skin has a wide range of colours, from purple-pink and reddish-orange to a brownish tone. The pulp has a sweet taste and it is usually of a dark crimson red colour with purple tinges.");
+        ingredientRepository.save(beet);
+        RawIngredient carrot = new RawIngredient("Carrot", "IMAGE", Boolean.FALSE, "Carrot, (Daucus carota), herbaceous, generally biennial plant of the Apiaceae family that produces an edible taproot. Among common varieties root shapes range from globular to long, with lower ends blunt to pointed. Besides the orange-coloured roots, white-, yellow-, and purple-fleshed varieties are known.");
+        ingredientRepository.save(carrot);
+        RawIngredient ginger = new RawIngredient("Ginger", "IMAGE", Boolean.FALSE, "Ginger is a 2-4 feet tall slender perennial with grass-like leaves and greenish-yellow flowers. Once the leaves of the plant die, the thick rhizomes, about 6 inches long, are dug up. Ginger is often referred to as a root but this is technically incorrect.");
+        ingredientRepository.save(ginger);
+        RawIngredient water = new RawIngredient("Water", "IMAGE", Boolean.FALSE, "Water, a substance composed of the chemical elements hydrogen and oxygen and existing in gaseous, liquid, and solid states. It is one of the most plentiful and essential of compounds. A tasteless and odourless liquid at room temperature, it has the important ability to dissolve many other substances.");
+        ingredientRepository.save(water);
+        RawIngredient orange = new RawIngredient("Orange", "IMAGE", Boolean.FALSE, "The orange is a usually round or oval citrus; its rind and flesh are generally orange, except the varieties of red pulp. The edible part of the orange is the flesh, consumed in fresh or in juice. The orange is also used to make stewed fruit, jams, for consumption as dehydrated fruit, etc.");
+        ingredientRepository.save(orange);
+        RawIngredient ice = new RawIngredient("Ice", "IMAGE", Boolean.FALSE, "Ice is water in its frozen, solid form. Ice often forms on lakes, rivers and the ocean in cold weather. It can be very thick or very thin. It occurs as frost, snow, sleet and hail. Water will freeze at zero degrees Celsius (32 degrees Fahrenheit).");
+        ingredientRepository.save(ice);
+        RawIngredient strawberry = new RawIngredient("Strawberry", "IMAGE", Boolean.FALSE, "Strawberries are soft, sweet, bright red berries. They're also delicious. Strawberries have tiny edible seeds, which grow all over their surface. When ripe, strawberries smell wonderful and taste even better. You can make jam, pie, strawberry shortcake, and more with strawberries.");
+        ingredientRepository.save(strawberry);
+        RawIngredient watermelon = new RawIngredient("Watermelon", "IMAGE", Boolean.FALSE, "A large oblong or roundish fruit with a hard green or white rind often striped or variegated, a sweet watery pink, yellowish, or red pulp, and usually many seeds. 2 : A widely cultivated African vine (Citrullus lanatus synonym C. vulgaris) of the gourd family that bears watermelons.");
+        ingredientRepository.save(watermelon);
+
 
 
         // COFFEE
@@ -254,7 +271,8 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/bGRaRHA.jpg",
                 "Easy",
                 5,
-                "https://www.youtube.com/embed/5DW0t34Lr5Y");
+                "https://www.youtube.com/embed/5DW0t34Lr5Y"
+        );
 
         virginMojito.addIngredients(virginMojitoIngredient1);
         virginMojito.addIngredients(virginMojitoIngredient2);
@@ -266,7 +284,7 @@ public class DataLoader implements ApplicationRunner {
         Instructions virginMojitoInstruction2 = new Instructions("Put a handful of crushed ice into 2 tall glasses. Divide the lime juice between the glasses with the mint mix. Add a straw and top up with soda water.", virginMojito);
         instructionRepository.save(virginMojitoInstruction2);
 
-    // MARTINIS
+        // MARTINIS
 
         RecipeIngredient martiniIngredient1 = new RecipeIngredient(vodka, 60, "ml");
         recipeIngredientRepository.save(martiniIngredient1);
@@ -274,15 +292,15 @@ public class DataLoader implements ApplicationRunner {
         recipeIngredientRepository.save(martiniIngredient2);
 
         Recipe vodkaMartini = new Recipe(
-            "Vodka Martini",
-            "Jack",
-            true,
-            "Martini",
-            "https://i.imgur.com/cKCXoJj.jpg",
-            "Easy",
-            5,
-            "https://www.youtube.com/embed/n5RNgIUtPv0"
-    );
+                "Vodka Martini",
+                "Jack",
+                true,
+                "Martini",
+                "https://i.imgur.com/cKCXoJj.jpg",
+                "Easy",
+                5,
+                "https://www.youtube.com/embed/n5RNgIUtPv0"
+        );
 
         vodkaMartini.addIngredients(martiniIngredient1);
         vodkaMartini.addIngredients(martiniIngredient2);
@@ -322,7 +340,6 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(cosmopolitanInstruction1);
 
 
-
         RecipeIngredient martiniIngredient7 = new RecipeIngredient(olive, 6, "pitted with brine");
         recipeIngredientRepository.save(martiniIngredient7);
         RecipeIngredient martiniIngredient8 = new RecipeIngredient(londonDryGin, 150, "ml");
@@ -354,7 +371,7 @@ public class DataLoader implements ApplicationRunner {
 
 //        // Cocktail
 
-        RecipeIngredient classicShandyIngredient1 = new RecipeIngredient(lemon , 2, "slices");
+        RecipeIngredient classicShandyIngredient1 = new RecipeIngredient(lemon, 2, "slices");
         recipeIngredientRepository.save(classicShandyIngredient1);
         RecipeIngredient classicShandyIngredient2 = new RecipeIngredient(bitterBeer, 200, "ml");
         recipeIngredientRepository.save(classicShandyIngredient2);
@@ -381,6 +398,136 @@ public class DataLoader implements ApplicationRunner {
         Instructions classicShandyInstruction2 = new Instructions("Stir well, then make a small cut in a second lemon slice and use this to garnish the rim of the glass.", classicShandy);
         instructionRepository.save(classicShandyInstruction2);
 
+        // FRUIT JUICE
+
+        RecipeIngredient carrotBeetJuiceIngredient1 = new RecipeIngredient(beet, 0.5, "Peeled and chopped");
+        recipeIngredientRepository.save(carrotBeetJuiceIngredient1);
+        RecipeIngredient carrotBeetJuiceIngredient2 = new RecipeIngredient(carrot, 4, "Peeled and chopped");
+        recipeIngredientRepository.save(carrotBeetJuiceIngredient2);
+        RecipeIngredient carrotBeetJuiceIngredient3 = new RecipeIngredient(ginger, 0.25, "Inch");
+        recipeIngredientRepository.save(carrotBeetJuiceIngredient3);
+        RecipeIngredient carrotBeetJuiceIngredient4 = new RecipeIngredient(water, 1, "120ml");
+        recipeIngredientRepository.save(carrotBeetJuiceIngredient4);
+
+        Recipe carrotBeetJuice = new Recipe(
+                "Carrot Beet Juice",
+                "Jack",
+                true,
+                "Fruit Juice",
+                "IMAGE",
+                "Easy",
+                10,
+                "https://www.youtube.com/embed/tkiUMKG92f0"
+        );
+
+        carrotBeetJuice.addIngredients(carrotBeetJuiceIngredient1);
+        carrotBeetJuice.addIngredients(carrotBeetJuiceIngredient2);
+        carrotBeetJuice.addIngredients(carrotBeetJuiceIngredient3);
+        carrotBeetJuice.addIngredients(carrotBeetJuiceIngredient4);
+        recipeRepository.save(carrotBeetJuice);
+        Instructions carrotBeetJuiceInstruction1 = new Instructions("Process chopped beetroot, carrot, and ginger thorough juicer and collect juice in its container.", carrotBeetJuice);
+        instructionRepository.save(carrotBeetJuiceInstruction1);
+        Instructions carrotBeetJuiceInstruction2 = new Instructions("Squeeze lemon in it and stir well. Fill up serving glass with the juice and serve.", carrotBeetJuice);
+        instructionRepository.save(carrotBeetJuiceInstruction2);
+
+
+        RecipeIngredient orangeJuiceIngredient1 = new RecipeIngredient(orange, 3, "75ml");
+        recipeIngredientRepository.save(orangeJuiceIngredient1);
+        RecipeIngredient orangeJuiceIngredient2 = new RecipeIngredient(ice, 2, "Cubes");
+        recipeIngredientRepository.save(orangeJuiceIngredient2);
+
+
+        Recipe orangeJuice = new Recipe(
+                "Orange Juice",
+                "Jack",
+                true,
+                "Fruit Juice",
+                "IMAGE",
+                "Easy",
+                10,
+                "https://www.youtube.com/embed/aRisxe4IdVg"
+        );
+
+        orangeJuice.addIngredients(orangeJuiceIngredient1);
+        orangeJuice.addIngredients(orangeJuiceIngredient2);
+        recipeRepository.save(orangeJuice);
+        Instructions orangeJuiceInstruction1 = new Instructions("Rinse oranges and pat dry them. Roll them on flat surface with little pressure to soften them and get juice easily. Cut them into halves crosswise.", orangeJuice);
+        instructionRepository.save(orangeJuiceInstruction1);
+        Instructions orangeJuiceInstruction2 = new Instructions("Place each half on a electric or hand citrus juicer, press and twist to get juice. You can also squeeze out juice with your hand by squeezing it like lemon.", orangeJuice);
+        instructionRepository.save(orangeJuiceInstruction2);
+        Instructions orangeJuiceInstruction3 = new Instructions("Remove seeds and pour it into chilled serving glass. Add ice cubes and garnish with orange wheel, serve chilled", orangeJuice);
+        instructionRepository.save(orangeJuiceInstruction3);
+
+
+
+        RecipeIngredient strawberryJuiceIngredient1 = new RecipeIngredient(strawberry, 2, "Cup");
+        recipeIngredientRepository.save(strawberryJuiceIngredient1);
+        RecipeIngredient strawberryJuiceIngredient2 = new RecipeIngredient(lime, 2, "Tbsp");
+        recipeIngredientRepository.save(strawberryJuiceIngredient2);
+        RecipeIngredient strawberryJuiceIngredient3 = new RecipeIngredient(sugar, 1, "Tbsp");
+        recipeIngredientRepository.save(strawberryJuiceIngredient3);
+        RecipeIngredient strawberryJuiceIngredient4 = new RecipeIngredient(water, 1, "Cup");
+        recipeIngredientRepository.save(strawberryJuiceIngredient4);
+        RecipeIngredient strawberryJuiceIngredient5 = new RecipeIngredient(ice, 2, "Cubes");
+        recipeIngredientRepository.save(strawberryJuiceIngredient5);
+
+        Recipe strawberryJuice = new Recipe(
+                "Strawberry Juice",
+                "Jack",
+                true,
+                "Fruit Juice",
+                "IMAGE",
+                "Easy",
+                5,
+                "https://www.youtube.com/embed/6X-z0JaaSgM"
+        );
+
+        strawberryJuice.addIngredients(strawberryJuiceIngredient1);
+        strawberryJuice.addIngredients(strawberryJuiceIngredient2);
+        strawberryJuice.addIngredients(strawberryJuiceIngredient3);
+        strawberryJuice.addIngredients(strawberryJuiceIngredient4);
+        strawberryJuice.addIngredients(strawberryJuiceIngredient5);
+        recipeRepository.save(strawberryJuice);
+        Instructions strawberryJuiceInstruction1 = new Instructions("Wash strawberries, remove stem and cut into small pieces.", strawberryJuice);
+        instructionRepository.save(strawberryJuiceInstruction1);
+        Instructions strawberryJuiceInstruction2 = new Instructions("Add strawberries, sugar and juice from lime (you can change the quantity of sugar and lime according to how ripe the strawberries are) in a blender.", strawberryJuice);
+        instructionRepository.save(strawberryJuiceInstruction2);
+        Instructions strawberryJuiceInstruction3 = new Instructions("Blend until smooth puree. Add water and blend again for a minute.", strawberryJuice);
+        instructionRepository.save(strawberryJuiceInstruction3);
+        Instructions strawberryJuiceInstruction4 = new Instructions("Place a fine mesh strainer over a large container and pour prepared juice over it to remove the foam results during blending. You can also use a cheesecloth to remove the foam. This step is optional.", strawberryJuice);
+        instructionRepository.save(strawberryJuiceInstruction4);
+        Instructions strawberryJuiceInstruction5 = new Instructions("Add one ice cubes in each of the glasses and pour sweet and sour fresh strawberry fruit juice over it. Place halved strawberry on rim of each glass to give it a tempting look and serve.", strawberryJuice);
+        instructionRepository.save(strawberryJuiceInstruction5);
+
+
+        RecipeIngredient watermelonJuiceIngredient1 = new RecipeIngredient(watermelon, 1, "Small watermelon");
+        recipeIngredientRepository.save(watermelonJuiceIngredient1);
+        RecipeIngredient watermelonJuiceIngredient2 = new RecipeIngredient(lime, 3, "Tbsp");
+        recipeIngredientRepository.save(watermelonJuiceIngredient2);
+        RecipeIngredient watermelonJuiceIngredient3 = new RecipeIngredient(ice, 4, "Cubes");
+        recipeIngredientRepository.save(watermelonJuiceIngredient3);
+
+        Recipe watermelonJuice = new Recipe(
+                "Watermelon Juice",
+                "Jack",
+                true,
+                "Fruit Juice",
+                "IMAGE",
+                "Easy",
+                10,
+                "https://www.youtube.com/embed/145WlH4OO04"
+        );
+
+        watermelonJuice.addIngredients(watermelonJuiceIngredient1);
+        watermelonJuice.addIngredients(watermelonJuiceIngredient2);
+        watermelonJuice.addIngredients(watermelonJuiceIngredient3);
+        recipeRepository.save(watermelonJuice);
+        Instructions watermelonJuiceInstruction1 = new Instructions("Cut watermelon into large pieces and discard the skin. Remove black seeds, no need to take the white seeds out.", watermelonJuice);
+        instructionRepository.save(watermelonJuiceInstruction1);
+        Instructions watermelonJuiceInstruction2 = new Instructions("Add watermelon pieces in a blender jar.", watermelonJuice);
+        instructionRepository.save(watermelonJuiceInstruction2);
+        Instructions watermelonJuiceInstruction3 = new Instructions("Blend until smooth texture. Transfer it to a large bowl and mix lime juice. If watermelon is sweet, no need to add sugar, but if it is not, taste the juice and if required, add sugar. Add 1-ice cube in each serving glass and pour prepared watermelon juice into it.", watermelonJuice);
+        instructionRepository.save(watermelonJuiceInstruction3);
 
 
     }
