@@ -1,42 +1,21 @@
-import React, { useState } from "react";
-import { FaStar } from "react-icons/fa";
+import React from 'react';
 
-const Ratings = ({ recipe }) => {
-  const accumulatedRating = recipe.accumulatedRating;
-  const numberOfRatings = recipe.numberOfRatings;
-  // const averageRating = () => {
-  //   return accumulatedRating / numberOfRatings;
-  // };
+const Ratings = ({rating}) => {
 
-  const makeStars = (recipe) => {
-    return (
-      <div className="wrapper">
-        {[...Array(5)].map((star, i) => {
-          const ratingValue = i + 1;
+   
+    // logic to apply classes
 
-          return (
-            <label key={ratingValue}>
-              <input type="radio" name="rating" value={ratingValue} />
-              <FaStar
-                color={ratingValue <= recipe.rating ? "#FFC107" : "#E4E5E9"}
-                size={50}
-              />
-            </label>
-          );
-        })}
-      </div>
-    );
-  };
 
+    
   return (
-    <div className="ratings text-center">
-      <p>
-        <span>
-          {makeStars(recipe)} {recipe.numberOfRatings} reviews
-        </span>
-      </p>
+    <div className="ratings">
+        <span className="star star-lit" data-value="1">X</span>
+        <span className="star star-lit" data-value="2">X</span>
+        <span className="star star-lit" data-value="3">X</span>
+        <span className="star" data-value="4">X</span>
+        <span className="star" data-value="5">X</span>
     </div>
-  );
-};
+  )
+}
 
 export default Ratings;

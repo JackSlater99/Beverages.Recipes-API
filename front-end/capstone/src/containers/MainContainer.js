@@ -1,108 +1,89 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route,Switch} from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
 
-import NavBar from "../components/header/NavBar";
-import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
-import Recipes from "../components/recipes/Recipes";
+import NavBar from '../components/header/NavBar';
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+import Recipies from "../components/recipies/Recipies";
 import RecipeFull from "../components/recipeFull/RecipeFull";
 import ApiIndex from "../components/api/ApiIndex";
 import Profile from "../components/AuthComponents/Profile";
 import Loading from "../components/AuthComponents/Loading";
-import ProtectedRoute from "../auth/protected-route";
-import Ingredients from "../components/ingredients/Ingredients";
-import Ingredient from "../components/ingredients/Ingredient";
-import BackToTopButton from "../components/Scroll/BackToTopButton";
-import Homepage from "../components/homepage/Homepage";
+
 
 const MainContainer = () => {
-  const { isLoading } = useAuth0();
 
-  const apiUrl = "http://localhost:8080/api/recipes";
+    const { isLoading } = useAuth0();
 
-  const [recipesJson, setRecipesJson] = useState([]);
+    if (isLoading) {
+      return <Loading />;
+    }
 
-  const getAllRecipes = async () => {
-    const resp = await fetch(apiUrl);
-    const data = await resp.json();
-    setRecipesJson(data);
-  };
 
-  useEffect(() => {
-    getAllRecipes();
-  }, []);
+    const test_json = 	{
+		"id": 1,
+		"name": "Flat White",
+		"type": "Coffee",
+		"rating": 4.0,
+		"image": "https://i.imgur.com/vWWmMbP.jpg",
+		"difficulty": "Easy",
+		"prepTime": 3,
+		"ingredients": [
+			{
+				"id": 1,
+				"rawIngredient": {
+					"id": 1,
+					"name": "Milk",
+					"image": "https://i.imgur.com/49CWlbF.jpg",
+					"alcoholic": false,
+					"description": ""
+				},
+				"quantity": 100.0,
+				"units": "ml"
+			},
+			{
+				"id": 2,
+				"rawIngredient": {
+					"id": 2,
+					"name": "Ground Espresso",
+					"image": "https://i.imgur.com/KhZQ9Oq.jpg",
+					"alcoholic": false,
+					"description": ""
+				},
+				"quantity": 18.0,
+				"units": "g"
+			}
+		],
+		"instructions": [
+			{
+				"id": 1,
+				"instruction": "Make around 35ml espresso using your coffee machine and pour into the base of your cup."
+			},
+			{
+				"id": 2,
+				"instruction": "Steam the milk with the steamer attachment so that it has around 1-2cm of foam on top. Hold the jug so that the spout is about 3-4cm above the cup and pour the milk in steadily. As the volume within the cup increases, bring the jug as close to the surface of the drink as possible whilst aiming to pour into the centre. Once the milk jug is almost touching the surface of the coffee, tilt the jug to speed up the rate of pour. As you accelerate, the milk will hit the back of the cup and start naturally folding in on itself to create a pattern on the top."
+			}
+		],
+		"video": "https://youtu.be/-50tS3d2Yao"
+	}
+      
+    return (
+        <div className="container mx-auto">
+            <Header />
+            
+                <Routes>
+                    <Route element={<Recipies />} path="/" exact component={<Recipies />} />
+                    <Route element={<RecipeFull selectedRecipe={test_json} />} path="/recipies" exact component={<RecipeFull />} />
+                    <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
+                    <Route element={<Profile />} path="/profile" component={<Profile />} />
+                </Routes>
+                
 
-  const apiUrl2 = "http://localhost:8080/api/ingredients";
+            <Footer />
+        </div>
+    )
 
-  const [ingredientsJson, setIngredientsJson] = useState([]);
-
-  const getAllIngredients = async () => {
-    const resp = await fetch(apiUrl2);
-    const data = await resp.json();
-    setIngredientsJson(data);
-  };
-
-  useEffect(() => {
-    getAllIngredients();
-  }, []);
-
-  if (isLoading) {
-    return <Loading />;
-  }
-
-  return (
-    <div className="">
-      <Header />
-      <div className="container mx-auto">
-        <Routes>
-          <Route
-            element={<Homepage recipes={recipesJson} />}
-            path="/"
-            exact
-            component={<Homepage />}
-          />
-          <Route
-            element={<Recipes recipes={recipesJson} />}
-            path="/recipes"
-            exact
-            component={<Recipes />}
-          />
-          <Route
-            element={
-              <RecipeFull recipes={recipesJson} getAllRecipes={getAllRecipes} />
-            }
-            path="/recipes/:id"
-            exact
-            component={<RecipeFull />}
-          />
-          <Route
-            element={<Ingredients ingredients={ingredientsJson} />}
-            path="/ingredients"
-            exact
-            component={<Ingredients />}
-          />
-          <Route
-            element={
-              <Ingredient recipes={recipesJson} ingredients={ingredientsJson} />
-            }
-            path="/ingredients/:id"
-            exact
-            component={<Ingredient />}
-          />
-
-          <Route element={<ApiIndex />} path="/api" component={<ApiIndex />} />
-          <Route
-            element={<Profile />}
-            path="/profile"
-            component={<Profile />}
-          />
-        </Routes>
-        <BackToTopButton />
-      </div>
-      <Footer />
-    </div>
-  );
-};
+}
 
 export default MainContainer;

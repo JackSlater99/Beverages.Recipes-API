@@ -18,7 +18,7 @@ public class RawIngredient {
     private String image;
     @Column(name = "alcoholic")
     private Boolean alcoholic;
-    @Column(name = "description", columnDefinition = "TEXT")
+    @Column(name = "description")
     private String description;
 
     @OneToMany(mappedBy = "rawIngredient", fetch = FetchType.LAZY)

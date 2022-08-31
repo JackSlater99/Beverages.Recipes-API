@@ -1,18 +1,12 @@
 import React from "react";
 
-const YouTubeLink = ({ videoLink, title }) => {
-  return (
-    <div className="aspect-w-16 aspect-h-9">
-      <iframe
-        width="560"
-        height="315"
-        src={videoLink}
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
-  );
-};
+const YouTubeLink = () => {
+
+    return (
+        <div className="flex items-center m-4">
+            <img src="https://via.placeholder.com/32" alt="title=" /><span>You Tube</span>
+        </div>
+    )
+}
 
 export default YouTubeLink;

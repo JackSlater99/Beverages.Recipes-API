@@ -6,7 +6,7 @@ const LogoutButton = () => {
     const { logout } = useAuth0();
   return (
     <button
-      className=""
+      className="bg-red-600 text-white"
       onClick={() =>
         logout({
           returnTo: window.location.origin,

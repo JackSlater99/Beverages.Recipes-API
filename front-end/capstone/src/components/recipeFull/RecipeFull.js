@@ -1,61 +1,35 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import Ratings from "../elements/Ratings";
-import RecipesIngredients from "../recipes/RecipeIngredients";
-import RecipesInstruction from "../recipes/RecipesInstruction";
-import YouTubeLink from "../elements/YouTubeLink";
-import RatingForm from "../elements/RatingForm";
 
-const RecipeFull = ({ recipes, getAllRecipes }) => {
-  const { id } = useParams();
-  const recipe = recipes.find((currentRecipe) => currentRecipe.id == id);
+const RecipeFull = ({selectedRecipe}) => {
 
-  if (!recipe) {
-    return "Recipe not found";
-  }
+    console.log(selectedRecipe)
 
-  return (
-    <main className="pb-8">
-      <div className="grid grid-rows-1">
-        <h1 className="text-center">{recipe.name}</h1>
-        <Ratings recipe={recipe} />
-      </div>
-      <div className="grid grid-cols-2 gap-4 p-6 center">
-        <div className="p-4">
-          <img
-            src={recipe.image}
-            alt={recipe.name}
-            className="max-w-md rounded"
-          />
+    return (
+        <main className="min-h-screen bg-green-100">
+            <h2>{selectedRecipe.name}</h2>
 
-          <p>
-            <span className="font-bold">Type of Drink:</span> {recipe.type}
-          </p>
-          <p>
-            <span className="font-bold">Difficulty:</span> {recipe.difficulty}
-          </p>
-          <p>
-            <span className="font-bold">Prep Time: </span>
-            {recipe.prepTime} minutes
-          </p>
-        </div>
-        <div className="p-4">
-          <YouTubeLink videoLink={recipe.video} title={recipe.name} />
-          <p>
-            <span className="font-bold">Ingredients:</span>
-            <RecipesIngredients ingredients={recipe.ingredients} />
-          </p>
-          <p>
-            <span className="font-bold">Instructions:</span>
-            <RecipesInstruction instructions={recipe.instructions} />
-          </p>
-        </div>
-      </div>
-      <div className="grid grid-rows-1">
-        <RatingForm recipes={recipes} getAllRecipes={getAllRecipes} />
-      </div>
-    </main>
-  );
-};
+            <div className="flex">
+                <div>
+                    <img src={selectedRecipe.image} alt={selectedRecipe.name} />
+                </div>
+
+                <div>
+                    <div className="STATSBAR">
+                        {selectedRecipe.type}
+                        {selectedRecipe.prepTime}
+                        {selectedRecipe.difficulty}
+                        <Ratings rating={selectedRecipe.rating} />
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+            <h3></h3>
+        </main>
+        )
+}
 
 export default RecipeFull;

@@ -19,23 +19,11 @@ public class Recipe {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "author")
-    private String author;
-
-    @Column(name = "approved")
-    private Boolean approved;
-
     @Column(name = "type")
     private String type;
 
     @Column(name = "rating")
     private double rating;
-
-    @Column(name = "number_of_ratings")
-    private int numberOfRatings;
-
-    @Column(name = "accumulated_rating")
-    private double accumulatedRating;
 
     @Column(name = "image")
     private String image;
@@ -57,28 +45,22 @@ public class Recipe {
     private List<RecipeIngredient> ingredients;
 
     @OneToMany(mappedBy = "recipe", fetch = FetchType.LAZY)
-    @JsonIgnoreProperties({"recipe"})
     private List<Instructions> instructions;
 
     @Column(name = "video")
     private String video;
 
-    public Recipe(String name, String author, Boolean approved, String type, String image, String difficulty, int prepTime, String video) {
+    public Recipe(String name, String type, double rating, String image, String difficulty, int prepTime, String video) {
         this.name = name;
-        this.author = author;
-        this.approved = approved;
         this.type = type;
+        this.rating = rating;
         this.image = image;
         this.difficulty = difficulty;
         this.prepTime = prepTime;
         this.ingredients = new ArrayList<RecipeIngredient>();
         this.instructions = new ArrayList<Instructions>();
         this.video = video;
-        this.numberOfRatings = 0;
-        this.accumulatedRating = 0.00;
-        this.rating = 0.0;
     }
-
 
     public Recipe() {
     }
@@ -107,34 +89,12 @@ public class Recipe {
         this.type = type;
     }
 
-    public int getNumberOfRatings() {
-        return numberOfRatings;
-    }
-
-    public void setNumberOfRatings(int numberOfRatings) {
-        this.numberOfRatings = numberOfRatings;
-    }
-
-    public double getAccumulatedRating() {
-        return accumulatedRating;
-    }
-
-    public void setAccumulatedRating(double accumulatedRating) {
-        this.accumulatedRating = accumulatedRating;
-    }
-
     public double getRating() {
-//
-        return this.calculateAverage();
+        return rating;
     }
 
     public void setRating(double rating) {
         this.rating = rating;
-    }
-
-    public int calculateAverage(){
-        int ratingAverage = (int) Math.round(getAccumulatedRating() / getNumberOfRatings());
-        return ratingAverage;
     }
 
     public String getImage() {
@@ -189,19 +149,4 @@ public class Recipe {
         this.ingredients.add(ingredient);
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public Boolean getApproved() {
-        return approved;
-    }
-
-    public void setApproved(Boolean approved) {
-        this.approved = approved;
-    }
 }
