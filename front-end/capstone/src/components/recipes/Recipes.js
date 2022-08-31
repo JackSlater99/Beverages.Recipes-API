@@ -12,15 +12,15 @@ const Recipes = ({ recipes }) => {
       <h2 id="cocktail">Cocktail</h2>
       <main className="grid grid-cols-4 gap-4">{cardNodes[0]}</main>
       <h2 id="coffee">Coffee</h2>
-      <main className="grid grid-cols-4 gap-4">{cardNodes.slice(1, 6)}</main>
+      <main className="grid grid-cols-4 gap-4">{cardNodes.slice[0, 5]}</main>
       <h2 id="martini">Martini</h2>
       <main className="grid grid-cols-4 gap-4">{cardNodes.slice(6, 10)}</main>
       <h2 id="mocktail">Mocktail</h2>
-      <main className="grid grid-cols-4 gap-4">{cardNodes.slice(6, 10)}</main>
+      <main className="grid grid-cols-4 gap-4">{cardNodes.slice(6)}</main>
       <h2 id="tea">Tea</h2>
-      <main className="grid grid-cols-4 gap-4">{cardNodes.slice(6, 10)}</main>
+      <main className="grid grid-cols-4 gap-4">{cardNodes.slice()}</main>
       <h2 id="milk">Milk</h2>
-      <main className="grid grid-cols-4 gap-4">{cardNodes.slice(6, 10)}</main>
+      <main className="grid grid-cols-4 gap-4">{cardNodes.slice()}</main>
     </>
   );
 };
