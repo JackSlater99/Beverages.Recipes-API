@@ -18,7 +18,7 @@ const Recipes = ({ recipes }) => {
       <h2 id="martini">Martini</h2>
       <main className="grid grid-cols-4 gap-4">{cardNodes.slice(14, 16)}</main>
       <h2 id="tea">Tea</h2>
-      <main className="grid grid-cols-4 gap-4">{cardNodes.slice(16, 17)}</main>
+      <main className="grid grid-cols-4 gap-4">{cardNodes.slice(16, 20)}</main>
       <h2 id="milk">Milk</h2>
       <main className="grid grid-cols-4 gap-4">{cardNodes.slice(17, 18)}</main>
       <h2 id="milkshake">Milkshake</h2>
