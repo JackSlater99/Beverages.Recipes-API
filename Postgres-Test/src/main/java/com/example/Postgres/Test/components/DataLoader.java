@@ -236,7 +236,7 @@ public class DataLoader implements ApplicationRunner {
                 "https://i.imgur.com/Gglcd3D.jpg",
                 "Easy",
                 3,
-                "https://youtu.be/gvPetTPFsZM"
+                "https://www.youtube.com/embed/gvPetTPFsZM"
         );
 
         cappuccino.addIngredients(coffeeIngredient2);
