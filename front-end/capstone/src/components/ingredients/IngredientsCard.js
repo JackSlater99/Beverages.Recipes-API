@@ -4,21 +4,21 @@ import Ingredient from "./Ingredient";
 
 const IngredientsCard = ({ ingredient }) => {
   return (
-    <article className="grid place-items-center pb-6">
+    <figure className="grid place-items-center pb-12">
       <h2>{ingredient.name}</h2>
-      <img
-        className="w-80 mb-4 rounded"
-        src={ingredient.image}
-        alt={ingredient.name}
-      />
       <Link
         to={{ pathname: `/ingredients/${ingredient.id}` }}
         ingredient={ingredient}
         element={<Ingredient />}
       >
-        See Ingredient
+      <img
+        className="w-80 mb-4 rounded"
+        src={ingredient.image}
+        alt={ingredient.name}
+      />
+        <figcaption>See Ingredient</figcaption>
       </Link>
-    </article>
+    </figure>
   );
 };
 
