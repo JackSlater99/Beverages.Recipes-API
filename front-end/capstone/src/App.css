@@ -2,7 +2,7 @@
   --default-font: "Poppins", sans-serif;
   --branding-colour: #233142;
   --secondary-colour: #455d7a;
-  --third-colour: #455d7a;
+  --third-colour: #f95959;
   --fourth-colour: #e3e3e3;
 }
 
@@ -16,12 +16,14 @@ body {
   font-family: var(--default-font);
 }
 
-h1, h2, h3 {
-  font-weight:600;
+h1,
+h2,
+h3 {
+  font-weight: 600;
 }
 h2 {
-  font-size: 1.8rem;;
-  margin-bottom: 1.0rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 figure {
@@ -34,7 +36,6 @@ figcaption {
   background-color: var(--fourth-colour);
   text-align: center;
 }
-
 
 a {
   color: var(--branding-colour);

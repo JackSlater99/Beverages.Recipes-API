@@ -8,12 +8,6 @@ const RatingForm = ({ recipes, getAllRecipes }) => {
   const recipe = recipes.find((currentRecipe) => currentRecipe.id == id);
 
   const [rating, setRating] = useState(recipe.rating);
-  const [accumulatedRating, setAccumulatedRating] = useState(
-    recipe.accumulatedRating
-  );
-  const [numberOfRatings, setNumberOfRatings] = useState(
-    recipe.numberOfRatings
-  );
   const [userRating, setUserRating] = useState(null);
   const [hover, setHover] = useState(null);
   const [formData, setFormData] = useState({
@@ -75,7 +69,7 @@ const RatingForm = ({ recipes, getAllRecipes }) => {
                   color={
                     ratingValue <= (hover || rating) ? "#FFC107" : "E4E5E9"
                   }
-                  size={100}
+                  size={75}
                   onMouseEnter={() => setHover(ratingValue)}
                 />
               </label>
@@ -83,7 +77,7 @@ const RatingForm = ({ recipes, getAllRecipes }) => {
           })}
         </div>
         <input
-          className="styled-btn"
+          className="styled-btn mt-8"
           type="submit"
           value="Submit"
           id="submit"
