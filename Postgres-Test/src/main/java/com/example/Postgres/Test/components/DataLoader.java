@@ -507,7 +507,7 @@ public class DataLoader implements ApplicationRunner {
         instructionRepository.save(bloodyMaryInstruction1);
         Instructions bloodyMaryInstruction2 = new Instructions("Add 3 shakes of Worcestershire sauce and Tabasco (or more if you like it very spicy) and a pinch of salt and pepper. Stir until the outside of the jug feels cold, then strain the cocktail into 2 tall glasses.", bloodyMary);
         instructionRepository.save(bloodyMaryInstruction2);
-        Instructions bloodyMaryInstruction3 = new Instructions("", bloodyMary);
+        Instructions bloodyMaryInstruction3 = new Instructions("Top up with fresh ice, add a celery stick and lemon slice to both glasses and enjoy.", bloodyMary);
         instructionRepository.save(bloodyMaryInstruction3);
 
 //        MULLED WINE
@@ -556,7 +556,7 @@ public class DataLoader implements ApplicationRunner {
         RecipeIngredient bobaIngredient6 = new RecipeIngredient(ice, 1, "handful");
         recipeIngredientRepository.save(bobaIngredient6);
 
-        Recipe brownSugarBoba = new Recipe("Brown Sugar Boba", "Tiffy Cooks", false, "Tea", "https://i.imgur.com/2zBworp.jpg", "Medium", 10, "https://www.youtube.com/embed/EA1skTLzBnQ")
+        Recipe brownSugarBoba = new Recipe("Brown Sugar Boba", "Tiffy Cooks", false, "Tea", "https://i.imgur.com/2zBworp.jpg", "Medium", 10, "https://www.youtube.com/embed/EA1skTLzBnQ");
 
         brownSugarBoba.addIngredients(bobaIngredient1);
         brownSugarBoba.addIngredients(bobaIngredient2);
@@ -707,42 +707,44 @@ public class DataLoader implements ApplicationRunner {
         mangoLassi.addIngredients(lassiIngredient6);
         recipeRepository.save(mangoLassi);
 
-        Instructions lassiInstruction1 = new Instructions("Add all of the ingedients to the bowl of a blender.", mangoLassi);
+        Instructions lassiInstruction1 = new Instructions("Add all of the ingredients to the bowl of a blender.", mangoLassi);
         instructionRepository.save(lassiInstruction1);
         Instructions lassiInstruction2 = new Instructions("Puree until smooth. Serve immediately!", mangoLassi);
         instructionRepository.save(lassiInstruction2);
 
 //        KOREAN STRAWBERRY MILK
-        RecipeIngredient smIngredient1 = new RecipeIngredient(strawberry, 1.5, "lb");
-        recipeIngredientRepository.save(smIngredient1);
-        RecipeIngredient smIngredient2 = new RecipeIngredient(sugar, 0.25, "cup");
-        recipeIngredientRepository.save(smIngredient2);
-        RecipeIngredient smIngredient3 = new RecipeIngredient(honey, 3, "tbsp");
-        recipeIngredientRepository.save(smIngredient3);
-        RecipeIngredient smIngredient4 = new RecipeIngredient(lemonJuice, 1, "tbsp");
-        recipeIngredientRepository.save(smIngredient4);
-        RecipeIngredient smIngredient5 = new RecipeIngredient(milk, 0.5, "cup");
-        recipeIngredientRepository.save(smIngredient5);
+        RecipeIngredient strawberryMilkIngredient1 = new RecipeIngredient(strawberry, 680, "g");
+        recipeIngredientRepository.save(strawberryMilkIngredient1);
+        RecipeIngredient strawberryMilkIngredient2 = new RecipeIngredient(sugar, 50, "g");
+        recipeIngredientRepository.save(strawberryMilkIngredient2);
+        RecipeIngredient strawberryMilkIngredient3 = new RecipeIngredient(honey, 3, "tbsp");
+        recipeIngredientRepository.save(strawberryMilkIngredient3);
+        RecipeIngredient strawberryMilkIngredient4 = new RecipeIngredient(lemonJuice, 1, "tbsp");
+        recipeIngredientRepository.save(strawberryMilkIngredient4);
+        RecipeIngredient strawberryMilkIngredient5 = new RecipeIngredient(milk, 47, "ml");
+        recipeIngredientRepository.save(strawberryMilkIngredient5);
 
-        Recipe strawberryMilk = new Recipe("Korean Strawberry Milk", "Tiffy Cooks", false, "Fruit", "https://i.imgur.com/qyNJYSG.jpg", "Easy", 20, "https://www.youtube.com/embed/FTScG6IWFiY");
-        strawberryMilk.addIngredients(smIngredient1);
-        strawberryMilk.addIngredients(smIngredient2);
-        strawberryMilk.addIngredients(smIngredient3);
-        strawberryMilk.addIngredients(smIngredient4);
-        strawberryMilk.addIngredients(smIngredient5);
+        Recipe strawberryMilk = new Recipe("Korean Strawberry Milk", "Tiffy Cooks", true, "Milk", "https://i.imgur.com/qyNJYSG.jpg", "Easy", 45, "https://www.youtube.com/embed/FTScG6IWFiY");
+        strawberryMilk.addIngredients(strawberryMilkIngredient1);
+        strawberryMilk.addIngredients(strawberryMilkIngredient2);
+        strawberryMilk.addIngredients(strawberryMilkIngredient3);
+        strawberryMilk.addIngredients(strawberryMilkIngredient4);
+        strawberryMilk.addIngredients(strawberryMilkIngredient5);
+        recipeRepository.save(strawberryMilk);
 
-        Instructions smInstruction1 = new Instructions("Cut strawberries into cubes and add ⅔ of the strawberry into a pot.", strawberryMilk);
-        instructionRepository.save(smInstruction1);
-        Instructions smInstruction2 = new Instructions("In the pot, add honey, sugar, and lemon juice. Mix well to ensure all the strawberries are coated in sugar.", strawberryMilk);
-        instructionRepository.save(smInstruction2);
-        Instructions smInstruction3 = new Instructions("Turn the heat to medium and let it simmer for 15 minutes until the strawberry gets soft; keep stirring to prevent it from burning.", strawberryMilk);
-        instructionRepository.save(smInstruction3);
-        Instructions smInstruction4 = new Instructions("After 15 minutes, add the remaining strawberries and gently mix to cook for another 2 minutes.", strawberryMilk);
-        instructionRepository.save(smInstruction4);
-        Instructions smInstruction5 = new Instructions("Store the strawberry in a glass jar, and once it has cooled down, it can last in the fridge for three weeks.", strawberryMilk);
-        instructionRepository.save(smInstruction5);
-        Instructions smInstruction6 = new Instructions("Add around 2-4 tbsp syrup, pour in the milk, and ice. Shake it all up together when you are ready to drink!", strawberryMilk);
-        instructionRepository.save(smInstruction6);
+        Instructions strawberryMilkInstruction1 = new Instructions("Cut strawberries into cubes and add ⅔ of the strawberry into a pot.", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction1);
+        Instructions strawberryMilkInstruction2 = new Instructions("In the pot, add honey, sugar, and lemon juice. Mix well to ensure all the strawberries are coated in sugar.", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction2);
+        Instructions strawberryMilkInstruction3 = new Instructions("Turn the heat to medium and let it simmer for 15 minutes until the strawberry gets soft; keep stirring to prevent it from burning.", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction3);
+        Instructions strawberryMilkInstruction4 = new Instructions("After 15 minutes, add the remaining strawberries and gently mix to cook for another 2 minutes.", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction4);
+        Instructions strawberryMilkInstruction5 = new Instructions("Store the strawberry in a glass jar, and once it has cooled down, it can last in the fridge for three weeks.", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction5);
+        Instructions strawberryMilkInstruction6 = new Instructions("Add around 2-4 tbsp syrup, pour in the milk, and ice. Shake it all up together when you are ready to drink!", strawberryMilk);
+        instructionRepository.save(strawberryMilkInstruction6);
+
 
 //        HORCHATA
         RecipeIngredient horchataIngredient1 = new RecipeIngredient(whiteRice, 1, "cup");
@@ -764,7 +766,7 @@ public class DataLoader implements ApplicationRunner {
         RecipeIngredient horchataIngredient9 = new RecipeIngredient(ice, 1, "handful");
         recipeIngredientRepository.save(horchataIngredient9);
 
-        Recipe horchata = new Recipe("Horchata", "My Latina Table", false, "Misc", "https://i.imgur.com/J5qC8k4.jpg", "Easy", 5.5, "https://www.youtube.com/embed/JtwqQEaxIQg");
+        Recipe horchata = new Recipe("Horchata", "My Latina Table", false, "Misc", "https://i.imgur.com/J5qC8k4.jpg", "Easy", 360, "https://www.youtube.com/embed/JtwqQEaxIQg");
         horchata.addIngredients(horchataIngredient1);
         horchata.addIngredients(horchataIngredient2);
         horchata.addIngredients(horchataIngredient3);
