@@ -31,3 +31,15 @@ Use the following frameworks / libraries:
 [Mike Langley](https://www.linkedin.com/in/mike-langley-641713246/)
 
 [Michael Lyon](https://www.linkedin.com/in/michaellyon19994/)
+
+## Version History
+
+* 0.1.0
+    * Initial Release
+    
+## Planned Updates
+
+* Deploy Project as an Open API
+* Increase Data Set Size
+* Implement functionality for current Auth0 Login
+
